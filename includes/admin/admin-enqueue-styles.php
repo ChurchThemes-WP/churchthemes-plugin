@@ -31,12 +31,12 @@ function ctfw_admin_enqueue_styles() {
 	// Admin widgets
 	// Framework also enqueues this for Customizer in framework/includes/customize.php
 	if ( 'widgets' == $screen->base ) {
-		wp_enqueue_style( 'ctfw-widgets', CTFW_CSS_DIR_URL . '/admin-widgets.css', false ); // bust cache on update
+		wp_enqueue_style( 'ctfw-widgets', CTFW_WIDGETS_CSS_DIR_URL . '/admin-widgets.css', false ); // bust cache on update
 	}
 
 	// Theme license
 	if ( 'appearance_page_theme-license' == $screen->base ) {
-		wp_enqueue_style( 'ctfw-license', CTFW_CSS_DIR_URL . '/admin-license.css', false ); // bust cache on update
+		wp_enqueue_style( 'ctfw-license', CTFW_WIDGETS_CSS_DIR_URL . '/admin-license.css', false ); // bust cache on update
 	}
 
 }

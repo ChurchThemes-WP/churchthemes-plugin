@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function ctfw_ctmb_setup() {
 
 	if ( ! defined( 'CTMB_URL' ) ) { // in case also used in plugin
-		define( 'CTMB_URL', ctfw_theme_url( CTFW_LIB_DIR . '/ct-meta-box' ) ); // for enqueing JS/CSS
+		define( 'CTMB_URL', ctfw_theme_url( CTFW_WIDGETS_LIB_DIR . '/ct-meta-box' ) ); // for enqueing JS/CSS
 	}
 
 }

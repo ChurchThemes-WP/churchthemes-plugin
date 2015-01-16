@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  * @since 0.9
  */
-class CTFW_Walker_Nav_Menu_Description extends Walker_Nav_Menu {
+class CTFW_WIDGETS_Walker_Nav_Menu_Description extends Walker_Nav_Menu {
 
 	/**
 	 * Replace the start_el() method from Walker::start_el()

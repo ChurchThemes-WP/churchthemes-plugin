@@ -2,7 +2,7 @@
 /**
  * Breadcrumbs Class
  *
- * This will output a breadcrumb path for WordPress: echo new CTFW_Breadcrumbs( $options );
+ * This will output a breadcrumb path for WordPress: echo new CTFW_WIDGETS_Breadcrumbs( $options );
  *
  * @package    Church_Theme_Framework
  * @subpackage Classes
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  * @since 0.9
  */
-class CTFW_Breadcrumbs {
+class CTFW_WIDGETS_Breadcrumbs {
 
 	/**
 	 * Display options

@@ -14,7 +14,7 @@
 // No direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class CTFW_EDD_SL_Theme_Updater {
+class CTFW_WIDGETS_EDD_SL_Theme_Updater {
 
 	private $remote_api_url;
 	private $request_data;
@@ -92,7 +92,7 @@ class CTFW_EDD_SL_Theme_Updater {
 					$api_response->new_version,
 					$update_url,
 					$update_onclick,
-					'http://churchthemes.com/go/changelog/' . CTFW_THEME_SLUG . '/'
+					'http://churchthemes.com/go/changelog/' . CTFW_WIDGETS_THEME_SLUG . '/'
 				);
 
 			echo '</div>';

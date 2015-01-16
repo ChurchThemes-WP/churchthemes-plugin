@@ -32,7 +32,7 @@ $has_image = wp_get_attachment_image_src( $instance['image_id'] ) ? true : false
 		<?php if ( $has_image ) : // valid image specified ?>
 			<?php echo wp_get_attachment_image( $instance['image_id'], 'uplifted-rect-large', false, array( 'class' => 'uplifted-image') ); ?>
 		<?php else : // use transparent placeholder thumbnail of proper proportion ?>
-			<img src="<?php echo apply_filters( 'uplifted_thumb_placeholder_url', CTFW_THEME_URL . '/images/thumb-placeholder.png' ); ?>">
+			<img src="<?php echo apply_filters( 'uplifted_thumb_placeholder_url', CTFW_WIDGETS_THEME_URL . '/images/thumb-placeholder.png' ); ?>">
 		<?php endif; ?>
 
 		<?php if ( $title || $instance['description'] ) : ?>
