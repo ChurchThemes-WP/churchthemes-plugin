@@ -64,10 +64,10 @@ function ctfw_edd_license_config( $arg = false ) {
 	// Use defaults or values passed in via theme supprt
 	$config = wp_parse_args( $config, array(
 		'store_url'					=> '',						// URL of store running EDD with Software Licensing extension
-		'version'					=> CTFW_THEME_VERSION,		// default is to auto-determine from theme
+		'version'					=> CTFW_WIDGETS_THEME_VERSION,		// default is to auto-determine from theme
 		'license'					=> ctfw_edd_license_key(),	// default is to use '{theme}_license_key' option
-		'item_name'					=> CTFW_THEME_NAME,			// default is to use theme name; must match download name in EDD
-		'author'					=> CTFW_THEME_AUTHOR,		// default is to auto-determine from theme
+		'item_name'					=> CTFW_WIDGETS_THEME_NAME,			// default is to use theme name; must match download name in EDD
+		'author'					=> CTFW_WIDGETS_THEME_AUTHOR,		// default is to auto-determine from theme
 		'updates'					=> true,					// default true; enable automatic updates
 		'options_page'				=> true,					// default true; provide options page for license entry/activaton
 		'options_page_message'		=> '',						// optional message to show on options page
@@ -115,10 +115,10 @@ function ctfw_edd_license_updater() {
 	if ( current_theme_supports( 'ctfw-edd-license' ) && ctfw_edd_license_config( 'updates' ) ) {
 
 		// Include updater class
-		locate_template( CTFW_CLASS_DIR . '/CTFW_EDD_SL_Theme_Updater.php', true );
+		locate_template( CTFW_WIDGETS_CLASS_DIR . '/CTFW_WIDGETS_EDD_SL_Theme_Updater.php', true );
 
 		// Activate updates
-		$edd_updater = new CTFW_EDD_SL_Theme_Updater( array(
+		$edd_updater = new CTFW_WIDGETS_EDD_SL_Theme_Updater( array(
 			'remote_api_url' 	=> ctfw_edd_license_config( 'store_url' ), 		// Store URL running EDD with Software Licensing extension
 			'version' 			=> ctfw_edd_license_config( 'version' ), 		// Current version of theme
 			'license' 			=> ctfw_edd_license_key(), 						// The license key entered by user
@@ -147,7 +147,7 @@ add_action( 'after_setup_theme', 'ctfw_edd_license_updater', 99 ); // after any 
  */
 function ctfw_edd_license_key_option( $append = '' ) {
 
-	$field = CTFW_THEME_SLUG . '_license_key';
+	$field = CTFW_WIDGETS_THEME_SLUG . '_license_key';
 
 	if ( $append ) {
 		$field .= '_' . ltrim( $append, '_' );
@@ -590,7 +590,7 @@ function ctfw_edd_license_activate_after_save( $old_value, $value ) {
 
 }
 
-add_action( 'update_option_' . CTFW_THEME_SLUG . '_license_key', 'ctfw_edd_license_activate_after_save', 10, 2 );
+add_action( 'update_option_' . CTFW_WIDGETS_THEME_SLUG . '_license_key', 'ctfw_edd_license_activate_after_save', 10, 2 );
 */
 
 /**
@@ -780,7 +780,7 @@ function ctfw_edd_license_notice() {
 					printf(
 						ctfw_edd_license_config( $notice ),
 						admin_url( 'themes.php?page=theme-license' ),
-						CTFW_THEME_NAME,
+						CTFW_WIDGETS_THEME_NAME,
 						$expiration_data['expiration_date'],
 						ctfw_edd_license_renewal_url(),
 						ctfw_edd_license_config( 'renewal_info_url' )

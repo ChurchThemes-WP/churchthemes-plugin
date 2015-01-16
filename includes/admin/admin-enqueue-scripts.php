@@ -32,7 +32,7 @@ function ctfw_admin_enqueue_scripts() {
 		wp_enqueue_media();
 
 		// Main widgets script
-		wp_enqueue_script( 'ctfw-admin-widgets', CTFW_JS_DIR_URL . '/admin-widgets.js', array( 'jquery' ) ); // bust cache on update
+		wp_enqueue_script( 'ctfw-admin-widgets', CTFW_WIDGETS_JS_DIR_URL . '/admin-widgets.js', array( 'jquery' ) ); // bust cache on update
 		wp_localize_script( 'ctfw-admin-widgets', 'ctfw_widgets', ctfw_admin_widgets_js_data() ); // see admin-widgets.php
 
 	}

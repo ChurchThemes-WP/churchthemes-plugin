@@ -21,7 +21,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 *
 	 * @since 0.9
 	 */
-	class CTFW_Customize_Textarea_Control extends WP_Customize_Control {
+	class CTFW_WIDGETS_Customize_Textarea_Control extends WP_Customize_Control {
 
 		public $type = 'textarea';
 
@@ -47,7 +47,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 *
 	 * @since 0.9
 	 */
-	class CTFW_Customize_Number_Control extends WP_Customize_Control {
+	class CTFW_WIDGETS_Customize_Number_Control extends WP_Customize_Control {
 
 		public $type = 'number';
 
@@ -69,7 +69,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 *
 	 * @since 1.4.1
 	 */
-	class CTFW_Customize_Background_Image_Preset_Control extends WP_Customize_Control {
+	class CTFW_WIDGETS_Customize_Background_Image_Preset_Control extends WP_Customize_Control {
 
 		public $type = 'background_image_presets';
 
@@ -148,7 +148,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * Extended background image class
 	 *
 	 * IMPORTANT: This has no effect as of WordPress 4.1 because the background image control was rewritten.
-	 * Use CTFW_Customize_Background_Image_Preset_Control above instead, as a separate control.
+	 * Use CTFW_WIDGETS_Customize_Background_Image_Preset_Control above instead, as a separate control.
 	 *
 	 * This adds a Presets tab (multiple) in place of the Default tab (single)
 	 *
@@ -156,7 +156,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 *
 	 * @since 0.9
 	 */
-	class CTFW_Customize_Background_Image_Control extends WP_Customize_Background_Image_Control {
+	class CTFW_WIDGETS_Customize_Background_Image_Control extends WP_Customize_Background_Image_Control {
 
 		/**
 		 * Constructor

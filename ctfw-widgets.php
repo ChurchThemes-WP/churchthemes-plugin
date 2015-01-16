@@ -1,7 +1,7 @@
 <?php
 /*
 * Plugin Name: Church Theme Framework Widgets
-* Version: 0.1.1
+* Version: 0.1.2
 */
 
 
@@ -24,14 +24,14 @@ class ChurchThemeFrameworkWidgets {
 		$pluginDir = untrailingslashit( plugin_dir_path( __FILE__ ) );
 		$pluginURL = untrailingslashit( plugin_dir_url( __FILE__ ) );
 
-		define( 'CTFW_INC_DIR', $pluginDir . '/includes' );
-		define( 'CTFW_CLASS_DIR', CTFW_INC_DIR . '/classes' );
-		define( 'CTFW_ADMIN_DIR', CTFW_INC_DIR . '/admin' );
-		define( 'CTFW_WIDGET_TEMPLATE_DIR', CTFW_INC_DIR . '/widget-templates' );
-		define( 'CTFW_JS_DIR', CTFW_INC_DIR . '/js' );
-		define( 'CTFW_CSS_DIR', CTFW_INC_DIR . '/css' );
-		define( 'CTFW_JS_DIR_URL', $pluginURL . '/js' );
-		define( 'CTFW_CSS_DIR_URL', $pluginURL . '/css' );
+		define( 'CTFW_WIDGETS_INC_DIR', $pluginDir . '/includes' );
+		define( 'CTFW_WIDGETS_CLASS_DIR', CTFW_WIDGETS_INC_DIR . '/classes' );
+		define( 'CTFW_WIDGETS_ADMIN_DIR', CTFW_WIDGETS_INC_DIR . '/admin' );
+		define( 'CTFW_WIDGETS_WIDGET_TEMPLATE_DIR', CTFW_WIDGETS_INC_DIR . '/widget-templates' );
+		define( 'CTFW_WIDGETS_JS_DIR', CTFW_WIDGETS_INC_DIR . '/js' );
+		define( 'CTFW_WIDGETS_CSS_DIR', CTFW_WIDGETS_INC_DIR . '/css' );
+		define( 'CTFW_WIDGETS_JS_DIR_URL', $pluginURL . '/js' );
+		define( 'CTFW_WIDGETS_CSS_DIR_URL', $pluginURL . '/css' );
 
         add_action( 'plugins_loaded', array( __CLASS__, 'setup') );
 
@@ -52,37 +52,37 @@ class ChurchThemeFrameworkWidgets {
 		   // Frontend or Admin
 		   'always' => array(
 
-				CTFW_INC_DIR . '/gallery.php',
-				CTFW_INC_DIR . '/taxonomies.php',
-				CTFW_CLASS_DIR . '/widget.php',
+				CTFW_WIDGETS_INC_DIR . '/gallery.php',
+				CTFW_WIDGETS_INC_DIR . '/taxonomies.php',
+				CTFW_WIDGETS_CLASS_DIR . '/widget.php',
 
 		   ),
 
 		   // Admin Only
 		   'admin' => array(
 
-				CTFW_ADMIN_DIR . '/admin-enqueue-scripts.php',
-				CTFW_ADMIN_DIR . '/admin-enqueue-styles.php',
-				CTFW_ADMIN_DIR . '/admin-widgets.php',
+				CTFW_WIDGETS_ADMIN_DIR . '/admin-enqueue-scripts.php',
+				CTFW_WIDGETS_ADMIN_DIR . '/admin-enqueue-styles.php',
+				CTFW_WIDGETS_ADMIN_DIR . '/admin-widgets.php',
 
 		   ),
 
 		   // Frontend Only
 		   'frontend' => array (
 
-			CTFW_INC_DIR . '/archives.php',
-			CTFW_INC_DIR . '/conditions.php',
-			CTFW_INC_DIR . '/downloads.php',
-			CTFW_INC_DIR . '/embeds.php',
-			CTFW_INC_DIR . '/events.php',
-			CTFW_INC_DIR . '/helpers.php',
-			CTFW_INC_DIR . '/locations.php',
-			CTFW_INC_DIR . '/maps.php',
-			CTFW_INC_DIR . '/meta-data.php',
-			CTFW_INC_DIR . '/people.php',
-			CTFW_INC_DIR . '/posts.php',
-			CTFW_INC_DIR . '/sermons.php',
-			CTFW_INC_DIR . '/template-tags.php',
+			CTFW_WIDGETS_INC_DIR . '/archives.php',
+			CTFW_WIDGETS_INC_DIR . '/conditions.php',
+			CTFW_WIDGETS_INC_DIR . '/downloads.php',
+			CTFW_WIDGETS_INC_DIR . '/embeds.php',
+			CTFW_WIDGETS_INC_DIR . '/events.php',
+			CTFW_WIDGETS_INC_DIR . '/helpers.php',
+			CTFW_WIDGETS_INC_DIR . '/locations.php',
+			CTFW_WIDGETS_INC_DIR . '/maps.php',
+			CTFW_WIDGETS_INC_DIR . '/meta-data.php',
+			CTFW_WIDGETS_INC_DIR . '/people.php',
+			CTFW_WIDGETS_INC_DIR . '/posts.php',
+			CTFW_WIDGETS_INC_DIR . '/sermons.php',
+			CTFW_WIDGETS_INC_DIR . '/template-tags.php',
 
 		   ),
 
@@ -275,7 +275,7 @@ class ChurchThemeFrameworkWidgets {
 			}
 
 
-			$widget_class_path = trailingslashit( CTFW_CLASS_DIR ) . $widget_data['class_file'];
+			$widget_class_path = trailingslashit( CTFW_WIDGETS_CLASS_DIR ) . $widget_data['class_file'];
 
 			if ( file_exists( $widget_class_path ) ) {
 
