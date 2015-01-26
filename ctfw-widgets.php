@@ -30,8 +30,10 @@ class ChurchThemeFrameworkWidgets {
 		define( 'CTFW_WIDGETS_WIDGET_TEMPLATE_DIR', CTFW_WIDGETS_INC_DIR . '/widget-templates' );
 		define( 'CTFW_WIDGETS_JS_DIR', CTFW_WIDGETS_INC_DIR . '/js' );
 		define( 'CTFW_WIDGETS_CSS_DIR', CTFW_WIDGETS_INC_DIR . '/css' );
+		define( 'CTFW_WIDGETS_DIR_URL', $pluginURL );
 		define( 'CTFW_WIDGETS_JS_DIR_URL', $pluginURL . '/js' );
 		define( 'CTFW_WIDGETS_CSS_DIR_URL', $pluginURL . '/css' );
+		define( 'CTFW_WIDGETS_VERSION', 1.0 );
 
         add_action( 'plugins_loaded', array( __CLASS__, 'setup') );
 
