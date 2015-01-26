@@ -35,11 +35,11 @@ function ctfw_google_map( $options = false ) {
 		// Enqueue map scripts to handle Google Maps init
 		// this way the scripts are loaded only when feature is used, not on every page
 		wp_enqueue_script( 'google-maps', '//maps.googleapis.com/maps/api/js?sensor=false', false, null ); // no version, generic name to share w/plugins
-		wp_enqueue_script( 'ctfw-maps', ctfw_theme_url( CTFW_WIDGETS_JS_DIR . '/maps.js' ), array( 'jquery', 'google-maps' ), CTFW_WIDGETS_VERSION ); // bust cache on theme update
+		wp_enqueue_script( 'ctfw-maps', CTFW_WIDGETS_JS_DIR_URL . '/maps.js', array( 'jquery', 'google-maps' ), CTFW_WIDGETS_VERSION ); // bust cache on theme update
 
 		// Pass location of map icons to JS
 		wp_localize_script( 'ctfw-maps', 'ctfw_maps', array(
-			'icon' => apply_filters( 'ctfw_maps_icon_color_file', 'images/map-icon.png' )
+			'icon' => apply_filters( 'ctfw_maps_icon_file', CTFW_WIDGETS_DIR_URL . '/images/map-icon.png' )
 		));
 
 		// Type and zoom are optional
