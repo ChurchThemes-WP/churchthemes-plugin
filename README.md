@@ -1,12 +1,7 @@
-# Church Theme Framework Widgets
+# ChurchThemes Plugin
 
-__REQUIRES__ the [Church Theme Content](https://github.com/churchthemes/church-theme-content) plugin
+The ChurchThemes plugin is a feature plugin from [ChurchThemes](https://churchthemes.net) that gives churches a set of post types for events, sermons, people, and locations as well as widgets and additional helper functions that can be used within church or ministry WordPress sites.
 
-## Changelog
+# Contributors / Credits
 
-* v 0.1.2
-	* Changed constant prefix from `CTFW_` to `CTFW_WIDGETS_`; Version bump to 0.1.2
-* v 0.1.1
-	* Check for existing `CTFW_Widget` class declaration
-* v 0.1.0
-	* Initial commit
+[garand](https://github.com/garand), [chriswallace](https://github.com/chriswallace), [ataylorme](https://github.com/ataylorme), [stevengliebe](https://github.com/stevengliebe)
