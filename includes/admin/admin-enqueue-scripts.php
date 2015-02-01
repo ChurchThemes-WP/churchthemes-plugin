@@ -4,7 +4,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Admin
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -20,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  * @since 0.9
  */
-function ctfw_admin_enqueue_scripts() {
+function ctc_admin_enqueue_scripts() {
 
 	$screen = get_current_screen();
 
@@ -32,11 +33,11 @@ function ctfw_admin_enqueue_scripts() {
 		wp_enqueue_media();
 
 		// Main widgets script
-		wp_enqueue_script( 'ctfw-admin-widgets', CTFW_WIDGETS_JS_DIR_URL . '/admin-widgets.js', array( 'jquery' ) ); // bust cache on update
-		wp_localize_script( 'ctfw-admin-widgets', 'ctfw_widgets', ctfw_admin_widgets_js_data() ); // see admin-widgets.php
+		wp_enqueue_script( 'ctc-admin-widgets', CTFW_WIDGETS_JS_DIR_URL . '/admin-widgets.js', array( 'jquery' ) ); // bust cache on update
+		wp_localize_script( 'ctc-admin-widgets', 'ctc_widgets', ctc_admin_widgets_js_data() ); // see admin-widgets.php
 
 	}
 
 }
 
-add_action( 'admin_enqueue_scripts', 'ctfw_admin_enqueue_scripts' ); // admin-end only
+add_action( 'admin_enqueue_scripts', 'ctc_admin_enqueue_scripts' ); // admin-end only

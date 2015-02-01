@@ -11,7 +11,7 @@ jQuery( document ).ready( function( $ ) {
 	 *******************************************/
 
 	// Choose Image
-	$( 'body' ).on( 'click', '.ctfw-widget-image-choose', function( event ) {
+	$( 'body' ).on( 'click', '.ctc-widget-image-choose', function( event ) {
 
 		var value_container, frame;
 
@@ -19,14 +19,14 @@ jQuery( document ).ready( function( $ ) {
 		event.preventDefault();
 
 		// Get field value container
-		value_container = $( this ).parent( '.ctfw-widget-value' );
+		value_container = $( this ).parent( '.ctc-widget-value' );
 
 		// Media frame
 		frame = wp.media( {
-			title : ctfw_widgets.image_library_title,
+			title : ctc_widgets.image_library_title,
 			multiple : false,
 			library : { type : 'image' },
-			button : { text : ctfw_widgets.image_library_button }
+			button : { text : ctc_widgets.image_library_button }
 		} );
 
 		// Open media frame and set current image
@@ -35,7 +35,7 @@ jQuery( document ).ready( function( $ ) {
 
 			var image_id, current_attachment;
 
-			image_id = $( '.ctfw-widget-image', value_container ).val();
+			image_id = $( '.ctc-widget-image', value_container ).val();
 
 			if ( image_id ) {
 				current_attachment = wp.media.attachment( image_id );
@@ -72,17 +72,17 @@ jQuery( document ).ready( function( $ ) {
 
 					// Set attachment ID on hidden input
 					// Also trigger change event to make Customizer refresh preview
-					$( '.ctfw-widget-image', value_container )
+					$( '.ctc-widget-image', value_container )
 						.val( attachment_id )
 						.change();
 
 					// Set image preview
-					$( '.ctfw-widget-image-preview', value_container ).html( '<img src="' + attachment_preview_url + '" />' );
+					$( '.ctc-widget-image-preview', value_container ).html( '<img src="' + attachment_preview_url + '" />' );
 
 					// Set class on value container to tell image and remove button to show
 					$( value_container )
-						.removeClass( 'ctfw-widget-image-unset' )
-						.addClass( 'ctfw-widget-image-set' );
+						.removeClass( 'ctc-widget-image-unset' )
+						.addClass( 'ctc-widget-image-set' );
 
 				}
 
@@ -93,7 +93,7 @@ jQuery( document ).ready( function( $ ) {
 	} );
 
 	// Remove Image
-	$( 'body' ).on( 'click', '.ctfw-widget-image-remove', function( event ) {
+	$( 'body' ).on( 'click', '.ctc-widget-image-remove', function( event ) {
 
 		var value_container;
 
@@ -101,21 +101,21 @@ jQuery( document ).ready( function( $ ) {
 		event.preventDefault();
 
 		// Get field value container
-		value_container = $( this ).parent( '.ctfw-widget-value' );
+		value_container = $( this ).parent( '.ctc-widget-value' );
 
 		// Set attachment ID on hidden input
 		// Also trigger change event to make Customizer refresh preview
-		$( '.ctfw-widget-image', value_container )
+		$( '.ctc-widget-image', value_container )
 			.val( '' )
 			.change();
 
 		// Set image preview
-		$( '.ctfw-widget-image-preview', value_container ).empty();
+		$( '.ctc-widget-image-preview', value_container ).empty();
 
 		// Set class on value container to tell image and remove button NOT to show
 		$( value_container )
-			.removeClass( 'ctfw-widget-image-set' )
-			.addClass( 'ctfw-widget-image-unset' );
+			.removeClass( 'ctc-widget-image-set' )
+			.addClass( 'ctc-widget-image-unset' );
 
 	} );
 
@@ -126,8 +126,8 @@ jQuery( document ).ready( function( $ ) {
 	// Add hidden message to all widgets
 	// admin-widgets.css hides this by default
 	// admin_head outputs CSS to show this and hide form content
-	if ( ctfw_widgets.widget_restrictions ) { // if feature supported
-		$( '.widget-inside' ).prepend( '<div class="ctfw-widget-incompatible">' + ctfw_widgets.incompatible_message + '</div>' );
+	if ( ctc_widgets.widget_restrictions ) { // if feature supported
+		$( '.widget-inside' ).prepend( '<div class="ctc-widget-incompatible">' + ctc_widgets.incompatible_message + '</div>' );
 	}
 
 	// Customizer: Pre-fill Search when "Add a Widget" clicked

@@ -4,7 +4,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Classes
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -28,7 +29,7 @@ class CTFW_Widget_Giving extends CTFW_Widget {
 	function __construct() {
 
 		parent::__construct(
-			'ctfw-giving',
+			'ctc-giving',
 			_x( 'CT Giving', 'widget', 'church-theme-framework' ),
 			array(
 				'description' => __( 'Shows a message and button', 'church-theme-framework' ),
@@ -45,7 +46,7 @@ class CTFW_Widget_Giving extends CTFW_Widget {
 	 * @since 0.9
 	 * @return array Fields for widget
 	 */
-	function ctfw_fields() { // prefix in case WP core adds method with same name
+	function ctc_fields() { // prefix in case WP core adds method with same name
 
 		// Fields
 		$fields = array(

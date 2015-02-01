@@ -37,9 +37,9 @@ if ( ! empty( $instance['show_dropdown'] ) ) {
 
 	// Add category arguments to base array
 	$cat_args['show_option_none'] = _x( 'Select One', 'categories widget', 'uplifted' );
-	$cat_args['id'] = 'uplifted-dropdown-taxonomy_id-' . rand( 10000, 99999 );
+	$cat_args['id'] = 'ctc-dropdown-taxonomy_id-' . rand( 10000, 99999 );
 	$cat_args['name'] = $cat_args['id'];
-	$cat_args['class'] = 'uplifted-dropdown-taxonomy-redirect';
+	$cat_args['class'] = 'ctc-dropdown-taxonomy-redirect';
 
 	// Show dropdown selector
 	?>

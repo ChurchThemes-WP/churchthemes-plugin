@@ -21,19 +21,19 @@ if ( wp_get_attachment_image_src( $instance['image_id'] ) ) :
 		$li_classes = array();
 
 		if ( $video_url ) {
-			$li_classes[] = 'uplifted-slide-video';
+			$li_classes[] = 'ctc-slide-video';
 		}
 
 		if ( $instance['click_url'] ) {
-			$li_classes[] = 'uplifted-slide-linked';
+			$li_classes[] = 'ctc-slide-linked';
 		}
 
 		if ( $instance['click_new'] ) {
-			$li_classes[] = 'uplifted-slide-click-new'; // for JavaScript
+			$li_classes[] = 'ctc-slide-click-new'; // for JavaScript
 		}
 
 		if ( ! $instance['description'] ) {
-			$li_classes[] = 'uplifted-slide-no-description';
+			$li_classes[] = 'ctc-slide-no-description';
 		}
 
 		if ( ! empty( $li_classes ) ) {
@@ -48,7 +48,7 @@ if ( wp_get_attachment_image_src( $instance['image_id'] ) ) :
 
 		<div class="flex-image-container">
 
-				<?php echo wp_get_attachment_image( $instance['image_id'], 'uplifted-slide', false, array( 'alt' => '', 'title' => '', 'class' => '' ) ); ?>
+				<?php echo wp_get_attachment_image( $instance['image_id'], 'ctc-slide', false, array( 'alt' => '', 'title' => '', 'class' => '' ) ); ?>
 
 		</div>
 

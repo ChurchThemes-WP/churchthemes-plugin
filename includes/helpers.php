@@ -6,7 +6,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Functions
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -28,11 +29,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @since 0.9
  * @return string http or https protocol
  */
-function ctfw_current_protocol() {
+function ctc_current_protocol() {
 
 	$protocol = is_ssl() ? 'https' : 'http';
 
-	return apply_filters( 'ctfw_current_protocol', $protocol );
+	return apply_filters( 'ctc_current_protocol', $protocol );
 
 }
 
@@ -43,7 +44,7 @@ function ctfw_current_protocol() {
  * @param string $string String to check for URL format
  * @return bool True if string i=s URL
  */
-function ctfw_is_url( $string ) {
+function ctc_is_url( $string ) {
 
 	$bool = false;
 
@@ -53,7 +54,7 @@ function ctfw_is_url( $string ) {
 		$bool = true;
 	}
 
-	return apply_filters( 'ctfw_is_url', $bool, $string );
+	return apply_filters( 'ctc_is_url', $bool, $string );
 
 }
 
@@ -64,15 +65,15 @@ function ctfw_is_url( $string ) {
  * @param string $url URL to test
  * @return bool True if URL is local
  */
-function ctfw_is_local_url( $url ) {
+function ctc_is_local_url( $url ) {
 
 	$bool = false;
 
-	if ( ctfw_is_url( $url ) && preg_match( '/^' . preg_quote( home_url(), '/' ) . '/', $url ) ) {
+	if ( ctc_is_url( $url ) && preg_match( '/^' . preg_quote( home_url(), '/' ) . '/', $url ) ) {
 		$bool = true;
 	}
 
-	return apply_filters( 'ctfw_is_local_url', $bool, $url );
+	return apply_filters( 'ctc_is_local_url', $bool, $url );
 
 }
 
@@ -84,7 +85,7 @@ function ctfw_is_local_url( $url ) {
  * @since 0.9
  * @return string Site path
  */
-function ctfw_site_path() {
+function ctc_site_path() {
 
 	$path = '';
 
@@ -94,7 +95,7 @@ function ctfw_site_path() {
 		$path = $parsed_url['path'];
 	}
 
-	return apply_filters( 'ctfw_site_path', $path );
+	return apply_filters( 'ctc_site_path', $path );
 
 }
 
@@ -112,7 +113,7 @@ function ctfw_site_path() {
  * @param string $file File to search for in the stylesheet directory
  * @return string The URL of the file
  */
-function ctfw_theme_url( $file = '' ) {
+function ctc_theme_url( $file = '' ) {
 
 	$file = ltrim( $file, '/' );
 
@@ -124,7 +125,7 @@ function ctfw_theme_url( $file = '' ) {
 		$url = get_template_directory_uri() . "/$file";
 	}
 
-	return apply_filters( 'ctfw_theme_url', $url, $file );
+	return apply_filters( 'ctc_theme_url', $url, $file );
 
 }
 
@@ -141,7 +142,7 @@ function ctfw_theme_url( $file = '' ) {
  * @param array Strings to always allow, such as shortcodes
  * @return string Sanitized list of URLs
  */
-function ctfw_sanitize_url_list( $urls, $allowed_strings = array() ) {
+function ctc_sanitize_url_list( $urls, $allowed_strings = array() ) {
 
 	// Convert to array
 	$urls_array = $urls;
@@ -183,7 +184,7 @@ function ctfw_sanitize_url_list( $urls, $allowed_strings = array() ) {
 	$sanitized_urls = implode( "\n", $sanitized_urls );
 
 	// Return sanitized filterable
-	return apply_filters( 'ctfw_sanitize_url_list', $sanitized_urls, $urls, $allowed_strings );
+	return apply_filters( 'ctc_sanitize_url_list', $sanitized_urls, $urls, $allowed_strings );
 
 }
 
@@ -203,7 +204,7 @@ function ctfw_sanitize_url_list( $urls, $allowed_strings = array() ) {
  * @param mixed $after_key Key in original array to merge second array after
  * @return array Modified array
  */
-function ctfw_array_merge_after_key( $original_array, $insert_array, $after_key ) {
+function ctc_array_merge_after_key( $original_array, $insert_array, $after_key ) {
 
 	$modified_array = array();
 
@@ -220,7 +221,7 @@ function ctfw_array_merge_after_key( $original_array, $insert_array, $after_key 
 
 	}
 
-	return apply_filters( 'ctfw_array_merge_after_key', $modified_array, $original_array, $insert_array, $after_key );
+	return apply_filters( 'ctc_array_merge_after_key', $modified_array, $original_array, $insert_array, $after_key );
 
 }
 
@@ -233,7 +234,7 @@ function ctfw_array_merge_after_key( $original_array, $insert_array, $after_key 
  * @param array $array Array to format
  * @param bool $return Return or echo output
  */
-function ctfw_print_array( $array, $return = false ) {
+function ctc_print_array( $array, $return = false ) {
 
 	$result = '<pre>' . print_r( $array, true ) . '</pre>';
 
@@ -260,7 +261,7 @@ function ctfw_print_array( $array, $return = false ) {
  * @param int $max_chars Maximum number of characters shortened string should have
  * @return string Modified string if shortening necesary
  */
-function ctfw_shorten( $string, $max_chars ) {
+function ctc_shorten( $string, $max_chars ) {
 
 	$max_chars = absint( $max_chars );
 
@@ -313,7 +314,7 @@ function ctfw_shorten( $string, $max_chars ) {
 	}
 
 	// Return filtered
-	return apply_filters( 'ctfw_shorten', $processed_string, $string, $max_chars );
+	return apply_filters( 'ctc_shorten', $processed_string, $string, $max_chars );
 
 }
 
@@ -326,7 +327,7 @@ function ctfw_shorten( $string, $max_chars ) {
  * @param string $address Multi-line address
  * @return string Single line address
  */
-function ctfw_address_one_line( $address ) {
+function ctc_address_one_line( $address ) {
 
 	$address_one_line = $address;
 
@@ -336,24 +337,24 @@ function ctfw_address_one_line( $address ) {
 		$address_one_line = trim( $address_one_line ); // remove whitespace
 	}
 
-	return apply_filters( 'ctfw_address_one_line', $address_one_line, $address );
+	return apply_filters( 'ctc_address_one_line', $address_one_line, $address );
 
 }
 
 /**
  * Make a Church Theme Content post type or taxonomy name friendly
  *
- * This is handy for get_template_part( 'content', ctfw_make_friendly( get_post_type() ) );
+ * This is handy for get_template_part( 'content', ctc_make_friendly( get_post_type() ) );
  * which produces content-post-type.php instead of content-ctc_post_type.php
  *
  * @since 0.9
  * @param string $string Post type or other prefixed CTC slug to make friendly
  * @return string Friendlier string without prefix
  */
-function ctfw_make_friendly( $string ) {
+function ctc_make_friendly( $string ) {
 
 	$friendly_string = str_replace( array( 'ctc_', '_'), array( '', '-'), $string );
 
-	return apply_filters( 'ctfw_make_friendly', $friendly_string, $string );
+	return apply_filters( 'ctc_make_friendly', $friendly_string, $string );
 
 }

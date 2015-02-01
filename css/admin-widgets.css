@@ -4,97 +4,97 @@
  * Appearance > Widgets and Customizer's widget controls both use these styles.
  */
 
-.ctfw-widget-field {
+.ctc-widget-field {
 	margin-bottom: 12px;
 }
 
-	.ctfw-widget-field:first-child {
+	.ctc-widget-field:first-child {
 		margin-top: 12px;
 	}
 
-	.ctfw-widget-field.ctfw-widget-no-bottom-margin {
+	.ctc-widget-field.ctc-widget-no-bottom-margin {
 		margin-bottom: 0;
 	}
 
-	.ctfw-widget-name {
+	.ctc-widget-name {
 		margin-top: 3px;
 	}
 
-		.ctfw-widget-name span { /* (Optional) or (Required) */
+		.ctc-widget-name span { /* (Optional) or (Required) */
 			color: #595959;
 			font-weight: normal;
 		}
 
 
-	.ctfw-widget-value input[type=text], /* can also use widefat class for 100% */
-	.ctfw-widget-value textarea {
+	.ctc-widget-value input[type=text], /* can also use widefat class for 100% */
+	.ctc-widget-value textarea {
 		width: 100%;
 	}
 
-	.ctfw-widget-value textarea {
+	.ctc-widget-value textarea {
 		height: 56px;
 	}
 
-	.ctfw-widget-value select {
+	.ctc-widget-value select {
 		max-width: 99%;
 	}
 
-	input[type=text].ctfw-widget-small,
-	textarea.ctfw-widget-small {
+	input[type=text].ctc-widget-small,
+	textarea.ctc-widget-small {
 		width: 100px;
 	}
 
-	input[type=text].ctfw-widget-tiny,
-	textarea.ctfw-widget-tiny {
+	input[type=text].ctc-widget-tiny,
+	textarea.ctc-widget-tiny {
 		width: 40px;
 	}
 
-	.ctfw-widget-radio-inline {
+	.ctc-widget-radio-inline {
 		display: inline-block;
 		margin: 2px 12px 0 0;
 	}
 
-		.ctfw-widget-radio-inline:last-child {
+		.ctc-widget-radio-inline:last-child {
 			margin-right: 0;
 		}
 
-	.ctfw-widget-value .description {
+	.ctc-widget-value .description {
 		margin-top: 6px !important;
 		padding: 0 !important;
 	}
 
 /* Hidden Fields */
 
-.ctfw-widget-hidden {
+.ctc-widget-hidden {
 	display: none;
 }
 
 /* Image Field */
 
-.ctfw-widget-image-preview img {
+.ctc-widget-image-preview img {
 	max-width: 100%;
 	height: auto;
 	margin-top: 4px;
 }
 
-.ctfw-widget-image-choose,
-.ctfw-widget-image-remove {
+.ctc-widget-image-choose,
+.ctc-widget-image-remove {
 	display: inline-block;
 	margin-top: 4px !important;
 }
 
-.ctfw-widget-image-choose {
+.ctc-widget-image-choose {
 	margin-right: 5px !important;
 }
 
-.ctfw-widget-image-unset .ctfw-widget-image-preview,
-.ctfw-widget-image-unset .ctfw-widget-image-remove {
+.ctc-widget-image-unset .ctc-widget-image-preview,
+.ctc-widget-image-unset .ctc-widget-image-remove {
 	display: none;
 }
 
 /* Widget/Sidebar Restrictions */
 
-.ctfw-widget-incompatible {
+.ctc-widget-incompatible {
 	display: none; /* initially */
 	margin: 10px 0;
 	color: #dc0909;
@@ -109,22 +109,22 @@
  * Here we're filling in the blanks or improving
  */
 
-#available-widgets [class*="ctfw-highlight"] .widget-title:before {
+#available-widgets [class*="ctc-highlight"] .widget-title:before {
 	content: "\f128"; /* dashicon-format-image */
 }
 
-#available-widgets [class*="ctfw-sermons"] .widget-title:before {
+#available-widgets [class*="ctc-sermons"] .widget-title:before {
 	content: "\f236"; /* dashicon-video-alt3 */
 }
 
-#available-widgets [class*="ctfw-people"] .widget-title:before {
+#available-widgets [class*="ctc-people"] .widget-title:before {
 	content: "\f307"; /* dashicon-groups */
 }
 
-#available-widgets [class*="ctfw-gallery"] .widget-title:before {
+#available-widgets [class*="ctc-gallery"] .widget-title:before {
 	content: "\f232"; /* dashicon-images-alt */
 }
 
-#available-widgets [class*="ctfw-giving"] .widget-title:before {
+#available-widgets [class*="ctc-giving"] .widget-title:before {
 	content: "\f174"; /* dashicon-cart */
 }

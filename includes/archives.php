@@ -4,7 +4,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Functions
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -32,10 +33,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @param array $post_types Post types to enable date archive for
  * @param object $wp_rewrite
  */
-function ctfw_cpt_date_archive_setup( $post_types, $wp_rewrite ) {
+function ctc_cpt_date_archive_setup( $post_types, $wp_rewrite ) {
 
 	// Enable override by child theme
-	$rules = apply_filters( 'ctfw_cpt_date_archive_setup_rules', array(), $post_types, $wp_rewrite ); // empty if nothing passed in by filter
+	$rules = apply_filters( 'ctc_cpt_date_archive_setup_rules', array(), $post_types, $wp_rewrite ); // empty if nothing passed in by filter
 
 	// If rules not already provided via filter
 	if ( empty( $rules ) ) {
@@ -129,7 +130,7 @@ function ctfw_cpt_date_archive_setup( $post_types, $wp_rewrite ) {
  * @param string $post_type Post type to build link for
  * @return string Permalink for date archive
  */
-function ctfw_post_type_get_month_link( $year, $month, $post_type = false ) {
+function ctc_post_type_get_month_link( $year, $month, $post_type = false ) {
 
 	global $wp_rewrite;
 
@@ -186,7 +187,7 @@ function ctfw_post_type_get_month_link( $year, $month, $post_type = false ) {
 		// Make URL
 		$url = home_url( $path );
 
-		return apply_filters( 'ctfw_post_type_month_link', $url, $year, $month );
+		return apply_filters( 'ctc_post_type_month_link', $url, $year, $month );
 
 	} else { // default with query string
 
@@ -195,7 +196,7 @@ function ctfw_post_type_get_month_link( $year, $month, $post_type = false ) {
 			$post_type_param = '&post_type=' . $post_type;
 		}
 
-		return apply_filters( 'ctfw_post_type_month_link', home_url( '?m=' . $year . zeroise( $month, 2 ) . $post_type_param ), $year, $month );
+		return apply_filters( 'ctc_post_type_month_link', home_url( '?m=' . $year . zeroise( $month, 2 ) . $post_type_param ), $year, $month );
 
 	}
 
@@ -208,18 +209,18 @@ function ctfw_post_type_get_month_link( $year, $month, $post_type = false ) {
 /**
  * Redirect post type archives to pages
  *
- * Use add_theme_support( 'ctfw-archive-redirection' ) to redirect post type archives to pages using specific page templates.
- * Post types and page templates from ctfw_content_types() are used to automate this (theme must filter page templates in).
+ * Use add_theme_support( 'ctc-archive-redirection' ) to redirect post type archives to pages using specific page templates.
+ * Post types and page templates from ctc_content_types() are used to automate this (theme must filter page templates in).
  *
  * Page template should output same loop but with with title, featured image, etc. for nicer presentation and to avoid duplicate content.
  * This is done only for non-date archive. Feeds are unaffected.
  *
  * @since 0.9
  */
-function ctfw_redirect_archives_to_pages() {
+function ctc_redirect_archives_to_pages() {
 
 	// Theme supports this?
-	if ( ! current_theme_supports( 'ctfw-archive-redirection' ) ) {
+	if ( ! current_theme_supports( 'ctc-archive-redirection' ) ) {
 		return false;
 	}
 
@@ -229,7 +230,7 @@ function ctfw_redirect_archives_to_pages() {
 	}
 
 	// Get content types
-	$content_types = ctfw_content_types();
+	$content_types = ctc_content_types();
 
 	// Loop content types
 	foreach ( $content_types as $content_type => $content_type_data ) {
@@ -256,7 +257,7 @@ function ctfw_redirect_archives_to_pages() {
 						if ( is_post_type_archive( $post_type ) ) {
 
 							// Check if a page is using primary template
-							if ( $redirect_page = ctfw_get_page_by_template( $page_template ) ) {
+							if ( $redirect_page = ctc_get_page_by_template( $page_template ) ) {
 
 								// Found a page?
 								if ( ! empty( $redirect_page->ID ) ) {
@@ -294,4 +295,4 @@ function ctfw_redirect_archives_to_pages() {
 
 }
 
-add_action( 'template_redirect', 'ctfw_redirect_archives_to_pages' );
+add_action( 'template_redirect', 'ctc_redirect_archives_to_pages' );

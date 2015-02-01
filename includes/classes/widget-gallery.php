@@ -4,7 +4,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Classes
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -28,7 +29,7 @@ class CTFW_Widget_Gallery extends CTFW_Widget {
 	function __construct() {
 
 		parent::__construct(
-			'ctfw-gallery',
+			'ctc-gallery',
 			_x( 'CT Gallery', 'gallery widget', 'church-theme-framework' ),
 			array(
 				'description' => __( 'Shows gallery thumbnails', 'church-theme-framework' )
@@ -45,10 +46,10 @@ class CTFW_Widget_Gallery extends CTFW_Widget {
 	 * @since 0.9
 	 * @return array Fields for widget
 	 */
-	function ctfw_fields() { // prefix in case WP core adds method with same name
+	function ctc_fields() { // prefix in case WP core adds method with same name
 
 		// Gallery posts/pages options
-		$gallery_posts = ctfw_gallery_posts( array(
+		$gallery_posts = ctc_gallery_posts( array(
 			'extract_data' => false, // optimization
 			'exclude_empty' => false
 		) );
@@ -128,7 +129,7 @@ class CTFW_Widget_Gallery extends CTFW_Widget {
 				'attributes'		=> array(), // attributes to add to input element
 				'class'				=> '', // class(es) to add to input
 				'field_attributes'	=> array(), // attr => value array for field container
-				'field_class'		=> 'ctfw-widget-no-bottom-margin', // class(es) to add to field container
+				'field_class'		=> 'ctc-widget-no-bottom-margin', // class(es) to add to field container
 				'custom_sanitize'	=> '', // function to do additional sanitization (or array( &$this, 'method' ))
 				'custom_field'		=> '', // function for custom display of field input
 				'page_templates'	=> array(), // field will not appear or save if one of these page templates are not selected (or array( &$this, 'method' ))
@@ -180,7 +181,7 @@ class CTFW_Widget_Gallery extends CTFW_Widget {
 				'attributes'		=> array(), // attributes to add to input element
 				'class'				=> '', // class(es) to add to input
 				'field_attributes'	=> array(), // attr => value array for field container
-				'field_class'		=> 'ctfw-widget-no-bottom-margin', // class(es) to add to field container
+				'field_class'		=> 'ctc-widget-no-bottom-margin', // class(es) to add to field container
 				'custom_sanitize'	=> '', // function to do additional sanitization (or array( &$this, 'method' ))
 				'custom_field'		=> '', // function for custom display of field input
 				'page_templates'	=> array(), // field will not appear or save if one of these page templates are not selected (or array( &$this, 'method' ))
@@ -282,7 +283,7 @@ class CTFW_Widget_Gallery extends CTFW_Widget {
 	 * @since 0.9
 	 * @return array Posts for widget template
 	 */
-	function ctfw_get_posts() {
+	function ctc_get_posts() {
 
 		$posts = array();
 
@@ -291,15 +292,15 @@ class CTFW_Widget_Gallery extends CTFW_Widget {
 			'post_type'			=> 'attachment',
 			'post_status'		=> 'inherit', // for attachments
 			'post_mime_type'	=> 'image',
-			'posts_per_page'	=> $this->ctfw_instance['limit'],
-			'orderby'			=> $this->ctfw_instance['orderby'],
-			'order'				=> $this->ctfw_instance['order'],
+			'posts_per_page'	=> $this->ctc_instance['limit'],
+			'orderby'			=> $this->ctc_instance['orderby'],
+			'order'				=> $this->ctc_instance['order'],
 			'no_found_rows'		=> true // faster
 		);
 
 		// All Galleries - get images attached to Gallery posts/pages
-		if ( 'all' == $this->ctfw_instance['post_id'] || empty( $this->ctfw_instance['post_id'] ) ) {
-			$args['post_parent__in'] = ctfw_gallery_posts_ids(); // get all Gallery post IDs into array
+		if ( 'all' == $this->ctc_instance['post_id'] || empty( $this->ctc_instance['post_id'] ) ) {
+			$args['post_parent__in'] = ctc_gallery_posts_ids(); // get all Gallery post IDs into array
 		}
 
 		// Specififc Gallery - get images used in shortcodes on post/page
@@ -307,13 +308,13 @@ class CTFW_Widget_Gallery extends CTFW_Widget {
 		else {
 
 			// Get data for one post
-			$posts = ctfw_gallery_posts( array(
-				'post_id' => $this->ctfw_instance['post_id']
+			$posts = ctc_gallery_posts( array(
+				'post_id' => $this->ctc_instance['post_id']
 			) );
 
 			// Use ID's from shortcode attributes
-			if ( ! empty( $posts[$this->ctfw_instance['post_id']]['image_ids'] ) ) {
-				$args['post__in'] = $posts[$this->ctfw_instance['post_id']]['image_ids'];
+			if ( ! empty( $posts[$this->ctc_instance['post_id']]['image_ids'] ) ) {
+				$args['post__in'] = $posts[$this->ctc_instance['post_id']]['image_ids'];
 			}
 
 		}
@@ -325,7 +326,7 @@ class CTFW_Widget_Gallery extends CTFW_Widget {
 		}
 
 		// Return filtered
-		return apply_filters( 'ctfw_gallery_widget_get_posts', $posts );
+		return apply_filters( 'ctc_gallery_widget_get_posts', $posts );
 
 	}
 

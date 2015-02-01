@@ -4,20 +4,20 @@
 
 /* Status */
 
-.ctfw-license-active {
+.ctc-license-active {
 	color: #1ba31b;
 	font-weight: bold;
 }
 
-.ctfw-license-inactive,
-.ctfw-license-expired,
-.ctfw-license-expiring-soon {
+.ctc-license-inactive,
+.ctc-license-expired,
+.ctc-license-expiring-soon {
 	color: #d52121;
 	font-weight: bold;
 }
 
 /* Buttons */
 
-.ctfw-license-button {
+.ctc-license-button {
 	margin-right: 10px !important;
 }

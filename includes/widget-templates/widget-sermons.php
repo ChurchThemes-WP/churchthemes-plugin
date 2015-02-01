@@ -5,7 +5,7 @@
  * Produces output for appropriate widget class in framework.
  * $this, $instance (sanitized field values) and $args are available.
  *
- * $this->ctfw_get_posts() can be used to produce a query according to widget field values.
+ * $this->ctc_get_posts() can be used to produce a query according to widget field values.
  */
 
 // No direct access
@@ -21,7 +21,7 @@ if ( ! empty( $title ) ) {
 }
 
 // Get posts
-$posts = $this->ctfw_get_posts(); // widget's default query according to field values
+$posts = $this->ctc_get_posts(); // widget's default query according to field values
 
 // Loop Posts
 $i = 0;
@@ -34,50 +34,50 @@ foreach ( $posts as $post ) : setup_postdata( $post ); $i++;
 	// $audio_player		Same as video
 	// $audio_download_url 	Same as video
 	// $pdf_download_url 	URL for download link (local or externally hosted, but "Save As" forced only if local)
-	extract( ctfw_sermon_data() );
+	extract( ctc_sermon_data() );
 
 ?>
 
-	<article <?php post_class( 'uplifted-widget-entry uplifted-sermons-widget-entry uplifted-clearfix' . ( 1 == $i ? ' uplifted-widget-entry-first' : '' ) ); ?>>
+	<article <?php post_class( 'ctc-widget-entry ctc-sermons-widget-entry ctc-clearfix' . ( 1 == $i ? ' ctc-widget-entry-first' : '' ) ); ?>>
 
-		<header class="uplifted-clearfix">
+		<header class="ctc-clearfix">
 
 			<?php if ( $instance['show_image'] && has_post_thumbnail() ) : ?>
-				<div class="uplifted-widget-entry-thumb">
-					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'uplifted-thumb-small', array( 'class' => 'uplifted-image' ) ); ?></a>
+				<div class="ctc-widget-entry-thumb">
+					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'ctc-thumb-small', array( 'class' => 'ctc-image' ) ); ?></a>
 				</div>
 			<?php endif; ?>
 
-			<h1 class="uplifted-widget-entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+			<h1 class="ctc-widget-entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
-			<ul class="uplifted-widget-entry-meta uplifted-clearfix">
+			<ul class="ctc-widget-entry-meta ctc-clearfix">
 
 				<?php if ( $instance['show_date'] ) : ?>
-					<li class="uplifted-widget-entry-date uplifted-sermons-widget-entry-date">
-						<time datetime="<?php esc_attr( the_time( 'c' ) ); ?>"><?php ctfw_post_date(); ?></time>
+					<li class="ctc-widget-entry-date ctc-sermons-widget-entry-date">
+						<time datetime="<?php esc_attr( the_time( 'c' ) ); ?>"><?php ctc_post_date(); ?></time>
 					</li>
 				<?php endif; ?>
 
 				<?php if ( $instance['show_speaker'] && $speakers = get_the_term_list( $post->ID, 'ctc_sermon_speaker', '', __( ', ', 'uplifted' ) ) ) : ?>
-					<li class="uplifted-widget-entry-byline uplifted-sermons-widget-entry-speakers">
+					<li class="ctc-widget-entry-byline ctc-sermons-widget-entry-speakers">
 						<?php printf( _x( 'by %s', 'widget', 'uplifted' ), $speakers ); ?>
 					</li>
 				<?php endif; ?>
 
 				<?php if ( $instance['show_topic'] && $topics = get_the_term_list( $post->ID, 'ctc_sermon_topic', '', __( ', ', 'uplifted' ) ) ) : ?>
-					<li class="uplifted-sermons-widget-entry-topics">
+					<li class="ctc-sermons-widget-entry-topics">
 						<?php echo $topics; ?>
 					</li>
 				<?php endif; ?>
 
 				<?php if ( $instance['show_book'] && $books = get_the_term_list( $post->ID, 'ctc_sermon_book', '', __( ', ', 'uplifted' ) ) ) : ?>
-					<li class="uplifted-sermons-widget-entry-books">
+					<li class="ctc-sermons-widget-entry-books">
 						<?php echo $books; ?>
 					</li>
 				<?php endif; ?>
 
 				<?php if ( $instance['show_series'] && $series = get_the_term_list( $post->ID, 'ctc_sermon_series', '', __( ', ', 'uplifted' ) ) ) : ?>
-					<li class="uplifted-sermons-widget-entry-series">
+					<li class="ctc-sermons-widget-entry-series">
 						<?php echo $series; ?>
 					</li>
 				<?php endif; ?>
@@ -87,7 +87,7 @@ foreach ( $posts as $post ) : setup_postdata( $post ); $i++;
 		</header>
 
 		<?php if ( get_the_excerpt() && ! empty( $instance['show_excerpt'] )): ?>
-			<div class="uplifted-widget-entry-content">
+			<div class="ctc-widget-entry-content">
 				<?php the_excerpt(); ?>
 			</div>
 		<?php endif; ?>

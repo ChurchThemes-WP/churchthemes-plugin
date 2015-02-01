@@ -6,7 +6,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Functions
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -22,16 +23,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @param array $classes Classes currently being added to <body>
  * @return array Modified array of classes
  */
-function ctfw_add_post_classes( $classes ) {
+function ctc_add_post_classes( $classes ) {
 
 	// Theme asks for this enhancement?
-	if ( current_theme_supports( 'ctfw-post-classes' ) ) {
+	if ( current_theme_supports( 'ctc-post-classes' ) ) {
 
 		// Has featured image?
 		if ( has_post_thumbnail() ) {
-			$classes[] = 'ctfw-has-image';
+			$classes[] = 'ctc-has-image';
 		} else {
-			$classes[] = 'ctfw-no-image';
+			$classes[] = 'ctc-no-image';
 		}
 
 	}
@@ -40,7 +41,7 @@ function ctfw_add_post_classes( $classes ) {
 
 }
 
-add_filter( 'post_class', 'ctfw_add_post_classes' );
+add_filter( 'post_class', 'ctc_add_post_classes' );
 
 /**
  * Get first ordered post
@@ -51,7 +52,7 @@ add_filter( 'post_class', 'ctfw_add_post_classes' );
  * @param string $post_type Post type to use
  * @return Array Post data
  */
-function ctfw_first_ordered_post( $post_type ) {
+function ctc_first_ordered_post( $post_type ) {
 
 	$post = array();
 
@@ -70,6 +71,6 @@ function ctfw_first_ordered_post( $post_type ) {
 	}
 
 	// Return filtered
-	return apply_filters( 'ctfw_first_ordered_post', $post );
+	return apply_filters( 'ctc_first_ordered_post', $post );
 
 }

@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @param array $args Arguments for getting events
  * @return array Event posts
  */
-function ctfw_get_events( $args = array() ) {
+function ctc_get_events( $args = array() ) {
 
 	// Defaults
 	$args['timeframe'] = ! empty( $args['timeframe'] ) ? $args['timeframe'] : 'upcoming';
@@ -89,7 +89,7 @@ function ctfw_get_events( $args = array() ) {
 	$posts = get_posts( $args );
 
 	// Return filtered
-	return apply_filters( 'ctfw_get_events', $posts, $args );
+	return apply_filters( 'ctc_get_events', $posts, $args );
 
 }
 
@@ -100,10 +100,10 @@ function ctfw_get_events( $args = array() ) {
  * @param int $post_id Post ID to get data for; null for current post
  * @return array Event data
  */
-function ctfw_event_data( $post_id = null ) {
+function ctc_event_data( $post_id = null ) {
 
 	// Get meta values
-	$meta = ctfw_get_meta_data( array(
+	$meta = ctc_get_meta_data( array(
 		'start_date',
 		'end_date',
 		'time', // Time Description
@@ -211,10 +211,10 @@ function ctfw_event_data( $post_id = null ) {
 	}
 
 	// Add directions URL (empty if show_directions_link not set)
-	$meta['directions_url'] = $meta['show_directions_link'] ? ctfw_directions_url( $meta['address'] ) : '';
+	$meta['directions_url'] = $meta['show_directions_link'] ? ctc_directions_url( $meta['address'] ) : '';
 
 	// Return filtered
-	return apply_filters( 'ctfw_event_data', $meta, $post_id );
+	return apply_filters( 'ctc_event_data', $meta, $post_id );
 
 }
 
@@ -229,10 +229,10 @@ function ctfw_event_data( $post_id = null ) {
  *
  * @since 0.9
  */
-function ctfw_previous_next_event_sorting() {
+function ctc_previous_next_event_sorting() {
 
 	// Theme supports it?
-	if ( ! current_theme_supports( 'ctfw-event-navigation' ) ) {
+	if ( ! current_theme_supports( 'ctc-event-navigation' ) ) {
 		return;
 	}
 
@@ -241,22 +241,22 @@ function ctfw_previous_next_event_sorting() {
 	if ( ! is_page() && is_singular( 'ctc_event' ) && current_theme_supports( 'ctc-events' ) ) {
 
 		// SQL JOIN
-		add_filter( 'get_previous_post_join', 'ctfw_previous_next_event_join' );
-		add_filter( 'get_next_post_join', 'ctfw_previous_next_event_join' );
+		add_filter( 'get_previous_post_join', 'ctc_previous_next_event_join' );
+		add_filter( 'get_next_post_join', 'ctc_previous_next_event_join' );
 
 		// SQL WHERE
-		add_filter( 'get_previous_post_where', 'ctfw_previous_event_where' );
-		add_filter( 'get_next_post_where', 'ctfw_next_event_where' );
+		add_filter( 'get_previous_post_where', 'ctc_previous_event_where' );
+		add_filter( 'get_next_post_where', 'ctc_next_event_where' );
 
 		// SQL ORDER BY
-		add_filter( 'get_previous_post_sort', 'ctfw_previous_event_sort' );
-		add_filter( 'get_next_post_sort', 'ctfw_next_event_sort' );
+		add_filter( 'get_previous_post_sort', 'ctc_previous_event_sort' );
+		add_filter( 'get_next_post_sort', 'ctc_next_event_sort' );
 
 	}
 
 }
 
-add_action( 'wp', 'ctfw_previous_next_event_sorting' ); // is_singular() not available until wp action (after posts_selection)
+add_action( 'wp', 'ctc_previous_next_event_sorting' ); // is_singular() not available until wp action (after posts_selection)
 
 /**
  * SQL JOIN for Prev/Next Event
@@ -268,7 +268,7 @@ add_action( 'wp', 'ctfw_previous_next_event_sorting' ); // is_singular() not ava
  * @param string $join Original JOIN SQL
  * @return string Modified JOIN SQL
  */
-function ctfw_previous_next_event_join( $join ) {
+function ctc_previous_next_event_join( $join ) {
 
 	global $wpdb;
 
@@ -286,7 +286,7 @@ function ctfw_previous_next_event_join( $join ) {
  * @param string $direction 'previous' or 'next'
  * @return string SQL WHERE clause
  */
-function ctfw_previous_next_event_where( $direction ) {
+function ctc_previous_next_event_where( $direction ) {
 
 	global $wpdb;
 
@@ -335,8 +335,8 @@ function ctfw_previous_next_event_where( $direction ) {
  * @param string $where Current WHERE clause
  * @return string Custom WHERE clause
  */
-function ctfw_previous_event_where( $where ) {
-	return ctfw_previous_next_event_where( 'previous' );
+function ctc_previous_event_where( $where ) {
+	return ctc_previous_next_event_where( 'previous' );
 }
 
 /**
@@ -346,8 +346,8 @@ function ctfw_previous_event_where( $where ) {
  * @param string $where Current WHERE clause
  * @return string Custom WHERE clause
  */
-function ctfw_next_event_where( $where ) {
-	return ctfw_previous_next_event_where( 'next' );
+function ctc_next_event_where( $where ) {
+	return ctc_previous_next_event_where( 'next' );
 }
 
 /**
@@ -357,7 +357,7 @@ function ctfw_next_event_where( $where ) {
  * @param string $sort Current ORDER BY clause
  * @return string Custom ORDER BY clause
  */
-function ctfw_previous_event_sort( $sort ) {
+function ctc_previous_event_sort( $sort ) {
 	return "ORDER BY pm.meta_value DESC, p.ID DESC LIMIT 1";
 }
 
@@ -368,6 +368,6 @@ function ctfw_previous_event_sort( $sort ) {
  * @param string $sort Current ORDER BY clause
  * @return string Custom ORDER BY clause
  */
-function ctfw_next_event_sort( $sort ) {
+function ctc_next_event_sort( $sort ) {
 	return "ORDER BY pm.meta_value ASC, p.ID ASC LIMIT 1";
 }

@@ -6,7 +6,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Classes
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -30,7 +31,7 @@ class CTFW_Widget_Archives extends CTFW_Widget {
 	function __construct() {
 
 		parent::__construct(
-			'ctfw-archives',
+			'ctc-archives',
 			_x( 'CT Archives', 'widget', 'church-theme-framework' ),
 			array(
 				'description' => __( 'Monthly archive for chosen post type', 'church-theme-framework' )
@@ -47,7 +48,7 @@ class CTFW_Widget_Archives extends CTFW_Widget {
 	 * @since 0.9
 	 * @return array Fields for widget
 	 */
-	function ctfw_fields() { // prefix in case WP core adds method with same name
+	function ctc_fields() { // prefix in case WP core adds method with same name
 
 		// Fields
 		$fields = array(
@@ -112,7 +113,7 @@ class CTFW_Widget_Archives extends CTFW_Widget {
 				'radio_inline'		=> false, // show radio inputs inline or on top of each other
 				'number_min'		=> '', // lowest possible value for number type
 				'number_max'		=> '', // highest possible value for number type
-				'options'			=> $this->ctfw_post_type_options(), // array of keys/values for radio or select
+				'options'			=> $this->ctc_post_type_options(), // array of keys/values for radio or select
 				'default'			=> 'post', // value to pre-populate option with (before first save or on reset)
 				'no_empty'			=> true, // if user empties value, force default to be saved instead
 				'allow_html'		=> false, // allow HTML to be used in the value (text, textarea)
@@ -167,7 +168,7 @@ class CTFW_Widget_Archives extends CTFW_Widget {
 				'attributes'		=> array(), // attributes to add to input element
 				'class'				=> '', // class(es) to add to input
 				'field_attributes'	=> array(), // attr => value array for field container
-				'field_class'		=> 'ctfw-widget-no-bottom-margin', // class(es) to add to field container
+				'field_class'		=> 'ctc-widget-no-bottom-margin', // class(es) to add to field container
 				'custom_sanitize'	=> '', // function to do additional sanitization (or array( &$this, 'method' ))
 				'custom_field'		=> '', // function for custom display of field input
 				'page_templates'	=> array(), // field will not appear or save if one of these page templates are not selected (or array( &$this, 'method' ))
@@ -210,7 +211,7 @@ class CTFW_Widget_Archives extends CTFW_Widget {
 	 * @since 0.9
 	 * @return array Options for post type field
 	 */
-	function ctfw_post_type_options() {
+	function ctc_post_type_options() {
 
 		$options = array();
 
@@ -240,7 +241,7 @@ class CTFW_Widget_Archives extends CTFW_Widget {
 		);
 
 		// Return filtered
-		return apply_filters( 'ctfw_archives_widget_post_type_options', $options );
+		return apply_filters( 'ctc_archives_widget_post_type_options', $options );
 
 	}
 
@@ -253,15 +254,15 @@ class CTFW_Widget_Archives extends CTFW_Widget {
 	 * @global object $wpdb
 	 * @return array Archives for use in template
 	 */
-	function ctfw_get_archives() {
+	function ctc_get_archives() {
 
 		global $wpdb;
 
 		// Get post type
-		$post_type = $this->ctfw_instance['post_type'];
+		$post_type = $this->ctc_instance['post_type'];
 
 		// Get limit
-		$limit = absint( $this->ctfw_instance['limit'] );
+		$limit = absint( $this->ctc_instance['limit'] );
 		$sql_limit = '';
 		if ( $limit > 0 ) {
 			$sql_limit = $wpdb->prepare(
@@ -295,7 +296,7 @@ class CTFW_Widget_Archives extends CTFW_Widget {
 		) );
 
 		// Return filtered
-		return apply_filters( 'ctfw_archives_widget_get_archives', $archives );
+		return apply_filters( 'ctc_archives_widget_get_archives', $archives );
 
 	}
 

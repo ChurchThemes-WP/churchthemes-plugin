@@ -4,7 +4,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Admin
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -22,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  * Themes can request certain things to be done after activation:
  *
- *		add_theme_support( 'ctfw-after-activation', array(
+ *		add_theme_support( 'ctc-after-activation', array(
  *			'flush_rewrite_rules'	=> true,
  *			'replace_notice'		=> sprintf( __( 'Please follow the <a href="%s">Next Steps</a> now that the theme has been activated.', 'your-theme-textdomain' ), 'http://churchthemes.com/guides/user/getting-started/' )
  *   	) );
@@ -32,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @since 0.9
  * @global object $wp_rewrite
  */
-function ctfw_after_activation() {
+function ctc_after_activation() {
 
 	global $wp_rewrite;
 
@@ -40,7 +41,7 @@ function ctfw_after_activation() {
 	if ( ! empty( $_GET['activated'] ) ) {
 
 		// Does theme support this?
-		$support = get_theme_support( 'ctfw-after-activation' );
+		$support = get_theme_support( 'ctc-after-activation' );
 		if ( $support ) {
 
 			// What to do
@@ -54,15 +55,12 @@ function ctfw_after_activation() {
 			// Show notice to user
 			if ( ! empty( $activation_tasks['notice'] ) ) {
 
-				add_action( 'admin_notices', 'ctfw_activation_notice', 5 ); // show above other notices
+				add_action( 'admin_notices', 'ctc_activation_notice', 5 ); // show above other notices
 
 				// Hide default notice
 				if ( ! empty( $activation_tasks['hide_default_notice'] ) ) {
-					add_action( 'admin_head', 'ctfw_hide_default_activation_notice' );
+					add_action( 'admin_head', 'ctc_hide_default_activation_notice' );
 				}
-
-				// Remove other notices when showing activation notice -- keep it simple
-				ctfw_activation_remove_notices();
 
 			}
 
@@ -72,7 +70,7 @@ function ctfw_after_activation() {
 
 }
 
-add_action( 'load-themes.php', 'ctfw_after_activation' );
+add_action( 'load-themes.php', 'ctc_after_activation' );
 
 /********************************************
  * NOTICES
@@ -81,21 +79,21 @@ add_action( 'load-themes.php', 'ctfw_after_activation' );
 /**
  * Message to show to user after activation
  *
- * Hooked in ctfw_after_activation().
+ * Hooked in ctc_after_activation().
  *
  * @since 0.9
  */
-function ctfw_activation_notice() {
+function ctc_activation_notice() {
 
 	// Get notice if supported by theme
-	$support = get_theme_support( 'ctfw-after-activation' );
+	$support = get_theme_support( 'ctc-after-activation' );
 	$notice = ! empty( $support[0]['notice'] ) ? $support[0]['notice'] : '';
 
 	// Show notice if have it
 	if ( $notice ) {
 
 		?>
-		<div id="ctfw-activation-notice" class="updated">
+		<div id="ctc-activation-notice" class="updated">
 			<p>
 				<?php echo $notice; ?>
 			</p>
@@ -111,25 +109,8 @@ function ctfw_activation_notice() {
  *
  * @since 0.9
  */
-function ctfw_hide_default_activation_notice() {
+function ctc_hide_default_activation_notice() {
 
 	echo '<style>#message2{ display: none; }</style>';
-
-}
-
-/**
- * Remove activation notices
- *
- * Remove all other notices from theme as not to overwhelm user on activation.
- * This way only the success (go to Next Steps) or fail (old WP version) notice for activation shows.
- *
- * See ctfw_after_activation() above and compatibility.php for where this is used.
- *
- * @since 0.9.1
- */
-function ctfw_activation_remove_notices() {
-
-	remove_action( 'admin_notices', 'ctfw_edd_license_notice', 7 ); // Theme License
-	remove_action( 'admin_notices', 'ctfw_ctc_plugin_notice' ); // Church Theme Content
 
 }

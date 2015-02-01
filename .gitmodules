@@ -1,0 +1,9 @@
+[submodule "includes/libraries/ct-meta-box"]
+	path = includes/libraries/ct-meta-box
+	url = https://github.com/churchthemes/ct-meta-box.git
+[submodule "includes/libraries/ct-plugin-settings"]
+	path = includes/libraries/ct-plugin-settings
+	url = https://github.com/churchthemes/ct-plugin-settings.git
+[submodule "includes/libraries/tgm-plugin-activation"]
+	path = includes/libraries/tgm-plugin-activation
+	url = git@github.com:thomasgriffin/TGM-Plugin-Activation.git

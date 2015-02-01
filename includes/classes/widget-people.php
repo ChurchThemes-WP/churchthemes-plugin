@@ -4,7 +4,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Classes
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -28,7 +29,7 @@ class CTFW_Widget_People extends CTFW_Widget {
 	function __construct() {
 
 		parent::__construct(
-			'ctfw-people',
+			'ctc-people',
 			_x( 'CT People', 'widget', 'church-theme-framework' ),
 			array(
 				'description' => __( 'Shows people according to options', 'church-theme-framework' )
@@ -45,7 +46,7 @@ class CTFW_Widget_People extends CTFW_Widget {
 	 * @since 0.9
 	 * @return array Fields for widget
 	 */
-	function ctfw_fields() { // prefix in case WP core adds method with same name
+	function ctc_fields() { // prefix in case WP core adds method with same name
 
 		// Fields
 		$fields = array(
@@ -110,7 +111,7 @@ class CTFW_Widget_People extends CTFW_Widget {
 				'radio_inline'		=> false, // show radio inputs inline or on top of each other
 				'number_min'		=> '', // lowest possible value for number type
 				'number_max'		=> '', // highest possible value for number type
-				'options'			=> ctfw_term_options( 'ctc_person_group', array( // array of keys/values for radio or select
+				'options'			=> ctc_term_options( 'ctc_person_group', array( // array of keys/values for radio or select
 					'all' => _x( 'All Groups', 'people widget', 'church-theme-framework' )
 				) ),
 				'default'			=> 'all', // value to pre-populate option with (before first save or on reset)
@@ -146,7 +147,7 @@ class CTFW_Widget_People extends CTFW_Widget {
 				'attributes'		=> array(), // attributes to add to input element
 				'class'				=> '', // class(es) to add to input
 				'field_attributes'	=> array(), // attr => value array for field container
-				'field_class'		=> 'ctfw-widget-no-bottom-margin', // class(es) to add to field container
+				'field_class'		=> 'ctc-widget-no-bottom-margin', // class(es) to add to field container
 				'custom_sanitize'	=> '', // function to do additional sanitization (or array( &$this, 'method' ))
 				'custom_field'		=> '', // function for custom display of field input
 				'page_templates'	=> array(), // field will not appear or save if one of these page templates are not selected (or array( &$this, 'method' ))
@@ -221,7 +222,7 @@ class CTFW_Widget_People extends CTFW_Widget {
 				'attributes'		=> array(), // attributes to add to input element
 				'class'				=> '', // class(es) to add to input
 				'field_attributes'	=> array(), // attr => value array for field container
-				'field_class'		=> 'ctfw-widget-no-bottom-margin', // class(es) to add to field container
+				'field_class'		=> 'ctc-widget-no-bottom-margin', // class(es) to add to field container
 				'custom_sanitize'	=> '', // function to do additional sanitization (or array( &$this, 'method' ))
 				'custom_field'		=> '', // function for custom display of field input
 				'page_templates'	=> array(), // field will not appear or save if one of these page templates are not selected (or array( &$this, 'method' ))
@@ -245,7 +246,7 @@ class CTFW_Widget_People extends CTFW_Widget {
 				'attributes'		=> array(), // attributes to add to input element
 				'class'				=> '', // class(es) to add to input
 				'field_attributes'	=> array(), // attr => value array for field container
-				'field_class'		=> 'ctfw-widget-no-bottom-margin', // class(es) to add to field container
+				'field_class'		=> 'ctc-widget-no-bottom-margin', // class(es) to add to field container
 				'custom_sanitize'	=> '', // function to do additional sanitization (or array( &$this, 'method' ))
 				'custom_field'		=> '', // function for custom display of field input
 				'page_templates'	=> array(), // field will not appear or save if one of these page templates are not selected (or array( &$this, 'method' ))
@@ -269,7 +270,7 @@ class CTFW_Widget_People extends CTFW_Widget {
 				'attributes'		=> array(), // attributes to add to input element
 				'class'				=> '', // class(es) to add to input
 				'field_attributes'	=> array(), // attr => value array for field container
-				'field_class'		=> 'ctfw-widget-no-bottom-margin', // class(es) to add to field container
+				'field_class'		=> 'ctc-widget-no-bottom-margin', // class(es) to add to field container
 				'custom_sanitize'	=> '', // function to do additional sanitization (or array( &$this, 'method' ))
 				'custom_field'		=> '', // function for custom display of field input
 				'page_templates'	=> array(), // field will not appear or save if one of these page templates are not selected (or array( &$this, 'method' ))
@@ -293,7 +294,7 @@ class CTFW_Widget_People extends CTFW_Widget {
 				'attributes'		=> array(), // attributes to add to input element
 				'class'				=> '', // class(es) to add to input
 				'field_attributes'	=> array(), // attr => value array for field container
-				'field_class'		=> 'ctfw-widget-no-bottom-margin', // class(es) to add to field container
+				'field_class'		=> 'ctc-widget-no-bottom-margin', // class(es) to add to field container
 				'custom_sanitize'	=> '', // function to do additional sanitization (or array( &$this, 'method' ))
 				'custom_field'		=> '', // function for custom display of field input
 				'page_templates'	=> array(), // field will not appear or save if one of these page templates are not selected (or array( &$this, 'method' ))
@@ -317,7 +318,7 @@ class CTFW_Widget_People extends CTFW_Widget {
 				'attributes'		=> array(), // attributes to add to input element
 				'class'				=> '', // class(es) to add to input
 				'field_attributes'	=> array(), // attr => value array for field container
-				'field_class'		=> 'ctfw-widget-no-bottom-margin', // class(es) to add to field container
+				'field_class'		=> 'ctc-widget-no-bottom-margin', // class(es) to add to field container
 				'custom_sanitize'	=> '', // function to do additional sanitization (or array( &$this, 'method' ))
 				'custom_field'		=> '', // function for custom display of field input
 				'page_templates'	=> array(), // field will not appear or save if one of these page templates are not selected (or array( &$this, 'method' ))
@@ -364,19 +365,19 @@ class CTFW_Widget_People extends CTFW_Widget {
 	 * @since 0.9
 	 * @return array Posts for widget template
 	 */
-	function ctfw_get_posts() {
+	function ctc_get_posts() {
 
 		// Base arguments
 		$args = array(
 			'post_type'       	=> 'ctc_person',
-			'orderby'         	=> $this->ctfw_instance['orderby'],
-			'order'           	=> $this->ctfw_instance['order'],
-			'numberposts'     	=> $this->ctfw_instance['limit'],
+			'orderby'         	=> $this->ctc_instance['orderby'],
+			'order'           	=> $this->ctc_instance['order'],
+			'numberposts'     	=> $this->ctc_instance['limit'],
 			'suppress_filters'	=> false // keep WPML from showing posts from all languages: http://bit.ly/I1JIlV + http://bit.ly/1f9GZ7D
 		);
 
 		// Group argument
-		if ( 'all' != $this->ctfw_instance['group'] && $group_term = get_term( $this->ctfw_instance['group'], 'ctc_person_group' ) ) {
+		if ( 'all' != $this->ctc_instance['group'] && $group_term = get_term( $this->ctc_instance['group'], 'ctc_person_group' ) ) {
 			$args['ctc_person_group'] = $group_term->slug;
 		}
 
@@ -384,7 +385,7 @@ class CTFW_Widget_People extends CTFW_Widget {
 		$posts = get_posts( $args );
 
 		// Return filtered
-		return apply_filters( 'ctfw_people_widget_get_posts', $posts );
+		return apply_filters( 'ctc_people_widget_get_posts', $posts );
 
 	}
 

@@ -4,7 +4,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Functions
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -26,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @param string $prefix Optional prefix override; otherwise post type used as prefix
  * @return array Meta data
  */
-function ctfw_get_meta_data( $fields, $post_id = null, $prefix = null ) {
+function ctc_get_meta_data( $fields, $post_id = null, $prefix = null ) {
 
 	$meta = array();
 
@@ -56,6 +57,6 @@ function ctfw_get_meta_data( $fields, $post_id = null, $prefix = null ) {
 
 	}
 
-	return apply_filters( 'ctfw_get_meta_data', $meta, $post_id );
+	return apply_filters( 'ctc_get_meta_data', $meta, $post_id );
 
 }

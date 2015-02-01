@@ -27,16 +27,16 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @return array Data for JavaScript
  */
 
-function ctfw_admin_widgets_js_data() {
+function ctc_admin_widgets_js_data() {
 
 	$data = array( // make data available
 		'image_library_title'	=> _x( 'Choose Image for Widget', 'widget image library', 'church-theme-framework' ),
 		'image_library_button'	=> _x( 'Use in Widget', 'widget image library', 'church-theme-framework' ),
 		'incompatible_message'	=> __( 'Sorry, this widget is not made for use in this area. Please delete.', 'church-theme-framework' ),
-		'widget_restrictions'	=> current_theme_supports( 'ctfw-sidebar-widget-restrictions' ),
+		'widget_restrictions'	=> current_theme_supports( 'ctc-sidebar-widget-restrictions' ),
 	);
 
-	return apply_filters( 'ctfw_admin_widgets_js_data', $data );
+	return apply_filters( 'ctc_admin_widgets_js_data', $data );
 
 }
 
@@ -50,15 +50,15 @@ function ctfw_admin_widgets_js_data() {
  * If a user drags a widget into a sidebar that it is not compatible with, a message is shown.
  * Also see admin-widgets.css, admin-widgets.js and widgets.php.
  *
- * Note: ctfw_restrict_sidebars_widgets() handles removing widgets from sidebars on both front-end
+ * Note: ctc_restrict_sidebars_widgets() handles removing widgets from sidebars on both front-end
  * and back-end in case user does not.
  *
  * @since 0.9
  */
-function ctfw_admin_restrict_widgets_css() {
+function ctc_admin_restrict_widgets_css() {
 
 	// Theme supports this?
-	if ( ! current_theme_supports( 'ctfw-sidebar-widget-restrictions' ) )  {
+	if ( ! current_theme_supports( 'ctc-sidebar-widget-restrictions' ) )  {
 		return;
 	}
 
@@ -73,7 +73,7 @@ function ctfw_admin_restrict_widgets_css() {
 		$message_elements = array();
 
 		// Get all registered widgets
-		$widgets = ctfw_get_registered_widgets();
+		$widgets = ctc_get_registered_widgets();
 
 		// Loop all sidebars
 		$sidebars = wp_get_sidebars_widgets();
@@ -88,7 +88,7 @@ function ctfw_admin_restrict_widgets_css() {
 			foreach ( $widgets as $widget_id ) {
 
 				// Check if sidebar and widget are not compatible
-				if ( ! ctfw_sidebar_widget_compatible( $sidebar_id, $widget_id ) ) {
+				if ( ! ctc_sidebar_widget_compatible( $sidebar_id, $widget_id ) ) {
 
 					// Appearance > Widgets
 					if ( 'widgets' == $screen->base ) {
@@ -98,7 +98,7 @@ function ctfw_admin_restrict_widgets_css() {
 						$form_elements[] = "#$sidebar_id div[id*=_$widget_id-] .widget-control-save";
 
 						// Element for showing message
-						$message_elements[] = "#$sidebar_id div[id*=_$widget_id-] .ctfw-widget-incompatible";
+						$message_elements[] = "#$sidebar_id div[id*=_$widget_id-] .ctc-widget-incompatible";
 
 					}
 
@@ -110,7 +110,7 @@ function ctfw_admin_restrict_widgets_css() {
 						$form_elements[] = "#accordion-section-sidebar-widgets-$sidebar_id div[id*=_$widget_id-] .widget-control-save";
 
 						// Element for showing message
-						$message_elements[] = "#accordion-section-sidebar-widgets-$sidebar_id div[id*=_$widget_id-] .ctfw-widget-incompatible";
+						$message_elements[] = "#accordion-section-sidebar-widgets-$sidebar_id div[id*=_$widget_id-] .ctc-widget-incompatible";
 
 					}
 
@@ -146,5 +146,5 @@ HTML;
 
 }
 
-add_action( 'admin_head', 'ctfw_admin_restrict_widgets_css' );
-add_action( 'customize_controls_print_scripts', 'ctfw_admin_restrict_widgets_css' ); // Customizer too
+add_action( 'admin_head', 'ctc_admin_restrict_widgets_css' );
+add_action( 'customize_controls_print_scripts', 'ctc_admin_restrict_widgets_css' ); // Customizer too

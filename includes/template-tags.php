@@ -6,7 +6,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Functions
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -24,12 +25,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @param array $options Options for display
  * @return string Post date
  */
-function ctfw_post_date( $options = array() ) {
+function ctc_post_date( $options = array() ) {
 
 	$date_formatted = '';
 
 	// Default options
-	$defaults = apply_filters( 'ctfw_post_date_default_options', array(
+	$defaults = apply_filters( 'ctc_post_date_default_options', array(
 		'return'	=> false,
 		'today'		=> true,	// show "Today" if post is from today
 		'yesterday'	=> true,	// show "Yesterday" instead of yesterday's date
@@ -61,7 +62,7 @@ function ctfw_post_date( $options = array() ) {
 	}
 
 	// Date filtering
-	$date_formatted = apply_filters( 'ctfw_post_date', $date_formatted, $options );
+	$date_formatted = apply_filters( 'ctc_post_date', $date_formatted, $options );
 
 	// Output or return
 	if ( $options['return'] ) {

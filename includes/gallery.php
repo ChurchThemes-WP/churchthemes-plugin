@@ -4,7 +4,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Functions
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -24,11 +25,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  * Basic usage:
  *
- * 		add_theme_support( 'ctfw-gallery-thumb-size', 'custom-size' );
+ * 		add_theme_support( 'ctc-gallery-thumb-size', 'custom-size' );
  *
  * Column-specific usage:
  *
- *		add_theme_support( 'ctfw-gallery-thumb-size', array(
+ *		add_theme_support( 'ctc-gallery-thumb-size', array(
  *			'1' => 'large',					// use this size when 1 column
  *			'2' => 'custom-size',	 		// use this size when 2 columns
  *			'3' => 'another-custom-size', 	// use this size when 3 columns
@@ -37,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  * @since 0.9
  */
-function ctfw_gallery_thumb_size( $out, $pairs, $atts ) {
+function ctc_gallery_thumb_size( $out, $pairs, $atts ) {
 
 	// Always use size specifically set on shortcode
 	if ( ! empty( $atts['size'] ) ) {
@@ -45,7 +46,7 @@ function ctfw_gallery_thumb_size( $out, $pairs, $atts ) {
 	}
 
 	// Use custom size based on column only if theme supports it
-	$support = $support = get_theme_support( 'ctfw-gallery-thumb-size' );
+	$support = $support = get_theme_support( 'ctc-gallery-thumb-size' );
 	if ( ! empty( $support[0] ) ) {
 
 		$sizes = $support[0];
@@ -79,7 +80,7 @@ function ctfw_gallery_thumb_size( $out, $pairs, $atts ) {
 
 }
 
-add_filter( 'shortcode_atts_gallery', 'ctfw_gallery_thumb_size', 10, 3 );
+add_filter( 'shortcode_atts_gallery', 'ctc_gallery_thumb_size', 10, 3 );
 
 /**
  * Remove default gallery styles
@@ -89,15 +90,15 @@ add_filter( 'shortcode_atts_gallery', 'ctfw_gallery_thumb_size', 10, 3 );
  *
  * @since 0.9
  */
-function ctfw_remove_gallery_styles() {
+function ctc_remove_gallery_styles() {
 
-	if ( current_theme_supports( 'ctfw-remove-gallery-styles' ) ) {
+	if ( current_theme_supports( 'ctc-remove-gallery-styles' ) ) {
 		add_filter( 'use_default_gallery_style', '__return_false' );
 	}
 
 }
 
-add_filter( 'init', 'ctfw_remove_gallery_styles' );
+add_filter( 'init', 'ctc_remove_gallery_styles' );
 
 /**
  * Remove prepend_attachment content filter
@@ -106,19 +107,19 @@ add_filter( 'init', 'ctfw_remove_gallery_styles' );
  * WordPress does this when an attachment template is used (images.php, attachment.php, etc.)
  * Do the same thing when custom attachment templates such as content-attachment.php are used.
  *
- * Enable with add_theme_support( 'ctfw-remove-prepend-attachment' )
+ * Enable with add_theme_support( 'ctc-remove-prepend-attachment' )
  *
  * @since 0.9
  */
-function ctfw_remove_prepend_attachment() {
+function ctc_remove_prepend_attachment() {
 
-	if ( is_attachment() && current_theme_supports( 'ctfw-remove-prepend-attachment' ) ) {
+	if ( is_attachment() && current_theme_supports( 'ctc-remove-prepend-attachment' ) ) {
 		remove_filter( 'the_content', 'prepend_attachment' );
 	}
 
 }
 
-add_filter( 'wp', 'ctfw_remove_prepend_attachment' ); // conditionals like is_attachment() not available until 'wp' action
+add_filter( 'wp', 'ctc_remove_prepend_attachment' ); // conditionals like is_attachment() not available until 'wp' action
 
 /**
  * Get post's gallery data
@@ -130,7 +131,7 @@ add_filter( 'wp', 'ctfw_remove_prepend_attachment' ); // conditionals like is_at
  * @param array $options Options for getting data
  * @return array Galleries data
  */
-function ctfw_post_galleries_data( $post, $options = array() ) {
+function ctc_post_galleries_data( $post, $options = array() ) {
 
 	// Default data
 	$data = array(
@@ -224,7 +225,7 @@ function ctfw_post_galleries_data( $post, $options = array() ) {
 	}
 
 	// Return filterable
-	return apply_filters( 'ctfw_post_galleries_data', $data, $post );
+	return apply_filters( 'ctc_post_galleries_data', $data, $post );
 
 }
 
@@ -237,7 +238,7 @@ function ctfw_post_galleries_data( $post, $options = array() ) {
  * @param array $options Options for getting posts
  * @return array Gallery posts
  */
-function ctfw_gallery_posts( $options = array() ) {
+function ctc_gallery_posts( $options = array() ) {
 
 	$gallery_posts = array();
 
@@ -263,12 +264,12 @@ function ctfw_gallery_posts( $options = array() ) {
 		'posts_per_page'	=> $options['limit'],
 		'no_found_rows'		=> true, // faster
 	);
-	$args = apply_filters( 'ctfw_gallery_posts_args', $args, $options );
+	$args = apply_filters( 'ctc_gallery_posts_args', $args, $options );
 
 	// Get posts
-    add_filter( 'posts_where', 'ctfw_gallery_posts_where' ); // modify query to search content for [gallery] shortcode so not all posts are gotten
+    add_filter( 'posts_where', 'ctc_gallery_posts_where' ); // modify query to search content for [gallery] shortcode so not all posts are gotten
 	$posts_query = new WP_Query( $args );
-    remove_filter( 'posts_where', 'ctfw_gallery_posts_where' ); // stop filtering WP_Query
+    remove_filter( 'posts_where', 'ctc_gallery_posts_where' ); // stop filtering WP_Query
 
 	// Compile post's gallery data
 	if ( ! empty( $posts_query->posts ) ) {
@@ -277,7 +278,7 @@ function ctfw_gallery_posts( $options = array() ) {
 		foreach ( $posts_query->posts as $post ) {
 
 			// Get gallery data unless option prevents it
-			$galleries_data = $options['extract_data'] ? ctfw_post_galleries_data( $post ) : array();
+			$galleries_data = $options['extract_data'] ? ctc_post_galleries_data( $post ) : array();
 
 			// Add post and gallery data to array
 			if ( ! ( $options['exclude_empty'] && empty( $galleries_data['image_count'] ) ) ) {
@@ -295,7 +296,7 @@ function ctfw_gallery_posts( $options = array() ) {
 	}
 
 	// Return filterable
-	return apply_filters( 'ctfw_gallery_posts', $gallery_posts, $options );
+	return apply_filters( 'ctc_gallery_posts', $gallery_posts, $options );
 
 }
 
@@ -308,7 +309,7 @@ function ctfw_gallery_posts( $options = array() ) {
  * @param string $where Original SQL WHERE clause
  * @return string Modified WHERE clause
  */
-function ctfw_gallery_posts_where( $where ) {
+function ctc_gallery_posts_where( $where ) {
 
 	global $wpdb;
 
@@ -331,19 +332,19 @@ function ctfw_gallery_posts_where( $where ) {
  * @param array $options Options for getting gallery posts IDs
  * @return array Posts IDs
  */
-function ctfw_gallery_posts_ids( $options = array() ) {
+function ctc_gallery_posts_ids( $options = array() ) {
 
 	// Do not extract data in this case, just need IDS
 	$options['extract_data'] = false; // optimization
 
 	// Get posts/pages with IDs
-	$gallery_posts = ctfw_gallery_posts( $options );
+	$gallery_posts = ctc_gallery_posts( $options );
 
 	// Put IDs into array
 	$ids = array_keys( $gallery_posts );
 
 	// Return filtered
-	return apply_filters( 'ctfw_gallery_posts_ids', $ids );
+	return apply_filters( 'ctc_gallery_posts_ids', $ids );
 
 }
 
@@ -358,7 +359,7 @@ function ctfw_gallery_posts_ids( $options = array() ) {
  * @param array $options Options for preview display
  * @return string Gallery shortcode output
  */
-function ctfw_post_gallery_preview( $post, $options = array() ) {
+function ctc_post_gallery_preview( $post, $options = array() ) {
 
 	$preview = '';
 
@@ -367,10 +368,10 @@ function ctfw_post_gallery_preview( $post, $options = array() ) {
 		'rows' => 2,
 		'columns' => '' // inherit from shortcode
 	) );
-	$options = apply_filters( 'ctfw_post_gallery_preview_options', $options );
+	$options = apply_filters( 'ctc_post_gallery_preview_options', $options );
 
 	// Get data from galleries used in post
-	$galleries_data = ctfw_post_galleries_data( $post );
+	$galleries_data = ctc_post_galleries_data( $post );
 
 	// Found at least one gallery with image?
 	if ( ! empty( $galleries_data['image_count'] ) ) {
@@ -394,6 +395,6 @@ function ctfw_post_gallery_preview( $post, $options = array() ) {
 	}
 
 	// Return filterable
-	return apply_filters( 'ctfw_post_gallery_preview', $preview, $post, $options );
+	return apply_filters( 'ctc_post_gallery_preview', $preview, $post, $options );
 
 }

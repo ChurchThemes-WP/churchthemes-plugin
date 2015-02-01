@@ -163,7 +163,7 @@ class CTFW_WIDGETS_Breadcrumbs {
 
 		}
 
-		return apply_filters( 'ctfw_post_breadcrumbs', $post_breadcrumbs, $post_id );
+		return apply_filters( 'ctc_post_breadcrumbs', $post_breadcrumbs, $post_id );
 
 	}
 
@@ -216,7 +216,7 @@ class CTFW_WIDGETS_Breadcrumbs {
 
 		}
 
-		$term_breadcrumbs = apply_filters( 'ctfw_taxonomy_term_breadcrumbs', $term_breadcrumbs, $term, $taxonomy );
+		$term_breadcrumbs = apply_filters( 'ctc_taxonomy_term_breadcrumbs', $term_breadcrumbs, $term, $taxonomy );
 
 		return $term_breadcrumbs;
 
@@ -294,7 +294,7 @@ class CTFW_WIDGETS_Breadcrumbs {
 		// Reverse order
 		$date_breadcrumbs = array_reverse( $date_breadcrumbs );
 
-		return apply_filters( 'ctfw_date_breadcrumbs', $date_breadcrumbs, $base_url );
+		return apply_filters( 'ctc_date_breadcrumbs', $date_breadcrumbs, $base_url );
 
 	}
 
@@ -320,10 +320,10 @@ class CTFW_WIDGETS_Breadcrumbs {
 
 		// Shorten
 		if ( isset( $options['shorten'] ) ) {
-			$tidy_title = ctfw_shorten( $tidy_title, $options['shorten'] );
+			$tidy_title = ctc_shorten( $tidy_title, $options['shorten'] );
 		}
 
-		return apply_filters( 'ctfw_post_breadcrumbs', $tidy_title, $title );
+		return apply_filters( 'ctc_post_breadcrumbs', $tidy_title, $title );
 
 	}
 
@@ -348,7 +348,7 @@ class CTFW_WIDGETS_Breadcrumbs {
 			$post_type_obj = get_post_type_object( $post_type );
 
 			// Page Number
-			$page_num = ctfw_page_num();
+			$page_num = ctc_page_num();
 			if ( $page_num > 1 ) {
 				$this->add_breadcrumb( $breadcrumbs, array(
 					sprintf( _x( 'Page %s', 'breadcrumb', 'church-theme-framework' ), $page_num ),
@@ -375,7 +375,7 @@ class CTFW_WIDGETS_Breadcrumbs {
 
 					// No post type found
 					// Get post type via content type (section)
-					$post_types = ctfw_current_content_type_data( 'post_types' );
+					$post_types = ctc_current_content_type_data( 'post_types' );
 					if ( is_array( $post_types ) && 1 == count( $post_types ) && isset( $post_types[0] ) ) { // use section's post type if only one
 						$post_type = $post_types[0];
 					}
@@ -388,7 +388,7 @@ class CTFW_WIDGETS_Breadcrumbs {
 
 						/* translators: %s is mime type */
 						$this->add_breadcrumb( $breadcrumbs, array(
-							ctfw_mime_type_name( $post->post_mime_type ),
+							ctc_mime_type_name( $post->post_mime_type ),
 							get_permalink()
 						) );
 
@@ -531,7 +531,7 @@ class CTFW_WIDGETS_Breadcrumbs {
 
 		}
 
-		return apply_filters( 'ctfw_breadcrumbs_array', $breadcrumbs );
+		return apply_filters( 'ctc_breadcrumbs_array', $breadcrumbs );
 
 	}
 
@@ -556,7 +556,7 @@ class CTFW_WIDGETS_Breadcrumbs {
 			// Output
 			$i = 0;
 			$count = count( $breadcrumbs );
-			$string .= '<div class="ctfw-breadcrumbs' . $classes . '">';
+			$string .= '<div class="ctc-breadcrumbs' . $classes . '">';
 			foreach ( $breadcrumbs as $breadcrumb ) {
 
 				$i++;
@@ -592,7 +592,7 @@ class CTFW_WIDGETS_Breadcrumbs {
 		// Restore original $post data for proper code execution after breadcrumbs
 		wp_reset_postdata();
 
-		return apply_filters( 'ctfw_breadcrumbs_string', $string );
+		return apply_filters( 'ctc_breadcrumbs_string', $string );
 
 	}
 

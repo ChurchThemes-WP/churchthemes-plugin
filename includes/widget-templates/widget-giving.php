@@ -20,10 +20,10 @@ if ( ! empty( $title ) ) {
 
 ?>
 
-<div class="uplifted-giving-widget">
+<div class="ctc-giving-widget">
 
 	<?php if ( ! empty( $instance['text'] ) ) :	?>
-		<div class="uplifted-giving-widget-text">
+		<div class="ctc-giving-widget-text">
 			<?php echo wpautop( wptexturize( $instance['text'] ) ); ?>
 		</div>
 	<?php endif; ?>
@@ -32,7 +32,7 @@ if ( ! empty( $title ) ) {
 	$button_url = ! empty( $instance['button_url'] ) && 'http://' != $instance['button_url'] ? $instance['button_url'] : '';
 	if ( $button_url && ! empty( $instance['button_text'] ) ) :
 	?>
-		<div class="uplifted-giving-widget-button">
+		<div class="ctc-giving-widget-button">
 			<a href="<?php echo esc_url( $button_url ); ?>" target="_blank"><?php echo esc_html( $instance['button_text'] ); ?></a>
 		</div>
 	<?php endif; ?>

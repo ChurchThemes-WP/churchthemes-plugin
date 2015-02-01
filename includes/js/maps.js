@@ -5,16 +5,16 @@
 jQuery( document ).ready( function( $ ) {
 
 	// Loop map elements
-	$( '.ctfw-google-map' ).each( function() {
+	$( '.ctc-google-map' ).each( function() {
 
 		var id, lat, lng, type, zoom, latlng, map_type, map, image, marker;
 
 		// Get map data from element attributes
 		id = $( this ).attr( 'id' );
-		lat = $( this ).attr( 'data-ctfw-map-lat' );
-		lng = $( this ).attr( 'data-ctfw-map-lng' );
-		type = $( this ).attr( 'data-ctfw-map-type' );
-		zoom = $( this ).attr( 'data-ctfw-map-zoom' );
+		lat = $( this ).attr( 'data-ctc-map-lat' );
+		lng = $( this ).attr( 'data-ctc-map-lng' );
+		type = $( this ).attr( 'data-ctc-map-type' );
+		zoom = $( this ).attr( 'data-ctc-map-zoom' );
 
 		// Map being used? Have coordinates?
 		if ( $( '#' + id ).length && lat && lng ) {
@@ -55,7 +55,7 @@ jQuery( document ).ready( function( $ ) {
 			} );
 
 			// Custom Marker
-			image = new google.maps.MarkerImage( ctfw_maps.icon,
+			image = new google.maps.MarkerImage( ctc_maps.icon,
 				new google.maps.Size( 26, 26 ),
 				new google.maps.Point( 0,0 ),
 				new google.maps.Point( 13, 26 ) );

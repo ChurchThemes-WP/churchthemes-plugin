@@ -4,7 +4,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Functions
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -24,18 +25,18 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  * This information was useful: http://wordpress.stackexchange.com/questions/3480/how-can-i-force-a-file-download-in-the-wordpress-backend
  *
- * Use add_theme_support( 'ctfw_force_downloads' );
+ * Use add_theme_support( 'ctc_force_downloads' );
  *
  * @since 0.9
  * @global object $wp_query
  * @global object $wp_filesystem;
  */
-function ctfw_force_download() {
+function ctc_force_download() {
 
     global $wp_query, $wp_filesystem;
 
 	// Theme supports this?
-	if ( ! current_theme_supports( 'ctfw-force-downloads' ) ) {
+	if ( ! current_theme_supports( 'ctc-force-downloads' ) ) {
 		return;
 	}
 
@@ -102,7 +103,7 @@ function ctfw_force_download() {
 
 }
 
-add_action( 'template_redirect', 'ctfw_force_download' );
+add_action( 'template_redirect', 'ctc_force_download' );
 
 /**
  * Convert regular URL to one that forces download ("Save As")
@@ -118,16 +119,16 @@ add_action( 'template_redirect', 'ctfw_force_download' );
  * @param string $url URL for file
  * @return string URL forcing "Save As" on file if local
  */
-function ctfw_force_download_url( $url ) {
+function ctc_force_download_url( $url ) {
 
 	// In case URL is not local or feature not supported by theme
 	$download_url = $url;
 
 	// Theme supports this?
-	if ( current_theme_supports( 'ctfw-force-downloads' ) ) {
+	if ( current_theme_supports( 'ctc-force-downloads' ) ) {
 
 		// Is URL local?
-		if ( ctfw_is_local_url( $url ) ) {
+		if ( ctc_is_local_url( $url ) ) {
 
 			// Get URL to upload directory
 			$upload_dir = wp_upload_dir();
@@ -144,6 +145,6 @@ function ctfw_force_download_url( $url ) {
 
 	}
 
-	return apply_filters( 'ctfw_force_download_url', $download_url, $url );
+	return apply_filters( 'ctc_force_download_url', $download_url, $url );
 
 }

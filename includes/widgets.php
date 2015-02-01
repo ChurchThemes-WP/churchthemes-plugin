@@ -9,7 +9,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Functions
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -32,137 +33,137 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @since 0.9
  * @return array $widgets Available widgets configuration
  */
-function ctfw_widgets() {
+function ctc_widgets() {
 
 	// Available widgets
 	$widgets = array(
-		'ctfw-categories' => array(										// id_base as specified in widget's class
+		'ctc-categories' => array(										// id_base as specified in widget's class
 			'class'						=> 'CTFW_Widget_Categories',	// widget class name
 			'class_file'				=> 'widget-categories.php',		// filename of class in framework class directory
 			'template_file'				=> 'widget-categories.php',		// filename of template in widget-templates directory
 			'ctc_required'				=> false,						// requires Church Theme Content plugin to be active
-			'theme_support'				=> 'ctfw-widget-categories',	// add_theme_support() feature required (can be empty)
+			'theme_support'				=> 'ctc-widget-categories',	// add_theme_support() feature required (can be empty)
 			'theme_support_required'	=> array(),						// additional features theme must support for widget to register
 			'icon'						=> 'dashicons-microphone',
 			'unregister' 				=> array(						// widgets to unregister when this is registered
 											'WP_Widget_Categories'
 										),
 		),
-		'ctfw-posts' => array(
+		'ctc-posts' => array(
 			'class'						=> 'CTFW_Widget_Posts',
 			'class_file'				=> 'widget-posts.php',
 			'template_file'				=> 'widget-posts.php',
 			'ctc_required'				=> false,
-			'theme_support'				=> 'ctfw-widget-posts',
+			'theme_support'				=> 'ctc-widget-posts',
 			'theme_support_required'	=> array(),
 			'unregister'				=> array(
 				'WP_Widget_Recent_Posts'
 			)
 		),
-		'ctfw-sermons' => array(
+		'ctc-sermons' => array(
 			'class'						=> 'CTFW_Widget_Sermons',
 			'class_file'				=> 'widget-sermons.php',
 			'template_file'				=> 'widget-sermons.php',
 			'ctc_required'				=> true,
-			'theme_support'				=> 'ctfw-widget-sermons',
+			'theme_support'				=> 'ctc-widget-sermons',
 			'theme_support_required'	=> array(
 				'ctc-sermons',
 			),
 			'unregister'				=> array(),
 		),
-		'ctfw-events' => array(
+		'ctc-events' => array(
 			'class'						=> 'CTFW_Widget_Events',
 			'class_file'				=> 'widget-events.php',
 			'template_file'				=> 'widget-events.php',
 			'ctc_required'				=> true,
-			'theme_support'				=> 'ctfw-widget-events',
+			'theme_support'				=> 'ctc-widget-events',
 			'theme_support_required'	=> array(
 				'ctc-events',
 			),
 			'unregister'				=> array(),
 		),
-		'ctfw-gallery' => array(
+		'ctc-gallery' => array(
 			'class'						=> 'CTFW_Widget_Gallery',
 			'class_file'				=> 'widget-gallery.php',
 			'template_file'				=> 'widget-gallery.php',
 			'ctc_required'				=> false, // uses native WordPress galleries
-			'theme_support'				=> 'ctfw-widget-gallery',
+			'theme_support'				=> 'ctc-widget-gallery',
 			'theme_support_required'	=> array(),
 			'unregister'				=> array(),
 		),
-		'ctfw-galleries' => array(
+		'ctc-galleries' => array(
 			'class'						=> 'CTFW_Widget_Galleries',
 			'class_file'				=> 'widget-galleries.php',
 			'template_file'				=> 'widget-galleries.php',
 			'ctc_required'				=> false, // uses native WordPress galleries
-			'theme_support'				=> 'ctfw-widget-galleries',
+			'theme_support'				=> 'ctc-widget-galleries',
 			'theme_support_required'	=> array(),
 			'unregister'				=> array(),
 		),
-		'ctfw-people' => array(
+		'ctc-people' => array(
 			'class'						=> 'CTFW_Widget_People',
 			'class_file'				=> 'widget-people.php',
 			'template_file'				=> 'widget-people.php',
 			'ctc_required'				=> true,
-			'theme_support'				=> 'ctfw-widget-people',
+			'theme_support'				=> 'ctc-widget-people',
 			'theme_support_required'	=> array(
 				'ctc-people',
 			),
 			'unregister'				=> array(),
 		),
-		'ctfw-locations' => array(
+		'ctc-locations' => array(
 			'class'						=> 'CTFW_Widget_Locations',
 			'class_file'				=> 'widget-locations.php',
 			'template_file'				=> 'widget-locations.php',
 			'ctc_required'				=> true,
-			'theme_support'				=> 'ctfw-widget-locations',
+			'theme_support'				=> 'ctc-widget-locations',
 			'theme_support_required'	=> array(
 				'ctc-locations',
 			),
 			'unregister'				=> array(),
 		),
-		'ctfw-archives' => array(
+		'ctc-archives' => array(
 			'class'						=> 'CTFW_Widget_Archives',
 			'class_file'				=> 'widget-archives.php',
 			'template_file'				=> 'widget-archives.php',
 			'ctc_required'				=> false,
-			'theme_support'				=> 'ctfw-widget-archives',
+			'theme_support'				=> 'ctc-widget-archives',
 			'theme_support_required'	=> array(),
 			'unregister' 				=> array(
 											'WP_Widget_Archives'
 										)
 		),
-		'ctfw-giving' => array(
+		'ctc-giving' => array(
 			'class'						=> 'CTFW_Widget_Giving',
 			'class_file'				=> 'widget-giving.php',
 			'template_file'				=> 'widget-giving.php',
 			'ctc_required'				=> false,
-			'theme_support'				=> 'ctfw-widget-giving',
+			'theme_support'				=> 'ctc-widget-giving',
 			'theme_support_required'	=> array(),
 			'unregister'				=> array(),
 		),
-		'ctfw-slide' => array(
+		'ctc-slide' => array(
 			'class'						=> 'CTFW_Widget_Slide',
 			'class_file'				=> 'widget-slide.php',
 			'template_file'				=> 'widget-slide.php',
 			'ctc_required'				=> false,
-			'theme_support'				=> 'ctfw-widget-slide',
+			'theme_support'				=> 'ctc-widget-slide',
 			'theme_support_required'	=> array(),
 			'unregister'				=> array(),
 		),
-		'ctfw-highlight' => array(
+		'ctc-highlight' => array(
 			'class'						=> 'CTFW_Widget_Highlight',
 			'class_file'				=> 'widget-highlight.php',
 			'template_file'				=> 'widget-highlight.php',
 			'ctc_required'				=> false,
-			'theme_support'				=> 'ctfw-widget-highlight',
+			'theme_support'				=> 'ctc-widget-highlight',
 			'theme_support_required'	=> array(),
 			'unregister'				=> array(),
 		),
 	);
 
 	// Return filterable
-	return apply_filters( 'ctfw_widgets', $widgets );
+	return apply_filters( 'ctc_widgets', $widgets );
 
 }
 
@@ -177,13 +178,13 @@ function ctfw_widgets() {
  *
  * @since 0.9
  */
-function ctfw_register_widgets() {
+function ctc_register_widgets() {
 
 	// Available widgets
-	$widgets = ctfw_widgets();
+	$widgets = ctc_widgets();
 
 	// Church Theme Content plugin is installed and activated?
-	$ctc_active = ctfw_ctc_plugin_active();
+	$ctc_active = ctc_plugin_active();
 
 	// Loop widgets
 	foreach ( $widgets as $widget_id => $widget_data ) {
@@ -234,7 +235,7 @@ function ctfw_register_widgets() {
 
 }
 
-add_action( 'widgets_init', 'ctfw_register_widgets' ); // same as init 1
+add_action( 'widgets_init', 'ctc_register_widgets' ); // same as init 1
 
 /*********************************************
  * THEME SUPPORT
@@ -248,13 +249,13 @@ add_action( 'widgets_init', 'ctfw_register_widgets' ); // same as init 1
  * @param string $argument Specific argument
  * @return mixed Theme support data
  */
-function ctfw_get_widget_theme_support( $widget_id, $argument ) {
+function ctc_get_widget_theme_support( $widget_id, $argument ) {
 
 	// Null by default so if argument data not found, isset() returns false
 	$data = null;
 
 	// Get widgets
-	$widgets = ctfw_widgets();
+	$widgets = ctc_widgets();
 
 	// Get widget data
 	if ( isset( $widgets[$widget_id] ) ) { // valid widget
@@ -282,7 +283,7 @@ function ctfw_get_widget_theme_support( $widget_id, $argument ) {
 	}
 
 	// Return filterable
-	return apply_filters( 'ctfw_get_widget_theme_support', $data, $widget_id, $argument );
+	return apply_filters( 'ctc_get_widget_theme_support', $data, $widget_id, $argument );
 
 }
 
@@ -297,23 +298,23 @@ function ctfw_get_widget_theme_support( $widget_id, $argument ) {
  *
  * @since 0.9
  */
-function ctfw_filter_widget_fields() {
+function ctc_filter_widget_fields() {
 
 	// Loop widgets to filter their fields
-	$widgets = ctfw_widgets();
+	$widgets = ctc_widgets();
 	foreach ( $widgets as $widget_id => $widget_data ) {
 
 		// Set Visible Fields
-		add_filter( 'ctfw_widget_visible_fields-' . $widget_id, 'ctfw_set_visible_widget_fields', 10, 2 );
+		add_filter( 'ctc_widget_visible_fields-' . $widget_id, 'ctc_set_visible_widget_fields', 10, 2 );
 
 		// Set Field Overrides
-		add_filter( 'ctfw_widget_field_overrides-' . $widget_id, 'ctfw_set_widget_field_overrides', 10, 2 );
+		add_filter( 'ctc_widget_field_overrides-' . $widget_id, 'ctc_set_widget_field_overrides', 10, 2 );
 
 	}
 
 }
 
-add_action( 'widgets_init', 'ctfw_filter_widget_fields' );
+add_action( 'widgets_init', 'ctc_filter_widget_fields' );
 
 /**
  * Set Visible Fields
@@ -327,10 +328,10 @@ add_action( 'widgets_init', 'ctfw_filter_widget_fields' );
  * @param string $widget_id Widget ID
  * @return array Modified visible fields
  */
-function ctfw_set_visible_widget_fields( $visible_fields, $widget_id ) {
+function ctc_set_visible_widget_fields( $visible_fields, $widget_id ) {
 
 	// Get theme's supported fields for widget
-	$supported_fields = ctfw_get_widget_theme_support( $widget_id, 'fields' );
+	$supported_fields = ctc_get_widget_theme_support( $widget_id, 'fields' );
 
 	// Check if fields are set (even if empty)
 	if ( isset( $supported_fields ) ) {
@@ -357,10 +358,10 @@ function ctfw_set_visible_widget_fields( $visible_fields, $widget_id ) {
  * @param string $widget_id The widget's ID
  * @return array Field override data
  */
-function ctfw_set_widget_field_overrides( $field_overrides, $widget_id ) {
+function ctc_set_widget_field_overrides( $field_overrides, $widget_id ) {
 
 	// Return field overrides, if any
-	return ctfw_get_widget_theme_support( $widget_id, 'field_overrides' );
+	return ctc_get_widget_theme_support( $widget_id, 'field_overrides' );
 
 }
 
@@ -377,7 +378,7 @@ function ctfw_set_widget_field_overrides( $field_overrides, $widget_id ) {
  * @global array $wp_registered_widgets
  * @return array Registered widgets
  */
-function ctfw_get_registered_widgets() {
+function ctc_get_registered_widgets() {
 
 	global $wp_registered_widgets;
 
@@ -391,6 +392,6 @@ function ctfw_get_registered_widgets() {
 
 	$widgets = array_unique( $widgets ); // no duplicates
 
-	return apply_filters( 'ctfw_get_registered_widgets', $widgets );
+	return apply_filters( 'ctc_get_registered_widgets', $widgets );
 
 }

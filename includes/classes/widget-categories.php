@@ -6,7 +6,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Classes
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -30,7 +31,7 @@ class CTFW_Widget_Categories extends CTFW_Widget {
 	function __construct() {
 
 		parent::__construct(
-			'ctfw-categories',
+			'ctc-categories',
 			_x( 'CT Categories', 'widget', 'church-theme-framework' ),
 			array(
 				'description' => __( 'Shows categories of various types', 'church-theme-framework' )
@@ -38,7 +39,7 @@ class CTFW_Widget_Categories extends CTFW_Widget {
 		);
 
 		// Redirect Dropdown URL
-		add_action( 'template_redirect', array( &$this, 'ctfw_redirect_taxonomy' ) ); // used with Categories widget dropdown redirects
+		add_action( 'template_redirect', array( &$this, 'ctc_redirect_taxonomy' ) ); // used with Categories widget dropdown redirects
 
 	}
 
@@ -50,7 +51,7 @@ class CTFW_Widget_Categories extends CTFW_Widget {
 	 * @since 0.9
 	 * @return array Fields for widget
 	 */
-	function ctfw_fields() { // prefix in case WP core adds method with same name
+	function ctc_fields() { // prefix in case WP core adds method with same name
 
 		// Fields
 		$fields = array(
@@ -115,7 +116,7 @@ class CTFW_Widget_Categories extends CTFW_Widget {
 				'radio_inline'		=> false, // show radio inputs inline or on top of each other
 				'number_min'		=> '', // lowest possible value for number type
 				'number_max'		=> '', // highest possible value for number type
-				'options'			=> $this->ctfw_taxonomy_options(), // array of keys/values for radio or select
+				'options'			=> $this->ctc_taxonomy_options(), // array of keys/values for radio or select
 				'default'			=> 'category', // value to pre-populate option with (before first save or on reset)
 				'no_empty'			=> true, // if user empties value, force default to be saved instead
 				'allow_html'		=> false, // allow HTML to be used in the value (text, textarea)
@@ -150,7 +151,7 @@ class CTFW_Widget_Categories extends CTFW_Widget {
 				'attributes'		=> array(), // attributes to add to input element
 				'class'				=> '', // class(es) to add to input
 				'field_attributes'	=> array(), // attr => value array for field container
-				'field_class'		=> 'ctfw-widget-no-bottom-margin', // class(es) to add to field container
+				'field_class'		=> 'ctc-widget-no-bottom-margin', // class(es) to add to field container
 				'custom_sanitize'	=> '', // function to do additional sanitization (or array( &$this, 'method' ))
 				'custom_field'		=> '', // function for custom display of field input
 				'page_templates'	=> array(), // field will not appear or save if one of these page templates are not selected (or array( &$this, 'method' ))
@@ -225,7 +226,7 @@ class CTFW_Widget_Categories extends CTFW_Widget {
 				'attributes'		=> array(), // attributes to add to input element
 				'class'				=> '', // class(es) to add to input
 				'field_attributes'	=> array(), // attr => value array for field container
-				'field_class'		=> 'ctfw-widget-no-bottom-margin', // class(es) to add to field container
+				'field_class'		=> 'ctc-widget-no-bottom-margin', // class(es) to add to field container
 				'custom_sanitize'	=> '', // function to do additional sanitization (or array( &$this, 'method' ))
 				'custom_field'		=> '', // function for custom display of field input
 				'page_templates'	=> array(), // field will not appear or save if one of these page templates are not selected (or array( &$this, 'method' ))
@@ -249,7 +250,7 @@ class CTFW_Widget_Categories extends CTFW_Widget {
 				'attributes'		=> array(), // attributes to add to input element
 				'class'				=> '', // class(es) to add to input
 				'field_attributes'	=> array(), // attr => value array for field container
-				'field_class'		=> 'ctfw-widget-no-bottom-margin', // class(es) to add to field container
+				'field_class'		=> 'ctc-widget-no-bottom-margin', // class(es) to add to field container
 				'custom_sanitize'	=> '', // function to do additional sanitization (or array( &$this, 'method' ))
 				'custom_field'		=> '', // function for custom display of field input
 				'page_templates'	=> array(), // field will not appear or save if one of these page templates are not selected (or array( &$this, 'method' ))
@@ -292,7 +293,7 @@ class CTFW_Widget_Categories extends CTFW_Widget {
 	 * @since 0.9
 	 * @return array Taxonomy options for fields
 	 */
-	function ctfw_taxonomy_options() {
+	function ctc_taxonomy_options() {
 
 		$options = array();
 
@@ -320,7 +321,7 @@ class CTFW_Widget_Categories extends CTFW_Widget {
 		}
 
 		// Return filtered
-		return apply_filters( 'ctfw_categories_widget_taxonomy_options', $options );
+		return apply_filters( 'ctc_categories_widget_taxonomy_options', $options );
 
 	}
 
@@ -332,7 +333,7 @@ class CTFW_Widget_Categories extends CTFW_Widget {
 	 *
 	 * @since 0.9
 	 */
-	function ctfw_redirect_taxonomy() {
+	function ctc_redirect_taxonomy() {
 
 		// Redirect is being attempted on front page with valid taxonomy
 		$id = isset( $_GET['id'] ) ? (int) $_GET['id'] : '';

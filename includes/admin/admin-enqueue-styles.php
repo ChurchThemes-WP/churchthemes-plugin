@@ -4,7 +4,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Admin
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -24,21 +25,21 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  * @since 0.9
  */
-function ctfw_admin_enqueue_styles() {
+function ctc_admin_enqueue_styles() {
 
 	$screen = get_current_screen();
 
 	// Admin widgets
 	// Framework also enqueues this for Customizer in framework/includes/customize.php
 	if ( 'widgets' == $screen->base ) {
-		wp_enqueue_style( 'ctfw-widgets', CTFW_WIDGETS_CSS_DIR_URL . '/admin-widgets.css', false ); // bust cache on update
+		wp_enqueue_style( 'ctc-widgets', CTFW_WIDGETS_CSS_DIR_URL . '/admin-widgets.css', false ); // bust cache on update
 	}
 
 	// Theme license
 	if ( 'appearance_page_theme-license' == $screen->base ) {
-		wp_enqueue_style( 'ctfw-license', CTFW_WIDGETS_CSS_DIR_URL . '/admin-license.css', false ); // bust cache on update
+		wp_enqueue_style( 'ctc-license', CTFW_WIDGETS_CSS_DIR_URL . '/admin-license.css', false ); // bust cache on update
 	}
 
 }
 
-add_action( 'admin_enqueue_scripts', 'ctfw_admin_enqueue_styles' );
+add_action( 'admin_enqueue_scripts', 'ctc_admin_enqueue_styles' );

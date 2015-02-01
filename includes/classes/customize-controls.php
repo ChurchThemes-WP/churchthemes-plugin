@@ -28,8 +28,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		public function render_content() {
 
 			// allow description to be placed here
-			do_action( 'ctfw_customize_textarea_control_before' );
-			do_action( 'ctfw_customize_textarea_control_before-' . $this->id );
+			do_action( 'ctc_customize_textarea_control_before' );
+			do_action( 'ctc_customize_textarea_control_before-' . $this->id );
 
 			?>
 			<label>
@@ -76,7 +76,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		public function render_content() {
 
 			// Get presets
-			$presets = ctfw_background_image_presets();
+			$presets = ctc_background_image_presets();
 
 			// Value saved
 			$value = $this->value();
@@ -89,7 +89,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 			</label>
 
-			<ul class="ctfw-customize-image-presets">
+			<ul class="ctc-customize-image-presets">
 
 				<?php
 
@@ -105,7 +105,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 					// Selected class
 					if ( $value == $url ) {
-						$classes[] = 'ctfw-customize-image-preset-selected';
+						$classes[] = 'ctc-customize-image-preset-selected';
 					}
 
 					// Build class attribute
@@ -123,7 +123,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 							data-customize-image-preset-position="<?php echo esc_attr( $data['position'] ); ?>"
 							data-customize-image-preset-attachment="<?php echo esc_attr( $data['attachment'] ); ?>"
 							data-customize-image-preset-colorable="<?php echo esc_attr( $data['colorable'] ); ?>">
-							<div class="ctfw-customize-thumbnail-wrapper"><img src="<?php echo esc_url( $thumbnail_url ); ?>" /></div>
+							<div class="ctc-customize-thumbnail-wrapper"><img src="<?php echo esc_url( $thumbnail_url ); ?>" /></div>
 						</li>
 
 					<?php
@@ -134,7 +134,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 			</ul>
 
-			<p class="ctfw-customize-background-image-preset-colorable" class="description" style="display: none">
+			<p class="ctc-customize-background-image-preset-colorable" class="description" style="display: none">
 				<?php _e( 'The selected image is <strong>colorable</strong>.', 'church-theme-framework' ); ?>
 			</p>
 
@@ -172,7 +172,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 			// Add presets tab (multiple)
 			if ( $this->presets ) {
-				$this->add_tab( 'ctfw_presets',  _x( 'Presets', 'customizer', 'church-theme-framework' ),  array( $this, 'tab_preset_backgrounds' ) );
+				$this->add_tab( 'ctc_presets',  _x( 'Presets', 'customizer', 'church-theme-framework' ),  array( $this, 'tab_preset_backgrounds' ) );
 			}
 
 			// Remove "Default" tab - user can select first in presets
@@ -202,7 +202,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 					data-customize-image-preset-position="<?php echo esc_attr( $data['position'] ); ?>"
 					data-customize-image-preset-attachment="<?php echo esc_attr( $data['attachment'] ); ?>"
 					data-customize-image-preset-colorable="<?php echo esc_attr( $data['colorable'] ); ?>">
-					<div class="ctfw-customizer-thumbnail-wrapper"><img src="<?php echo esc_url( $thumbnail_url ); ?>" /></div>
+					<div class="ctc-customizer-thumbnail-wrapper"><img src="<?php echo esc_url( $thumbnail_url ); ?>" /></div>
 				</a>
 				<?php
 

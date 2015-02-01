@@ -19,7 +19,7 @@ if ( ! empty( $title ) ) {
 }
 
 // Get posts
-$posts = $this->ctfw_get_posts(); // widget's default query according to field values
+$posts = $this->ctc_get_posts(); // widget's default query according to field values
 
 // Have posts
 if ( ! empty( $posts ) ) :

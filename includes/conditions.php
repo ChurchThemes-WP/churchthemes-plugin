@@ -4,7 +4,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Functions
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -24,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @global bool $multipage
  * @return bool True if current post has multiple pages
  */
-function ctfw_is_multipage() {
+function ctc_is_multipage() {
 
 	global $multipage;
 
@@ -34,7 +35,7 @@ function ctfw_is_multipage() {
 		$is_multipage = true;
 	}
 
-	return apply_filters( 'ctfw_is_multipage', $is_multipage );
+	return apply_filters( 'ctc_is_multipage', $is_multipage );
 
 }
 
@@ -45,7 +46,7 @@ function ctfw_is_multipage() {
  * @global object $post
  * @return bool True if uses more tag
  */
-function ctfw_has_more_tag() {
+function ctc_has_more_tag() {
 
 	global $post;
 
@@ -55,7 +56,7 @@ function ctfw_has_more_tag() {
 		$has_more_tag = true;
 	}
 
-	return apply_filters( 'ctfw_has_more_tag', $has_more_tag );
+	return apply_filters( 'ctc_has_more_tag', $has_more_tag );
 
 }
 
@@ -65,7 +66,7 @@ function ctfw_has_more_tag() {
  * @since 0.9
  * @return bool True if has title
  */
-function ctfw_has_title() {
+function ctc_has_title() {
 
 	$has_title = false;
 
@@ -73,7 +74,7 @@ function ctfw_has_title() {
 		$has_title = true;
 	}
 
-	return apply_filters( 'ctfw_has_title', $has_title );
+	return apply_filters( 'ctc_has_title', $has_title );
 
 }
 
@@ -83,7 +84,7 @@ function ctfw_has_title() {
  * @since 0.9
  * @return bool True if has content
  */
-function ctfw_has_content() {
+function ctc_has_content() {
 
 	$has_content = false;
 
@@ -91,7 +92,7 @@ function ctfw_has_content() {
 		$has_content = true;
 	}
 
-	return apply_filters( 'ctfw_has_content', $has_content );
+	return apply_filters( 'ctc_has_content', $has_content );
 
 }
 
@@ -101,7 +102,7 @@ function ctfw_has_content() {
  * @since 0.9
  * @return bool True if has manual or automatic excerpt
  */
-function ctfw_has_excerpt() {
+function ctc_has_excerpt() {
 
 	$has_excerpt = false;
 
@@ -109,7 +110,7 @@ function ctfw_has_excerpt() {
 		$has_excerpt = true;
 	}
 
-	return apply_filters( 'ctfw_has_excerpt', $has_excerpt );
+	return apply_filters( 'ctc_has_excerpt', $has_excerpt );
 
 }
 
@@ -120,7 +121,7 @@ function ctfw_has_excerpt() {
  * @global object $post
  * @return bool True if has manual excerpt
  */
-function ctfw_has_manual_excerpt() {
+function ctc_has_manual_excerpt() {
 
 	global $post;
 
@@ -130,7 +131,7 @@ function ctfw_has_manual_excerpt() {
 		$bool = true;
 	}
 
-	return apply_filters( 'ctfw_has_manual_excerpt', $bool );
+	return apply_filters( 'ctc_has_manual_excerpt', $bool );
 
 }
 
@@ -145,7 +146,7 @@ function ctfw_has_manual_excerpt() {
  * @global object $post
  * @return bool True if user can edit post
  */
-function ctfw_can_edit_post() {
+function ctc_can_edit_post() {
 
 	global $post;
 
@@ -165,7 +166,7 @@ function ctfw_can_edit_post() {
 
 	}
 
-	return apply_filters( 'ctfw_can_edit_post', $can_edit );
+	return apply_filters( 'ctc_can_edit_post', $can_edit );
 
 }
 
@@ -181,7 +182,7 @@ function ctfw_can_edit_post() {
  * @since 0.9
  * @return bool True if is "Posts page"
  */
-function ctfw_is_posts_page() {
+function ctc_is_posts_page() {
 
 	$bool = false;
 
@@ -189,6 +190,6 @@ function ctfw_is_posts_page() {
 		$bool = true;
 	}
 
-	return apply_filters( 'ctfw_is_posts_page', $bool );
+	return apply_filters( 'ctc_is_posts_page', $bool );
 
 }

@@ -4,7 +4,8 @@
  *
  * @package    Church_Theme_Framework
  * @subpackage Functions
- * @copyright  Copyright (c) 2013, churchthemes.com
+ * @copyright  Copyright (c) 2015, churchthemes.net
+ * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -26,12 +27,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @since 0.9
  * @param string $content URL
  */
-function ctfw_embed_code( $content ) {
+function ctc_embed_code( $content ) {
 
 	global $wp_embed;
 
 	// Convert URL into media shortcode like [audio] or [video]
-	if ( ctfw_is_url( $content ) ) {
+	if ( ctc_is_url( $content ) ) {
 		$embed_code = $wp_embed->shortcode( array(), $content );
 	}
 
@@ -45,29 +46,29 @@ function ctfw_embed_code( $content ) {
 	$embed_code = do_shortcode( $embed_code );
 
 	// Return filtered
-	return apply_filters( 'ctfw_embed_code', $embed_code, $content );
+	return apply_filters( 'ctc_embed_code', $embed_code, $content );
 
 }
 
 /**
  * Responsive embeds JavaScript
  */
-function ctfw_responsive_embeds_enqueue_scripts() {
+function ctc_responsive_embeds_enqueue_scripts() {
 
 	// If theme supports this feature
-	if ( current_theme_supports( 'ctfw-responsive-embeds' ) ) {
+	if ( current_theme_supports( 'ctc-responsive-embeds' ) ) {
 
 		// FitVids.js
-		wp_enqueue_script( 'fitvids', ctfw_theme_url( CTFW_WIDGETS_JS_DIR . '/jquery.fitvids.js' ), array( 'jquery' ), CTFW_WIDGETS_THEME_VERSION ); // bust cache on theme update
+		wp_enqueue_script( 'fitvids', ctc_theme_url( CTFW_WIDGETS_JS_DIR . '/jquery.fitvids.js' ), array( 'jquery' ), CTFW_WIDGETS_THEME_VERSION ); // bust cache on theme update
 
 		// Responsive embeds script
-		wp_enqueue_script( 'ctfw-responsive-embeds', ctfw_theme_url( CTFW_WIDGETS_JS_DIR . '/responsive-embeds.js' ), array( 'fitvids' ), CTFW_WIDGETS_THEME_VERSION ); // bust cache on theme update
+		wp_enqueue_script( 'ctc-responsive-embeds', ctc_theme_url( CTFW_WIDGETS_JS_DIR . '/responsive-embeds.js' ), array( 'fitvids' ), CTFW_WIDGETS_THEME_VERSION ); // bust cache on theme update
 
 	}
 
 }
 
-add_action( 'wp_enqueue_scripts', 'ctfw_responsive_embeds_enqueue_scripts' ); // front-end only (yes, wp_enqueue_scripts is correct for styles)
+add_action( 'wp_enqueue_scripts', 'ctc_responsive_embeds_enqueue_scripts' ); // front-end only (yes, wp_enqueue_scripts is correct for styles)
 
 /**
  * Generic embeds
@@ -75,16 +76,16 @@ add_action( 'wp_enqueue_scripts', 'ctfw_responsive_embeds_enqueue_scripts' ); //
  * This helps make embeds more generic by setting parameters to remove
  * related videos, set neutral colors, reduce branding, etc.
  *
- * Enable with: add_theme_support( 'ctfw-generic-embeds' );
+ * Enable with: add_theme_support( 'ctc-generic-embeds' );
  *
  * @since 0.9
  * @param string $html Embed HTML code
  * @return string Modified embed HTML code
  */
-function ctfw_generic_embeds( $html ) {
+function ctc_generic_embeds( $html ) {
 
 	// Does theme support this?
-	if ( current_theme_supports( 'ctfw-generic-embeds' ) ) {
+	if ( current_theme_supports( 'ctc-generic-embeds' ) ) {
 
 		// Get iframe source URL
 		preg_match_all( '/<iframe[^>]+src=([\'"])(.+?)\1[^>]*>/i', $html, $matches );
@@ -121,7 +122,7 @@ function ctfw_generic_embeds( $html ) {
 			}
 
 			// Modify URL
-			$args = apply_filters( 'ctfw_generic_embeds_add_args', $args, $source );
+			$args = apply_filters( 'ctc_generic_embeds_add_args', $args, $source );
 			$new_url = add_query_arg( $args, $url );
 
 			// Replace source with modified URL
@@ -137,4 +138,4 @@ function ctfw_generic_embeds( $html ) {
 
 }
 
-add_filter( 'embed_oembed_html', 'ctfw_generic_embeds' );
+add_filter( 'embed_oembed_html', 'ctc_generic_embeds' );

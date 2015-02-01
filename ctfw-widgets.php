@@ -1,8 +1,7 @@
 <?php
-/*
-* Plugin Name: Church Theme Framework Widgets
-* Version: 0.1.2
-*/
+/**
+ * Adds ChurchThemes widgets to the plugin.
+ */
 
 
 // No direct access
@@ -115,7 +114,7 @@ class ChurchThemeFrameworkWidgets {
 		$widgets = array(
 
 			// widget class name
-			'ctfw-categories' => array(
+			'ctc-categories' => array(
 
 				// filename of class in framework class directory
 				'class' => 'CTFW_Widget_Categories',
@@ -130,7 +129,7 @@ class ChurchThemeFrameworkWidgets {
 				'ctc_required' => false,
 
 				// additional features theme must support for widget to register
-				'theme_support' => 'ctfw-widget-categories',
+				'theme_support' => 'ctc-widget-categories',
 
 				'theme_support_required' => array(),
 				// widgets to unregister when this is registered
@@ -140,114 +139,114 @@ class ChurchThemeFrameworkWidgets {
 					'WP_Widget_Categories'
 				),
 			),
-			'ctfw-posts' => array(
+			'ctc-posts' => array(
 				'class' => 'CTFW_Widget_Posts',
 				'class_file' => 'widget-posts.php',
 				'template_file' => 'widget-posts.php',
 				'ctc_required' => false,
-				'theme_support' => 'ctfw-widget-posts',
+				'theme_support' => 'ctc-widget-posts',
 				'theme_support_required' => array(),
 				'unregister' => array(
 					'WP_Widget_Recent_Posts'
 				)
 			),
-			'ctfw-sermons' => array(
+			'ctc-sermons' => array(
 				'class' => 'CTFW_Widget_Sermons',
 				'class_file' => 'widget-sermons.php',
 				'template_file' => 'widget-sermons.php',
 				'ctc_required' => true,
-				'theme_support' => 'ctfw-widget-sermons',
+				'theme_support' => 'ctc-widget-sermons',
 				'theme_support_required' => array(
 					'ctc-sermons',
 				),
 				'unregister' => array(),
 			),
-			'ctfw-events' => array(
+			'ctc-events' => array(
 				'class' => 'CTFW_Widget_Events',
 				'class_file' => 'widget-events.php',
 				'template_file' => 'widget-events.php',
 				'ctc_required' => true,
-				'theme_support' => 'ctfw-widget-events',
+				'theme_support' => 'ctc-widget-events',
 				'theme_support_required' => array(
 					'ctc-events',
 				),
 				'unregister' => array(),
 			),
-			'ctfw-gallery' => array(
+			'ctc-gallery' => array(
 				'class' => 'CTFW_Widget_Gallery',
 				'class_file' => 'widget-gallery.php',
 				'template_file' => 'widget-gallery.php',
 				'ctc_required' => false, // uses native WordPress galleries
-				'theme_support' => 'ctfw-widget-gallery',
+				'theme_support' => 'ctc-widget-gallery',
 				'theme_support_required' => array(),
 				'unregister' => array(),
 			),
-			'ctfw-galleries' => array(
+			'ctc-galleries' => array(
 				'class' => 'CTFW_Widget_Galleries',
 				'class_file' => 'widget-galleries.php',
 				'template_file' => 'widget-galleries.php',
 				'ctc_required' => false, // uses native WordPress galleries
-				'theme_support' => 'ctfw-widget-galleries',
+				'theme_support' => 'ctc-widget-galleries',
 				'theme_support_required' => array(),
 				'unregister' => array(),
 			),
-			'ctfw-people' => array(
+			'ctc-people' => array(
 				'class' => 'CTFW_Widget_People',
 				'class_file' => 'widget-people.php',
 				'template_file' => 'widget-people.php',
 				'ctc_required' => true,
-				'theme_support' => 'ctfw-widget-people',
+				'theme_support' => 'ctc-widget-people',
 				'theme_support_required' => array(
 					'ctc-people',
 				),
 				'unregister' => array(),
 			),
-			'ctfw-locations' => array(
+			'ctc-locations' => array(
 				'class' => 'CTFW_Widget_Locations',
 				'class_file' => 'widget-locations.php',
 				'template_file' => 'widget-locations.php',
 				'ctc_required' => true,
-				'theme_support' => 'ctfw-widget-locations',
+				'theme_support' => 'ctc-widget-locations',
 				'theme_support_required' => array(
 					'ctc-locations',
 				),
 				'unregister' => array(),
 			),
-			'ctfw-archives' => array(
+			'ctc-archives' => array(
 				'class' => 'CTFW_Widget_Archives',
 				'class_file' => 'widget-archives.php',
 				'template_file' => 'widget-archives.php',
 				'ctc_required' => false,
-				'theme_support' => 'ctfw-widget-archives',
+				'theme_support' => 'ctc-widget-archives',
 				'theme_support_required' => array(),
 				'unregister' => array(
 					'WP_Widget_Archives'
 				)
 			),
-			'ctfw-giving' => array(
+			'ctc-giving' => array(
 				'class' => 'CTFW_Widget_Giving',
 				'class_file' => 'widget-giving.php',
 				'template_file' => 'widget-giving.php',
 				'ctc_required' => false,
-				'theme_support' => 'ctfw-widget-giving',
+				'theme_support' => 'ctc-widget-giving',
 				'theme_support_required' => array(),
 				'unregister' => array(),
 			),
-			'ctfw-slide' => array(
+			'ctc-slide' => array(
 				'class' => 'CTFW_Widget_Slide',
 				'class_file' => 'widget-slide.php',
 				'template_file' => 'widget-slide.php',
 				'ctc_required' => false,
-				'theme_support' => 'ctfw-widget-slide',
+				'theme_support' => 'ctc-widget-slide',
 				'theme_support_required' => array(),
 				'unregister' => array(),
 			),
-			'ctfw-highlight' => array(
+			'ctc-highlight' => array(
 				'class' => 'CTFW_Widget_Highlight',
 				'class_file' => 'widget-highlight.php',
 				'template_file' => 'widget-highlight.php',
 				'ctc_required' => false,
-				'theme_support' => 'ctfw-widget-highlight',
+				'theme_support' => 'ctc-widget-highlight',
 				'theme_support_required' => array(),
 				'unregister' => array(),
 			),
@@ -257,25 +256,11 @@ class ChurchThemeFrameworkWidgets {
 		return $widgets;
 	}
 
-	public static function ctcActive(){
-		return is_plugin_active( 'church-theme-content/church-theme-content.php' );
-	}
-
 	public static function registerWidgets() {
 
 		$widgets = self::widgetList();
 
-
-		$ctcActive = self::ctcActive();
-
-
 		foreach ( $widgets as $widget_id => $widget_data ) {
-
-			// skip widget if it requires the church themes content plugin but the plugin isn't active
-			if( $widget_data['ctc_required'] && ! $ctcActive ){
-				continue;
-			}
-
 
 			$widget_class_path = trailingslashit( CTFW_WIDGETS_CLASS_DIR ) . $widget_data['class_file'];
 
