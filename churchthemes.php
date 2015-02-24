@@ -189,6 +189,7 @@ class ChurchThemes_Framework {
 				CTC_INC_DIR . '/event-fields.php',
 				CTC_INC_DIR . '/helpers.php',
 				CTC_INC_DIR . '/mime-types.php',
+				CTC_INC_DIR . '/page-nav.php',
 				CTC_INC_DIR . '/post-types.php',
 				CTC_INC_DIR . '/schedule.php',
 				CTC_INC_DIR . '/support.php',
