@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: ChurchThemes Framework
- * Plugin URI: http://churchthemes.net/churchthemes-plugin/
+ * Plugin URI: https://churchthemes.net/churchthemes-plugin/
  * Description: Adds sermon, event, person and location post types and related widgets. Works with any theme and is best used with themes designed specifically for it.
  * Version: 1.0
  * Author: churchthemes.net
- * Author URI: http://churchthemes.net
+ * Author URI: https://churchthemes.net
  * License: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * Text Domain: churchthemes
  * Domain Path: /languages
