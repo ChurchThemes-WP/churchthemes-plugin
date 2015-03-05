@@ -5,7 +5,7 @@
  * @package    ChurchThemes_Framework
  * @subpackage Admin
  * @copyright  Copyright (c) 2015, churchthemes.net
- * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
+ * @copyright  Copyright (c) 2013 - 2015, Steven Gliebe
  * @link       https://github.com/churchthemes-wp/churchthemes-plugin
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9

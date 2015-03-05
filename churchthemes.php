@@ -12,7 +12,7 @@
  *
  * @package    ChurchThemes_Framework
  * @copyright  Copyright (c) 2015, churchthemes.net
- * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
+ * @copyright  Copyright (c) 2013 - 2015, Steven Gliebe
  * @link       https://github.com/churchthemes-wp/churchthemes-plugin
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -138,7 +138,7 @@ class ChurchThemes_Framework {
 	 * Load language file
 	 *
 	 * This will load the MO file for the current locale.
-	 * The translation file must be named church-theme-content-$locale.mo.
+	 * The translation file must be named churchthemes-framework-$locale.mo.
 	 *
 	 * First it will check to see if the MO file exists in wp-content/languages/plugins.
 	 * If not, then the 'languages' direcory inside the plugin will be used.

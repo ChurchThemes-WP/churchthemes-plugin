@@ -2,10 +2,10 @@
 /**
  * Embed Functions
  *
- * @package    Church_Theme_Framework
+ * @package    ChurchThemes_Framework
  * @subpackage Functions
  * @copyright  Copyright (c) 2015, churchthemes.net
- * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
+ * @copyright  Copyright (c) 2013 - 2015, Steven Gliebe
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -59,10 +59,10 @@ function ctc_responsive_embeds_enqueue_scripts() {
 	if ( current_theme_supports( 'ctc-responsive-embeds' ) ) {
 
 		// FitVids.js
-		wp_enqueue_script( 'fitvids', ctc_theme_url( CTFW_WIDGETS_JS_DIR . '/jquery.fitvids.js' ), array( 'jquery' ), CTC_VERSION ); // bust cache on theme update
+		wp_enqueue_script( 'fitvids', plugins_url( '/js/jquery.fitvids.js', CTC_FILE ), array( 'jquery' ), CTC_VERSION ); // bust cache on theme update
 
 		// Responsive embeds script
-		wp_enqueue_script( 'ctc-responsive-embeds', ctc_theme_url( CTFW_WIDGETS_JS_DIR . '/responsive-embeds.js' ), array( 'fitvids' ), CTC_VERSION ); // bust cache on theme update
+		wp_enqueue_script( 'ctc-responsive-embeds', plugins_url( '/js/responsive-embeds.js', CTC_FILE ), array( 'fitvids' ), CTC_VERSION ); // bust cache on theme update
 
 	}
 

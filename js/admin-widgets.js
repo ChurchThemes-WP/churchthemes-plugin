@@ -168,7 +168,7 @@ jQuery( document ).ready( function( $ ) {
 					$( '#widgets-search' )
 						.val( search )
 						.change();
-				}, 100 )
+				}, 100 );
 
 			}
 

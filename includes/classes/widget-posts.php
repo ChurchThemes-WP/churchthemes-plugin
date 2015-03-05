@@ -4,10 +4,10 @@
  *
  * This replaces the core Recent Posts widget, adding options to show author, date, excerpt and thumbnail.
  *
- * @package    Church_Theme_Framework
+ * @package    ChurchThemes_Framework
  * @subpackage Classes
  * @copyright  Copyright (c) 2015, churchthemes.net
- * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
+ * @copyright  Copyright (c) 2013 - 2015, Steven Gliebe
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9

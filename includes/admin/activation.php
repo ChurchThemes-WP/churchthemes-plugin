@@ -2,10 +2,10 @@
 /**
  * Theme Activation
  *
- * @package    Church_Theme_Framework
+ * @package    ChurchThemes_Framework
  * @subpackage Admin
  * @copyright  Copyright (c) 2015, churchthemes.net
- * @copyright  Copyright (c) 2013 - 2015, churchthemes.com
+ * @copyright  Copyright (c) 2013 - 2015, Steven Gliebe
  * @link       https://github.com/churchthemes/church-theme-framework
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @since      0.9
@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  *		add_theme_support( 'ctc-after-activation', array(
  *			'flush_rewrite_rules'	=> true,
- *			'replace_notice'		=> sprintf( __( 'Please follow the <a href="%s">Next Steps</a> now that the theme has been activated.', 'your-theme-textdomain' ), 'http://churchthemes.com/guides/user/getting-started/' )
+ *			'replace_notice'		=> sprintf( __( 'Please follow the <a href="%s">Next Steps</a> now that the theme has been activated.', 'your-theme-textdomain' ), 'http://Steven Gliebe/guides/user/getting-started/' )
  *   	) );
  *
  * This does not affect the Customizer preview.
