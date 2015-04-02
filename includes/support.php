@@ -426,3 +426,12 @@ function ctc_set_field_overrides( $field_overrides, $post_type ) {
 	return ctc_get_theme_support_by_post_type( $post_type, 'field_overrides' );
 
 }
+
+/**
+ * Include base widget styles
+ */
+function ctc_enqueue_styles() {
+	wp_enqueue_style( 'ctc-widgets', CTFW_WIDGETS_CSS_DIR_URL . '/widgets.css', false );
+}
+
+add_action( 'wp_enqueue_scripts', 'ctc_enqueue_styles' );

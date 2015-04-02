@@ -46,7 +46,9 @@ if ( ! empty( $instance['show_dropdown'] ) ) {
 	<form>
 		<input type="hidden" name="taxonomy" value="<?php echo esc_attr( $taxonomy ); ?>">
 		<?php wp_dropdown_categories( $cat_args ); ?>
-		<input type="submit" name="submit" value="View">
+		<div class="submit-button">
+			<input type="submit" name="submit" value="View">
+		</div>
 	</form>
 	<?php
 

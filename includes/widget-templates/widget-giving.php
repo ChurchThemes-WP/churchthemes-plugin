@@ -33,7 +33,7 @@ if ( ! empty( $title ) ) {
 	if ( $button_url && ! empty( $instance['button_text'] ) ) :
 	?>
 		<div class="ctc-giving-widget-button">
-			<a href="<?php echo esc_url( $button_url ); ?>" target="_blank"><?php echo esc_html( $instance['button_text'] ); ?></a>
+			<a href="<?php echo esc_url( $button_url ); ?>" target="_blank" class="button"><?php echo esc_html( $instance['button_text'] ); ?></a>
 		</div>
 	<?php endif; ?>
 
