@@ -1,0 +1,198 @@
+/* Widget Title */
+.ctc-widget-entry-title {
+  font-size: 1em;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.widget .hentry {
+  padding: 0;
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: .75em;
+  padding-bottom: .75rem;
+  margin-bottom: .75em;
+  margin-bottom: .75rem;
+}
+
+.widget li a {
+  display: inline-block!important;
+  border: none!important;
+}
+
+.widget li {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.widget li:last-child {
+  border-bottom: none;
+}
+
+.widget .hentry:last-child {
+  padding: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.widget_ctc-categories form {
+  overflow: hidden;
+}
+
+.widget_ctc-categories .ctc-dropdown-taxonomy-redirect {
+  float: left;
+  width: 70%;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+}
+
+.widget_ctc-categories .ctc-dropdown-taxonomy-redirect ~ .submit-button {
+  float: right;
+  width: 30%;
+  padding-left: 1em;
+  padding-left: 1rem;
+}
+
+.widget_ctc-categories .submit-button input {
+  width: 100%;
+}
+
+.widget_ctc-events .ctc-image {
+  float: right;
+  width: 30%;
+  margin-left: 1em;
+  margin-left: 1rem;
+}
+
+.widget_ctc-events .ctc-widget-entry-meta li {
+  border: 0;
+  font-size: .8em;
+  font-size: .8rem;
+}
+
+.widget_ctc-events .ctc-widget-entry-content p {
+  margin: 0;
+}
+
+.widget_ctc-gallery {
+  overflow: hidden;
+}
+
+.widget_ctc-gallery .ctc-gallery-widget-link {
+  display: block;
+  clear: both;
+}
+
+.widget_ctc-gallery .ctc-gallery-widget-link .button {
+  width: 100%;
+  text-align: center;
+}
+
+.widget_ctc-giving .ctc-giving-widget-button .button {
+  width: 100%;
+  text-align: center;
+}
+
+.widget_ctc-highlight .widget-title {
+  margin-bottom: 0em;
+}
+
+.widget_ctc-locations .ctc-image {
+  float: right;
+  width: 40%;
+  margin-left: 1em;
+  margin-left: 1rem;
+}
+
+.widget_ctc-locations .ctc-widget-entry-meta li {
+  border: 0;
+  font-size: .8em;
+  font-size: .8rem;
+  line-height: 1.4;
+}
+
+.widget_ctc-locations .ctc-widget-entry-content p {
+  margin: 0;
+}
+
+
+.widget_ctc-people .ctc-image {
+  float: right;
+  width: 40%;
+  margin-left: 1em;
+  margin-left: 1rem;
+}
+
+.widget_ctc-people .ctc-widget-entry-meta li {
+  border: 0;
+  font-size: .8em;
+  font-size: .8rem;
+  line-height: 1.4;
+}
+
+.widget_ctc-people .ctc-widget-entry-meta li a {
+  padding: 0;
+}
+
+.widget_ctc-people .ctc-widget-entry-content {
+  margin-top: .75em;
+  margin-top: .75rem;
+}
+
+.widget_ctc-people .ctc-widget-entry-content p {
+  margin: 0;
+}
+
+.widget_ctc-posts .ctc-widget-entry-thumb {
+  float: right;
+  width: 40%;
+  margin-left: 1em;
+  margin-left: 1rem;
+}
+
+.widget_ctc-posts .ctc-widget-entry-meta li {
+  border: 0;
+  font-size: .8em;
+  font-size: .8rem;
+  line-height: 1.4;
+}
+
+.widget_ctc-posts .ctc-widget-entry-meta li a {
+  padding: 0;
+}
+
+.widget_ctc-posts .ctc-widget-entry-content {
+  margin-top: .75em;
+  margin-top: .75rem;
+}
+
+.widget_ctc-posts .ctc-widget-entry-content p {
+  margin: 0;
+}
+
+.widget_ctc-sermons .ctc-widget-entry-thumb {
+  float: right;
+  width: 40%;
+  margin-left: 1em;
+  margin-left: 1rem;
+}
+
+.widget_ctc-sermons .ctc-widget-entry-meta li {
+  border: 0;
+  font-size: .8em;
+  font-size: .8rem;
+  line-height: 1.4;
+}
+
+.widget_ctc-sermons .ctc-widget-entry-meta li a {
+  padding: 0;
+}
+
+.widget_ctc-sermons .ctc-widget-entry-content {
+  margin-top: .75em;
+  margin-top: .75rem;
+}
+
+.widget_ctc-sermons .ctc-widget-entry-content p {
+  margin: 0;
+}
