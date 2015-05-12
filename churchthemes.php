@@ -55,6 +55,10 @@ class ChurchThemes_Framework {
 	 */
 	public function __construct() {
 
+		if( defined( 'CTC_VERSION' ) ){
+			deactivate_plugins( 'church-theme-content/church-theme-content.php' );
+		}
+
 		// Set plugin data
 		add_action( 'plugins_loaded', array( &$this, 'set_plugin_data' ), 1 );
 
