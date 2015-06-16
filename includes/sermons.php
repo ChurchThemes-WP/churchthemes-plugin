@@ -88,3 +88,51 @@ function ctc_sermon_data( $post_id = null ) {
 	return apply_filters( 'ctc_sermon_data', $data );
 
 }
+
+/**
+	 * Get sermons
+	 *
+	 * This can optionally be used by the template.
+	 * $this->instance is sanitized before being made available here.
+	 *
+	 * @since 0.9
+	 * @return array Posts for widget template
+	 */
+	function ctc_get_sermons( $instance ) {
+
+		// Base arguments
+		$args = array(
+			'post_type'       	=> 'ctc_sermon',
+			'orderby'         	=> $instance['orderby'],
+			'order'           	=> $instance['order'],
+			'numberposts'     	=> $instance['limit'],
+			'suppress_filters'	=> false // keep WPML from showing posts from all languages: http://bit.ly/I1JIlV + http://bit.ly/1f9GZ7D
+		);
+
+		// Topic argument
+		if ( 'all' != $instance['topic'] && $topic_term = get_term( $instance['topic'], 'ctc_sermon_topic' ) ) {
+			$args['ctc_sermon_topic'] = $topic_term->slug;
+		}
+
+		// Book argument
+		if ( 'all' != $instance['book'] && $book_term = get_term( $instance['book'], 'ctc_sermon_book' ) ) {
+			$args['ctc_sermon_book'] = $book_term->slug;
+		}
+
+		// Series argument
+		if ( 'all' != $instance['series'] && $series_term = get_term( $instance['series'], 'ctc_sermon_series' ) ) {
+			$args['ctc_sermon_series'] = $series_term->slug;
+		}
+
+		// Speaker argument
+		if ( 'all' != $instance['speaker'] && $speaker_term = get_term( $instance['speaker'], 'ctc_sermon_speaker' ) ) {
+			$args['ctc_sermon_speaker'] = $speaker_term->slug;
+		}
+
+		// Get posts
+		$posts = get_posts( $args );
+
+		// Return filtered
+		return apply_filters( 'ctc_sermons_widget_get_posts', $posts );
+
+	}
