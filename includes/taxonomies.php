@@ -320,7 +320,7 @@ function ctc_term_options( $taxonomy_name, $prepend = array() ) {
 
 	$options = array();
 
-	if ( ! preg_match( '/^ctc_/', $taxonomy_name ) || ctc_taxonomy_supported( $taxonomy_name ) ) { // make sure CTC taxonomy support
+	if ( ! preg_match( '/^ctc_/', $taxonomy_name ) || ctc_taxonomy_supported( 'sermons', $taxonomy_name ) ) { // make sure CTC taxonomy support
 
 		$terms = $categories = get_terms( $taxonomy_name );
 

@@ -90,7 +90,7 @@ class CTFW_Widget extends WP_Widget {
 				foreach ( (array) $fields[$id]['taxonomies'] as $taxonomy_name ) {
 
 					// Taxonomy not supported by theme (or possibly disabled via Church Theme Content)
-					if ( ! ctc_taxonomy_supported( $taxonomy_name ) ) { // check show_ui
+					if ( ! ctc_taxonomy_supported( 'sermons', $taxonomy_name ) ) { // check show_ui
 						$fields[$id]['hidden'] = true;
 						break; // one strike and you're out
 					}
