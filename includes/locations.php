@@ -82,3 +82,28 @@ function ctc_previous_next_location_sorting() {
 }
 
 add_action( 'wp', 'ctc_previous_next_location_sorting' ); // is_singular() not available until wp action (after posts_selection)
+
+/**
+ * Get locations
+ *
+ * This can optionally be used by the template.
+ * $this->instance is sanitized before being made available here.
+ *
+ * @since 0.9
+ * @return array Posts for widget template
+ */
+function ctc_get_locations( $instance ) {
+
+	// Get posts
+	$posts = get_posts( array(
+		'post_type'      	=> 'ctc_location',
+		'orderby'        	=> $instance['orderby'],
+		'order'          	=> $instance['order'],
+		'numberposts'    	=> $instance['limit'],
+		'suppress_filters'	=> false // keep WPML from showing posts from all languages: http://bit.ly/I1JIlV + http://bit.ly/1f9GZ7D
+	) );
+
+	// Return filtered
+	return apply_filters( 'ctc_locations_widget_get_posts', $posts );
+
+}
