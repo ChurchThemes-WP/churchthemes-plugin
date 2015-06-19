@@ -107,3 +107,32 @@ function ctc_previous_next_person_sorting() {
 }
 
 add_action( 'wp', 'ctc_previous_next_person_sorting' ); // is_singular() not available until wp action (after posts_selection)
+
+/**
+ * Get people
+ *
+ * This can optionally be used by the template.
+ * $this->instance is sanitized before being made available here.
+ *
+ * @since 0.9
+ * @return array Posts for widget template
+ */
+function ctc_get_people( $instance ) {
+
+	// Base arguments
+	$args = array(
+		'post_type'       	=> 'ctc_person',
+		'orderby'         	=> $instance['orderby'],
+		'order'           	=> $instance['order'],
+		'numberposts'     	=> $instance['limit'],
+		'group'							=> '',
+		'suppress_filters'	=> false // keep WPML from showing posts from all languages: http://bit.ly/I1JIlV + http://bit.ly/1f9GZ7D
+	);
+
+	// Get posts
+	$posts = get_posts( $args );
+
+	// Return filtered
+	return apply_filters( 'ctc_people_widget_get_posts', $posts );
+
+}
