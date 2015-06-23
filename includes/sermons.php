@@ -109,6 +109,10 @@ function ctc_sermon_data( $post_id = null ) {
 			'suppress_filters'	=> false // keep WPML from showing posts from all languages: http://bit.ly/I1JIlV + http://bit.ly/1f9GZ7D
 		);
 
+		if ( isset($instance['series']) ) {
+			$args['ctc_sermon_series'] = $instance['series'];
+		}
+
 		// Topic argument
 		if ( 'all' != $instance['topic'] && $topic_term = get_term( $instance['topic'], 'ctc_sermon_topic' ) ) {
 			$args['ctc_sermon_topic'] = $topic_term->slug;
@@ -120,7 +124,7 @@ function ctc_sermon_data( $post_id = null ) {
 		}
 
 		// Series argument
-		if ( 'all' != $instance['series'] && $series_term = get_term( $instance['series'], 'ctc_sermon_series' ) ) {
+		if ( isset($instance['series']) && 'all' != $instance['series'] && $series_term = get_term( $instance['series'], 'ctc_sermon_series' ) ) {
 			$args['ctc_sermon_series'] = $series_term->slug;
 		}
 
