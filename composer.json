@@ -1,0 +1,8 @@
+{
+  "name": "faithmade/churchthemes",
+  "type": "wordpress-plugin",
+  "description": "Sermons, people, locations, and events support for use with any theme built for Rock",
+  "require": {
+    "composer/installers": "v1.0.21"
+  }
+}
