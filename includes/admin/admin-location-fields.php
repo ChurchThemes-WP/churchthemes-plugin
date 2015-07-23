@@ -145,7 +145,7 @@ function ctc_add_meta_box_location() {
 				'name'				=> _x( 'Times', 'location meta box', 'churchthemes-framework' ),
 				'after_name'		=> '', // (Optional), (Required), etc.
 				'after_input'		=> '', // text to show to right of input (fields: text, select, number, upload, url, date, time)
-				'desc'				=> '',
+				'desc'				=> 'You can add service times or hours of operation',
 				'type'				=> 'textarea', // text, textarea, checkbox, radio, select, number, upload, upload_textarea, url, date, time
 				'checkbox_label'	=> '', //show text after checkbox
 				'options'			=> array(), // array of keys/values for radio or select
