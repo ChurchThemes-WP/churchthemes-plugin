@@ -109,7 +109,7 @@ function ctc_sermon_data( $post_id = null ) {
 			'suppress_filters'	=> false // keep WPML from showing posts from all languages: http://bit.ly/I1JIlV + http://bit.ly/1f9GZ7D
 		);
 
-		if ( isset($instance['series']) ) {
+		if ( 'all' != isset($instance['series']) ) {
 			$args['ctc_sermon_series'] = $instance['series'];
 		}
 
