@@ -97,11 +97,7 @@ function ctc_add_meta_box_sermon_details() {
 				'name'				=> __( 'Video', 'churchthemes-framework' ),
 				'after_name'		=> '', // (Optional), (Required), etc.
 				'after_input'		=> '', // text to show to right of input (fields: text, select, number, upload, url, date, time)
-				'desc'				=> sprintf(
-											__( 'Upload a file by clicking "Choose Video" or upload a video to one of the <a href="%s" target="_blank">supported sites</a> (such as YouTube) then paste its URL here, or paste an embed code from another site. <a href="%s" target="_blank">Video Help</a>', 'churchthemes-framework' ),
-											apply_filters( 'ctc_sermon_video_sites_url', 'http://Steven Gliebe/go/ctc-sermon-video-sites' ),
-											apply_filters( 'ctc_sermon_video_help_url', 'http://Steven Gliebe/go/ctc-sermon-video-help' )
-										),
+				'desc'				=> __( 'Upload a file by clicking "Choose Video" or upload a video to YouTube, Vimeo, or another supported site then paste the URL here, or paste an embed code from another site.', 'churchthemes-framework' ),
 				'type'				=> 'upload_textarea', // text, textarea, checkbox, radio, select, number, upload, upload_textarea, url, date, time
 				'checkbox_label'	=> '', //show text after checkbox
 				'options'			=> array(), // array of keys/values for radio or select
@@ -125,11 +121,7 @@ function ctc_add_meta_box_sermon_details() {
 				'name'				=> __( 'Audio', 'churchthemes-framework' ),
 				'after_name'		=> '', // (Optional), (Required), etc.
 				'after_input'		=> '', // text to show to right of input (fields: text, select, number, upload, url, date, time)
-				'desc'				=> sprintf(
-											__( 'Upload a file by clicking "Choose Audio" or upload audio to one of the <a href="%s" target="_blank">supported sites</a> (such as SoundCloud) then paste its URL here, or paste an embed code from another site. <a href="%s" target="_blank">Audio Help</a>', 'churchthemes-framework' ),
-											apply_filters( 'ctc_sermon_audio_sites_url', 'http://Steven Gliebe/go/ctc-sermon-audio-sites' ),
-											apply_filters( 'ctc_sermon_audio_help_url', 'http://Steven Gliebe/go/ctc-sermon-audio-help' )
-										),
+				'desc'				=> __( 'Upload a file by clicking "Choose Audio" or upload audio to a site like SoundCloud and paste the URL here or paste an embed code from another site.', 'churchthemes-framework' ),
 				'type'				=> 'upload_textarea', // text, textarea, checkbox, radio, select, number, upload, upload_textarea, url, date, time
 				'checkbox_label'	=> '', //show text after checkbox
 				'options'			=> array(), // array of keys/values for radio or select
