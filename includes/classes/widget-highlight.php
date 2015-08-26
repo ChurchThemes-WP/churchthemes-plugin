@@ -30,7 +30,7 @@ class CTFW_Widget_Highlight extends CTFW_Widget {
 
 		parent::__construct(
 			'ctc-highlight',
-			_x( 'CT Highlight', 'widget', 'church-theme-framework' ),
+			_x( 'Highlight', 'widget', 'church-theme-framework' ),
 			array(
 				'description' => __( 'Shows a highlight', 'church-theme-framework' )
 			)

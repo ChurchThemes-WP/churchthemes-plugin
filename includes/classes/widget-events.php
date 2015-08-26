@@ -30,7 +30,7 @@ class CTFW_Widget_Events extends CTFW_Widget {
 
 		parent::__construct(
 			'ctc-events',
-			_x( 'CT Events', 'events widget', 'church-theme-framework' ),
+			_x( 'Events', 'events widget', 'church-theme-framework' ),
 			array(
 				'description' => _x( 'Shows upcoming or past events', 'events widget', 'church-theme-framework' )
 			)

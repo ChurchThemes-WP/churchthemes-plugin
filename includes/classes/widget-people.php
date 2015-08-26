@@ -30,7 +30,7 @@ class CTFW_Widget_People extends CTFW_Widget {
 
 		parent::__construct(
 			'ctc-people',
-			_x( 'CT People', 'widget', 'church-theme-framework' ),
+			_x( 'People', 'widget', 'church-theme-framework' ),
 			array(
 				'description' => __( 'Shows people according to options', 'church-theme-framework' )
 			)

@@ -30,7 +30,7 @@ class CTFW_Widget_Locations extends CTFW_Widget {
 
 		parent::__construct(
 			'ctc-locations',
-			_x( 'CT Locations', 'widget', 'church-theme-framework' ),
+			_x( 'Locations', 'widget', 'church-theme-framework' ),
 			array(
 				'description' => __( 'Shows church location(s)', 'church-theme-framework' )
 			)

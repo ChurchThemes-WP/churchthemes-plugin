@@ -32,7 +32,7 @@ class CTFW_Widget_Archives extends CTFW_Widget {
 
 		parent::__construct(
 			'ctc-archives',
-			_x( 'CT Archives', 'widget', 'church-theme-framework' ),
+			_x( 'Archives', 'widget', 'church-theme-framework' ),
 			array(
 				'description' => __( 'Monthly archive for chosen post type', 'church-theme-framework' )
 			)

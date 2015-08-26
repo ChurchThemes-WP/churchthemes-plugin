@@ -30,7 +30,7 @@ class CTFW_Widget_Giving extends CTFW_Widget {
 
 		parent::__construct(
 			'ctc-giving',
-			_x( 'CT Giving', 'widget', 'church-theme-framework' ),
+			_x( 'Giving', 'widget', 'church-theme-framework' ),
 			array(
 				'description' => __( 'Shows a message and button', 'church-theme-framework' ),
 			)

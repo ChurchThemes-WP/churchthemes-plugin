@@ -30,7 +30,7 @@ class CTFW_Widget_Sermons extends CTFW_Widget {
 
 		parent::__construct(
 			'ctc-sermons',
-			_x( 'CT Sermons', 'widget', 'church-theme-framework' ),
+			_x( 'Sermons', 'widget', 'church-theme-framework' ),
 			array(
 				'description' => __( 'Shows sermons according to options', 'church-theme-framework' )
 			)

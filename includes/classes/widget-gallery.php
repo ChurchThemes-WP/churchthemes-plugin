@@ -30,7 +30,7 @@ class CTFW_Widget_Gallery extends CTFW_Widget {
 
 		parent::__construct(
 			'ctc-gallery',
-			_x( 'CT Gallery', 'gallery widget', 'church-theme-framework' ),
+			_x( 'Gallery', 'gallery widget', 'church-theme-framework' ),
 			array(
 				'description' => __( 'Shows gallery thumbnails', 'church-theme-framework' )
 			)
