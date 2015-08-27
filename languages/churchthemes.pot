@@ -1,1344 +1,23 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: churchthemes\n"
+"Project-Id-Version: ChurchThemes Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-04 19:13-0600\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2015-08-26 23:25-0600\n"
+"PO-Revision-Date: 2015-08-26 23:25-0600\n"
+"Last-Translator: Chris Wallace <chris@upthemes.com>\n"
+"Language-Team: ChurchThemes <support@churchthemes.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-
-#: includes/admin/admin-event-fields.php:37
-msgctxt "event meta box"
-msgid "Date & Time"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:75
-msgid "Start Date"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:76
-msgid "(Required)"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:100
-msgid "End Date"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:124
-msgid "Start Time"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:149
-msgid "End Time"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:180
-msgid "Do not show times entered above (use only for ordering events)"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:201
-msgid "Time Description"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:204
-msgid ""
-"Optionally describe the time (e.g. \"9:30 am and 11:00 am\" or \"After "
-"Second Service\")"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:225
-msgid "Recurrence"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:228
-msgctxt "event meta box"
-msgid "Dates automatically move forward after event ends."
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:232
-msgctxt "event meta box"
-msgid "None"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:233
-msgctxt "event meta box"
-msgid "Weekly"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:234
-msgctxt "event meta box"
-msgid "Monthly"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:235
-msgctxt "event meta box"
-msgid "Yearly"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:254
-msgid "Recur Until"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:301
-msgctxt "event meta box"
-msgid "Location"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:339
-msgid "Venue"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:342
-msgid ""
-"You can provide a building name, room number or other location name to help "
-"people find the event."
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:363
-msgctxt "event meta box"
-msgid "Address"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:366
-msgid ""
-"You can enter an address if it is necessary for people to find this event."
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:392
-msgid "Show directions link"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:411
-msgctxt "event meta box"
-msgid "Map Type"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:414
-msgctxt "event meta box"
-msgid ""
-"You can show a road map, satellite imagery, a combination of both (hybrid) "
-"or terrain."
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:435
-msgctxt "event meta box"
-msgid "Map Zoom"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:438
-msgctxt "event meta box"
-msgid ""
-"A lower number is more zoomed out while a higher number is more zoomed in."
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:622
-#: includes/admin/admin-location-fields.php:246
-#: includes/admin/admin-person-fields.php:218
-#: includes/admin/admin-sermon-fields.php:241
-msgid "Thumbnail"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:627
-msgctxt "events admin column"
-msgid "When"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:628
-msgctxt "events admin column"
-msgid "Where"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:690
-msgctxt "date range separator"
-msgid " &ndash; "
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:708
-msgctxt "time range separator"
-msgid " &ndash; "
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:738
-#, php-format
-msgid "Every week until %1$s"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:743
-msgid "Every week"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:754
-#, php-format
-msgid "Every month until %1$s"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:759
-msgid "Every month"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:770
-#, php-format
-msgid "Every year until %1$s"
-msgstr ""
-
-#: includes/admin/admin-event-fields.php:775
-msgid "Every year"
-msgstr ""
-
-#: includes/admin/admin-helpers.php:67
-msgctxt "map"
-msgid "Road"
-msgstr ""
-
-#: includes/admin/admin-helpers.php:68
-msgctxt "map"
-msgid "Satellite"
-msgstr ""
-
-#: includes/admin/admin-helpers.php:69
-msgctxt "map"
-msgid "Hybrid"
-msgstr ""
-
-#: includes/admin/admin-helpers.php:70
-msgctxt "map"
-msgid "Terrain"
-msgstr ""
-
-#: includes/admin/admin-location-fields.php:35
-msgctxt "location meta box"
-msgid "Location Details"
-msgstr ""
-
-#: includes/admin/admin-location-fields.php:73
-msgctxt "location meta box"
-msgid "Address"
-msgstr ""
-
-#: includes/admin/admin-location-fields.php:121
-#: includes/admin/admin-person-fields.php:122
-msgctxt "location meta box"
-msgid "Phone"
-msgstr ""
-
-#: includes/admin/admin-location-fields.php:145
-msgctxt "location meta box"
-msgid "Times"
-msgstr ""
-
-#: includes/admin/admin-location-fields.php:169
-msgctxt "location meta box"
-msgid "Map Type"
-msgstr ""
-
-#: includes/admin/admin-location-fields.php:172
-msgctxt "location meta box"
-msgid ""
-"You can show a road map, satellite imagery, a combination of both (hybrid) "
-"or terrain."
-msgstr ""
-
-#: includes/admin/admin-location-fields.php:194
-msgctxt "location meta box"
-msgid "Map Zoom"
-msgstr ""
-
-#: includes/admin/admin-location-fields.php:197
-msgctxt "location meta box"
-msgid ""
-"A lower number is more zoomed out while a higher number is more zoomed in."
-msgstr ""
-
-#: includes/admin/admin-location-fields.php:251
-msgctxt "location admin column"
-msgid "Address"
-msgstr ""
-
-#: includes/admin/admin-location-fields.php:252
-msgctxt "location admin column"
-msgid "Times"
-msgstr ""
-
-#: includes/admin/admin-location-fields.php:253
-#: includes/admin/admin-person-fields.php:225
-msgctxt "sorting"
-msgid "Order"
-msgstr ""
-
-#: includes/admin/admin-location-fields.php:257
-msgctxt "location admin column"
-msgid "Location"
-msgstr ""
-
-#: includes/admin/admin-person-fields.php:35
-msgid "Enter name here"
-msgstr ""
-
-#: includes/admin/admin-person-fields.php:60
-msgctxt "meta box"
-msgid "Person Details"
-msgstr ""
-
-#: includes/admin/admin-person-fields.php:98
-#: includes/admin/admin-person-fields.php:223
-msgid "Position"
-msgstr ""
-
-#: includes/admin/admin-person-fields.php:101
-msgid "Enter the person's position or title (e.g. Senior Pastor, Deacon, etc.)"
-msgstr ""
-
-#: includes/admin/admin-person-fields.php:146
-msgctxt "location meta box"
-msgid "Email"
-msgstr ""
-
-#: includes/admin/admin-person-fields.php:170
-msgid "URLs"
-msgstr ""
-
-#: includes/admin/admin-person-fields.php:224
-msgctxt "people column"
-msgid "Groups"
-msgstr ""
-
-#: includes/admin/admin-person-fields.php:229
-msgctxt "person"
-msgid "Name"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:35
-msgctxt "meta box"
-msgid "Sermon Media"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:73
-msgid "Full Text"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:76
-msgid "Check this if you provide a complete transcript above."
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:78
-msgid "Full sermon text provided"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:97
-msgid "Video"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:101
-#, php-format
-msgid ""
-"Upload a file by clicking \"Choose Video\" or upload a video to one of the "
-"<a href=\"%s\" target=\"_blank\">supported sites</a> (such as YouTube) then "
-"paste its URL here, or paste an embed code from another site. <a href=\"%s\" "
-"target=\"_blank\">Video Help</a>"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:108
-msgid "Choose Video"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:109
-msgid "Choose an Video File"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:125
-msgid "Audio"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:129
-#, php-format
-msgid ""
-"Upload a file by clicking \"Choose Audio\" or upload audio to one of the <a "
-"href=\"%s\" target=\"_blank\">supported sites</a> (such as SoundCloud) then "
-"paste its URL here, or paste an embed code from another site. <a href=\"%s\" "
-"target=\"_blank\">Audio Help</a>"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:136
-msgid "Choose Audio"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:137
-msgid "Choose an Audio File"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:153 includes/mime-types.php:75
-msgid "PDF"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:156
-msgid ""
-"Upload a file by clicking \"Choose PDF\" or paste the URL to a PDF hosted on "
-"another site."
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:160
-msgid "Choose PDF"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:161
-msgid "Choose a PDF File"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:246
-msgctxt "sermons"
-msgid "Formats"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:247
-msgid "Topics"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:289
-msgctxt "media type"
-msgid "Text"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:293
-msgctxt "media type"
-msgid "Video"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:297
-msgctxt "media type"
-msgid "Audio"
-msgstr ""
-
-#: includes/admin/admin-sermon-fields.php:301
-msgctxt "media type"
-msgid "PDF"
-msgstr ""
-
-#: includes/admin/admin-support.php:53
-#, php-format
-msgid ""
-"The <b>%1$s</b> theme does not support the <b>%2$s</b> plugin. <a href=\"%3$s"
-"\" target=\"_blank\">More Information</a>, <a href=\"%4$s\">Dismiss</a>"
-msgstr ""
-
-#: includes/admin/admin-widgets.php:33
-msgctxt "widget image library"
-msgid "Choose Image for Widget"
-msgstr ""
-
-#: includes/admin/admin-widgets.php:34
-msgctxt "widget image library"
-msgid "Use in Widget"
-msgstr ""
-
-#: includes/admin/admin-widgets.php:35
-msgid "Sorry, this widget is not made for use in this area. Please delete."
-msgstr ""
-
-#: includes/classes/breadcrumbs.php:55
-msgctxt "breadcrumb separator"
-msgid " > "
-msgstr ""
-
-#: includes/classes/breadcrumbs.php:241
-msgctxt "breadcrumb year format"
-msgid "Y"
-msgstr ""
-
-#: includes/classes/breadcrumbs.php:258
-msgctxt "breadcrumb month format"
-msgid "F"
-msgstr ""
-
-#: includes/classes/breadcrumbs.php:275
-msgctxt "breadcrumb day format"
-msgid "jS"
-msgstr ""
-
-#: includes/classes/breadcrumbs.php:354
-#, php-format
-msgctxt "breadcrumb"
-msgid "Page %s"
-msgstr ""
-
-#: includes/classes/breadcrumbs.php:365
-msgctxt "breadcrumb"
-msgid "Search Results"
-msgstr ""
-
-#: includes/classes/breadcrumbs.php:527
-msgctxt "breadcrumbs"
-msgid "Home"
-msgstr ""
-
-#: includes/classes/customize-controls.php:119
-#: includes/classes/customize-controls.php:198
-msgid "Colorable"
-msgstr ""
-
-#: includes/classes/customize-controls.php:138
-msgid "The selected image is <strong>colorable</strong>."
-msgstr ""
-
-#: includes/classes/customize-controls.php:175
-msgctxt "customizer"
-msgid "Presets"
-msgstr ""
-
-#: includes/classes/widget-archives.php:35
-msgctxt "widget"
-msgid "CT Archives"
-msgstr ""
-
-#: includes/classes/widget-archives.php:37
-msgid "Monthly archive for chosen post type"
-msgstr ""
-
-#: includes/classes/widget-archives.php:84
-msgctxt "archives widget"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-archives.php:93
-msgctxt "archives widget title default"
-msgid "Archives"
-msgstr ""
-
-#: includes/classes/widget-archives.php:108
-msgctxt "archives widget"
-msgid "Type"
-msgstr ""
-
-#: includes/classes/widget-archives.php:132
-msgctxt "archives widget"
-msgid "Limit"
-msgstr ""
-
-#: includes/classes/widget-archives.php:134
-msgctxt "archives widget"
-msgid "Set to 0 for no limit."
-msgstr ""
-
-#: includes/classes/widget-archives.php:163
-msgctxt "archives widget"
-msgid "Show counts"
-msgstr ""
-
-#: includes/classes/widget-archives.php:184
-msgctxt "archives widget"
-msgid "Show as dropdown"
-msgstr ""
-
-#: includes/classes/widget-archives.php:238
-msgctxt "archives widget"
-msgid "Blog"
-msgstr ""
-
-#: includes/classes/widget-categories.php:35
-msgctxt "widget"
-msgid "CT Categories"
-msgstr ""
-
-#: includes/classes/widget-categories.php:37
-msgid "Shows categories of various types"
-msgstr ""
-
-#: includes/classes/widget-categories.php:87
-msgctxt "categories widget"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-categories.php:96
-msgctxt "categories widget title default"
-msgid "Categories"
-msgstr ""
-
-#: includes/classes/widget-categories.php:111
-msgctxt "categories widget"
-msgid "Type"
-msgstr ""
-
-#: includes/classes/widget-categories.php:135
-msgctxt "categories widget"
-msgid "Order By"
-msgstr ""
-
-#: includes/classes/widget-categories.php:144
-msgctxt "categories widget order by"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-categories.php:145
-msgctxt "categories widget order by"
-msgid "Date"
-msgstr ""
-
-#: includes/classes/widget-categories.php:146
-msgctxt "categories widget order by"
-msgid "Post Count"
-msgstr ""
-
-#: includes/classes/widget-categories.php:172
-msgctxt "categories widget order"
-msgid "Low to High"
-msgstr ""
-
-#: includes/classes/widget-categories.php:173
-msgctxt "categories widget order"
-msgid "High to Low"
-msgstr ""
-
-#: includes/classes/widget-categories.php:190
-msgctxt "categories widget"
-msgid "Limit"
-msgstr ""
-
-#: includes/classes/widget-categories.php:192
-msgctxt "categories widget"
-msgid "Set to 0 for unlimited."
-msgstr ""
-
-#: includes/classes/widget-categories.php:221
-msgctxt "categories widget"
-msgid "Show counts"
-msgstr ""
-
-#: includes/classes/widget-categories.php:245
-msgctxt "categories widget"
-msgid "Show hierarchy"
-msgstr ""
-
-#: includes/classes/widget-categories.php:266
-msgctxt "categories widget"
-msgid "Show as dropdown"
-msgstr ""
-
-#: includes/classes/widget-categories.php:313
-msgctxt "categories widget"
-msgid "Blog Categories"
-msgstr ""
-
-#: includes/classes/widget-categories.php:315
-msgctxt "categories widget"
-msgid "Blog Tags"
-msgstr ""
-
-#: includes/classes/widget-events.php:33
-msgctxt "events widget"
-msgid "CT Events"
-msgstr ""
-
-#: includes/classes/widget-events.php:35
-msgctxt "events widget"
-msgid "Shows upcoming or past events"
-msgstr ""
-
-#: includes/classes/widget-events.php:82
-msgctxt "events widget"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-events.php:91
-msgctxt "events widget title default"
-msgid "Events"
-msgstr ""
-
-#: includes/classes/widget-events.php:115
-msgctxt "events widget order"
-msgid "Upcoming"
-msgstr ""
-
-#: includes/classes/widget-events.php:116
-msgctxt "events widget order"
-msgid "Past"
-msgstr ""
-
-#: includes/classes/widget-events.php:133
-msgctxt "events widget"
-msgid "Limit"
-msgstr ""
-
-#: includes/classes/widget-events.php:161
-#: includes/classes/widget-locations.php:188
-msgctxt "events widget"
-msgid "Show image"
-msgstr ""
-
-#: includes/classes/widget-events.php:188
-msgctxt "events widget"
-msgid "Show date"
-msgstr ""
-
-#: includes/classes/widget-events.php:209
-msgctxt "events widget"
-msgid "Show time"
-msgstr ""
-
-#: includes/classes/widget-events.php:233
-msgctxt "events widget"
-msgid "Show excerpt"
-msgstr ""
-
-#: includes/classes/widget-galleries.php:35
-msgctxt "widget"
-msgid "CT Galleries"
-msgstr ""
-
-#: includes/classes/widget-galleries.php:37
-msgid "Shows list of gallery pages"
-msgstr ""
-
-#: includes/classes/widget-galleries.php:84
-msgctxt "galleries widget"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-galleries.php:93
-msgctxt "galleries widget title default"
-msgid "Galleries"
-msgstr ""
-
-#: includes/classes/widget-galleries.php:108
-msgctxt "galleries widget"
-msgid "Order By"
-msgstr ""
-
-#: includes/classes/widget-galleries.php:117
-msgctxt "galleries widget order by"
-msgid "Date Added"
-msgstr ""
-
-#: includes/classes/widget-galleries.php:118
-msgctxt "galleries widget order by"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-galleries.php:144
-msgctxt "galleries widget order"
-msgid "Low to High"
-msgstr ""
-
-#: includes/classes/widget-galleries.php:145
-msgctxt "galleries widget order"
-msgid "High to Low"
-msgstr ""
-
-#: includes/classes/widget-galleries.php:162
-msgctxt "galleries widget"
-msgid "Limit"
-msgstr ""
-
-#: includes/classes/widget-galleries.php:164
-msgctxt "galleries widget"
-msgid "Set to 0 for unlimited."
-msgstr ""
-
-#: includes/classes/widget-gallery.php:33
-msgctxt "gallery widget"
-msgid "CT Gallery"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:35
-msgid "Shows gallery thumbnails"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:57
-msgctxt "gallery widget"
-msgid "All Galleries"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:93
-msgctxt "gallery widget"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:102
-msgctxt "gallery widget title default"
-msgid "Gallery"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:117
-msgctxt "gallery widget"
-msgid "Gallery"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:145
-msgctxt "gallery widget"
-msgid "Show link to gallery"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:165
-msgctxt "gallery widget"
-msgid "Order By"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:174
-msgctxt "gallery widget order by"
-msgid "Upload Date"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:175
-msgctxt "gallery widget order by"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:176
-msgctxt "gallery widget order by"
-msgid "Comment Count"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:202
-msgctxt "gallery widget order"
-msgid "Low to High"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:203
-msgctxt "gallery widget order"
-msgid "High to Low"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:220
-msgctxt "gallery widget"
-msgid "Limit"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:244
-msgctxt "gallery widget"
-msgid "Thumbnail Size"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:253
-msgctxt "gallery widget"
-msgid "Small"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:254
-msgctxt "gallery widget"
-msgid "Medium"
-msgstr ""
-
-#: includes/classes/widget-gallery.php:255
-msgctxt "gallery widget"
-msgid "Large"
-msgstr ""
-
-#: includes/classes/widget-giving.php:33
-msgctxt "widget"
-msgid "CT Giving"
-msgstr ""
-
-#: includes/classes/widget-giving.php:35
-msgid "Shows a message and button"
-msgstr ""
-
-#: includes/classes/widget-giving.php:82
-msgctxt "giving widget"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-giving.php:91
-msgctxt "giving widget default title"
-msgid "Giving"
-msgstr ""
-
-#: includes/classes/widget-giving.php:106
-msgctxt "giving widget"
-msgid "Message"
-msgstr ""
-
-#: includes/classes/widget-giving.php:115
-msgid "You may give online by clicking below."
-msgstr ""
-
-#: includes/classes/widget-giving.php:130
-msgctxt "giving widget"
-msgid "Button Text"
-msgstr ""
-
-#: includes/classes/widget-giving.php:139
-msgctxt "giving widget"
-msgid "Give Now"
-msgstr ""
-
-#: includes/classes/widget-giving.php:154
-msgctxt "giving widget"
-msgid "Button URL"
-msgstr ""
-
-#: includes/classes/widget-highlight.php:33
-msgctxt "widget"
-msgid "CT Highlight"
-msgstr ""
-
-#: includes/classes/widget-highlight.php:35
-msgid "Shows a highlight"
-msgstr ""
-
-#: includes/classes/widget-highlight.php:82
-msgctxt "highlight widget"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-highlight.php:106
-msgctxt "highlight widget"
-msgid "Description"
-msgstr ""
-
-#: includes/classes/widget-highlight.php:130
-msgctxt "highlight widget"
-msgid "Click URL"
-msgstr ""
-
-#: includes/classes/widget-highlight.php:158
-msgctxt "highlight widget"
-msgid "Open in new tab"
-msgstr ""
-
-#: includes/classes/widget-highlight.php:178
-msgctxt "highlight widget"
-msgid "Image"
-msgstr ""
-
-#: includes/classes/widget-locations.php:33
-msgctxt "widget"
-msgid "CT Locations"
-msgstr ""
-
-#: includes/classes/widget-locations.php:35
-msgid "Shows church location(s)"
-msgstr ""
-
-#: includes/classes/widget-locations.php:82
-msgctxt "locations widget"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-locations.php:91
-msgctxt "locations widget title default"
-msgid "Locations"
-msgstr ""
-
-#: includes/classes/widget-locations.php:106
-msgctxt "locations widget"
-msgid "Order By"
-msgstr ""
-
-#: includes/classes/widget-locations.php:115
-msgctxt "locations widget order by"
-msgid "Custom Order"
-msgstr ""
-
-#: includes/classes/widget-locations.php:116
-msgctxt "locations widget order by"
-msgid "Name"
-msgstr ""
-
-#: includes/classes/widget-locations.php:142
-msgctxt "locations widget order"
-msgid "Low to High"
-msgstr ""
-
-#: includes/classes/widget-locations.php:143
-msgctxt "locations widget order"
-msgid "High to Low"
-msgstr ""
-
-#: includes/classes/widget-locations.php:160
-msgctxt "locations widget"
-msgid "Limit"
-msgstr ""
-
-#: includes/classes/widget-locations.php:212
-msgctxt "locations widget"
-msgid "Show address"
-msgstr ""
-
-#: includes/classes/widget-locations.php:236
-msgctxt "locations widget"
-msgid "Show phone number"
-msgstr ""
-
-#: includes/classes/widget-locations.php:260
-msgctxt "locations widget"
-msgid "Show times"
-msgstr ""
-
-#: includes/classes/widget-locations.php:284
-msgctxt "locations widget"
-msgid "Show map"
-msgstr ""
-
-#: includes/classes/widget-people.php:33
-msgctxt "widget"
-msgid "CT People"
-msgstr ""
-
-#: includes/classes/widget-people.php:35
-msgid "Shows people according to options"
-msgstr ""
-
-#: includes/classes/widget-people.php:82
-msgctxt "people widget"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-people.php:91
-msgctxt "people widget title default"
-msgid "People"
-msgstr ""
-
-#: includes/classes/widget-people.php:106
-msgctxt "people widget"
-msgid "Group"
-msgstr ""
-
-#: includes/classes/widget-people.php:115
-msgctxt "people widget"
-msgid "All Groups"
-msgstr ""
-
-#: includes/classes/widget-people.php:132
-msgctxt "people widget"
-msgid "Order By"
-msgstr ""
-
-#: includes/classes/widget-people.php:141
-msgctxt "people widget order by"
-msgid "Custom Order"
-msgstr ""
-
-#: includes/classes/widget-people.php:142
-msgctxt "people widget order by"
-msgid "Name"
-msgstr ""
-
-#: includes/classes/widget-people.php:168
-msgctxt "people widget order"
-msgid "Low to High"
-msgstr ""
-
-#: includes/classes/widget-people.php:169
-msgctxt "people widget order"
-msgid "High to Low"
-msgstr ""
-
-#: includes/classes/widget-people.php:186
-msgctxt "people widget"
-msgid "Limit"
-msgstr ""
-
-#: includes/classes/widget-people.php:214
-msgctxt "people widget"
-msgid "Show photo"
-msgstr ""
-
-#: includes/classes/widget-people.php:238
-msgctxt "people widget"
-msgid "Show position"
-msgstr ""
-
-#: includes/classes/widget-people.php:262
-msgctxt "people widget"
-msgid "Show phone"
-msgstr ""
-
-#: includes/classes/widget-people.php:286
-msgctxt "people widget"
-msgid "Show email"
-msgstr ""
-
-#: includes/classes/widget-people.php:310
-msgctxt "people widget"
-msgid "Show icons"
-msgstr ""
-
-#: includes/classes/widget-people.php:334
-#: includes/classes/widget-posts.php:289
-msgctxt "posts widget"
-msgid "Show excerpt"
-msgstr ""
-
-#: includes/classes/widget-posts.php:35
-msgctxt "widget"
-msgid "CT Posts"
-msgstr ""
-
-#: includes/classes/widget-posts.php:37
-msgid "Shows blog posts according to options"
-msgstr ""
-
-#: includes/classes/widget-posts.php:84
-msgctxt "posts widget"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-posts.php:93
-msgctxt "posts widget title default"
-msgid "Posts"
-msgstr ""
-
-#: includes/classes/widget-posts.php:108
-msgctxt "posts widget"
-msgid "Category"
-msgstr ""
-
-#: includes/classes/widget-posts.php:117
-msgctxt "posts widget"
-msgid "All Categories"
-msgstr ""
-
-#: includes/classes/widget-posts.php:134
-msgctxt "posts widget"
-msgid "Order By"
-msgstr ""
-
-#: includes/classes/widget-posts.php:143
-msgctxt "posts widget order by"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-posts.php:144
-msgctxt "posts widget order by"
-msgid "Date"
-msgstr ""
-
-#: includes/classes/widget-posts.php:145
-msgctxt "posts widget order by"
-msgid "Comment Count"
-msgstr ""
-
-#: includes/classes/widget-posts.php:171
-msgctxt "posts widget order"
-msgid "Low to High"
-msgstr ""
-
-#: includes/classes/widget-posts.php:172
-msgctxt "posts widget order"
-msgid "High to Low"
-msgstr ""
-
-#: includes/classes/widget-posts.php:189
-msgctxt "posts widget"
-msgid "Limit"
-msgstr ""
-
-#: includes/classes/widget-posts.php:217
-msgctxt "posts widget"
-msgid "Show image"
-msgstr ""
-
-#: includes/classes/widget-posts.php:244
-msgctxt "posts widget"
-msgid "Show date"
-msgstr ""
-
-#: includes/classes/widget-posts.php:268
-msgctxt "posts widget"
-msgid "Show author"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:33
-msgctxt "widget"
-msgid "CT Sermons"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:35
-msgid "Shows sermons according to options"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:82
-msgctxt "sermons widget"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:91
-msgctxt "sermons widget title default"
-msgid "Sermons"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:106
-msgctxt "sermons widget"
-msgid "Topic"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:115
-msgctxt "sermons widget"
-msgid "All Topics"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:132
-msgctxt "sermons widget"
-msgid "Book"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:141
-msgctxt "sermons widget"
-msgid "All Books"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:158
-msgctxt "sermons widget"
-msgid "Series"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:167
-msgctxt "sermons widget"
-msgid "All Series"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:184
-msgctxt "sermons widget"
-msgid "Speaker"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:193
-msgctxt "sermons widget"
-msgid "All Speakers"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:210
-msgctxt "sermons widget"
-msgid "Order By"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:219
-msgctxt "sermons widget order by"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:220
-msgctxt "sermons widget order by"
-msgid "Date"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:221
-msgctxt "sermons widget order by"
-msgid "Comment Count"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:247
-msgctxt "sermons widget order"
-msgid "Low to High"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:248
-msgctxt "sermons widget order"
-msgid "High to Low"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:265
-msgctxt "sermons widget"
-msgid "Limit"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:293
-msgctxt "sermons widget"
-msgid "Show image"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:320
-msgctxt "sermons widget"
-msgid "Show date"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:344
-msgctxt "sermons widget"
-msgid "Show topic"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:368
-msgctxt "sermons widget"
-msgid "Show book"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:392
-msgctxt "sermons widget"
-msgid "Show series"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:416
-msgctxt "sermons widget"
-msgid "Show speaker"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:437
-msgctxt "sermons widget"
-msgid "Show media types"
-msgstr ""
-
-#: includes/classes/widget-sermons.php:461
-msgctxt "sermons widget"
-msgid "Show excerpt"
-msgstr ""
-
-#: includes/classes/widget-slide.php:34
-msgctxt "widget"
-msgid "CT Slide"
-msgstr ""
-
-#: includes/classes/widget-slide.php:36
-msgid "A slide to be shown in a slider"
-msgstr ""
-
-#: includes/classes/widget-slide.php:82
-msgctxt "slide widget"
-msgid "Title"
-msgstr ""
-
-#: includes/classes/widget-slide.php:106
-msgctxt "slide widget"
-msgid "Description"
-msgstr ""
-
-#: includes/classes/widget-slide.php:130
-msgctxt "slide widget"
-msgid "Click URL"
-msgstr ""
-
-#: includes/classes/widget-slide.php:158
-msgctxt "slide widget"
-msgid "Open in new tab"
-msgstr ""
-
-#: includes/classes/widget-slide.php:178
-msgctxt "slide widget"
-msgid "Image"
-msgstr ""
-
-#: includes/classes/widget-slide.php:202
-msgctxt "slide widget"
-msgid "Video URL"
-msgstr ""
-
-#: includes/classes/widget.php:298
-msgctxt "widget image field"
-msgid "Choose Image"
-msgstr ""
-
-#: includes/classes/widget.php:301
-msgctxt "widget image field"
-msgid "Remove Image"
-msgstr ""
+"X-Poedit-KeywordsList: _e;__;esc_attr_e;esc_attr__;esc_attr_x;_x\n"
+"X-Poedit-Basepath: /Users/chriswallace/Sites/liftux-dev-server/www/faithmade.net/htdocs/wp-content/plugins/churchthemes/\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SearchPath-0: .\n"
 
 #: includes/events.php:146
-#, php-format
-msgctxt "dates"
-msgid "%1$s &ndash; %2$s"
-msgstr ""
-
 #: includes/events.php:174
 #, php-format
-msgctxt "times"
 msgid "%1$s &ndash; %2$s"
 msgstr ""
 
@@ -1347,40 +26,35 @@ msgstr ""
 msgid "%1$s <span>(%2$s)</span>"
 msgstr ""
 
-#: includes/helpers.php:283 includes/helpers.php:304
-msgctxt "shortened text"
+#: includes/helpers.php:283
+#: includes/helpers.php:304
 msgid "&hellip;"
 msgstr ""
 
 #: includes/maps.php:74
-msgid ""
-"<p><b>Google Map Error:</b> <i>latitude</i> and <i>longitude</i> attributes "
-"are required. See documentation for help.</p>"
+msgid "<p><b>Google Map Error:</b> <i>latitude</i> and <i>longitude</i> attributes are required. See documentation for help.</p>"
+msgstr ""
+
+#: includes/mime-types.php:75
+msgid "PDF"
 msgstr ""
 
 #: includes/mime-types.php:76
 msgid "Manage PDFs"
 msgstr ""
 
-#: includes/mime-types.php:77
-#, php-format
-msgid "PDF <span class=\"count\">(%s)</span>"
-msgid_plural "PDFs <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
-
 #: includes/post-types.php:31
-msgctxt "post type general name"
 msgid "Sermons"
 msgstr ""
 
 #: includes/post-types.php:32
-msgctxt "post type singular name"
 msgid "Sermon"
 msgstr ""
 
 #: includes/post-types.php:33
-msgctxt "sermon"
+#: includes/post-types.php:82
+#: includes/post-types.php:130
+#: includes/post-types.php:178
 msgid "Add New"
 msgstr ""
 
@@ -1417,18 +91,11 @@ msgid "No sermons found in Trash"
 msgstr ""
 
 #: includes/post-types.php:80
-msgctxt "post type general name"
 msgid "Events"
 msgstr ""
 
 #: includes/post-types.php:81
-msgctxt "post type singular name"
 msgid "Event"
-msgstr ""
-
-#: includes/post-types.php:82
-msgctxt "event"
-msgid "Add New"
 msgstr ""
 
 #: includes/post-types.php:83
@@ -1464,18 +131,13 @@ msgid "No events found in Trash"
 msgstr ""
 
 #: includes/post-types.php:128
-msgctxt "post type general name"
 msgid "Locations"
 msgstr ""
 
 #: includes/post-types.php:129
-msgctxt "post type singular name"
+#: includes/admin/admin-event-fields.php:301
+#: includes/admin/admin-location-fields.php:257
 msgid "Location"
-msgstr ""
-
-#: includes/post-types.php:130
-msgctxt "location"
-msgid "Add New"
 msgstr ""
 
 #: includes/post-types.php:131
@@ -1511,18 +173,11 @@ msgid "No location found in Trash"
 msgstr ""
 
 #: includes/post-types.php:176
-msgctxt "post type general name"
 msgid "People"
 msgstr ""
 
 #: includes/post-types.php:177
-msgctxt "post type singular name"
 msgid "Person"
-msgstr ""
-
-#: includes/post-types.php:178
-msgctxt "person"
-msgid "Add New"
 msgstr ""
 
 #: includes/post-types.php:179
@@ -1564,410 +219,321 @@ msgstr ""
 
 #: includes/settings.php:47
 #, php-format
-msgid ""
-"These settings are for the <a href=\"%1$s\" target=\"_blank\">Church Theme "
-"Content</a> plugin and its <a href=\"%2$s\" target=\"_blank\">Add-ons</a>."
+msgid "These settings are for the <a href=\"%1$s\" target=\"_blank\">Church Theme Content</a> plugin and its <a href=\"%2$s\" target=\"_blank\">Add-ons</a>."
 msgstr ""
 
 #: includes/settings.php:70
-msgctxt "settings"
 msgid "Add-on Licenses"
 msgstr ""
 
 #: includes/settings.php:75
-msgid ""
-"Save then activate your add-on license keys to enable one-click updates for "
-"them."
+msgid "Save then activate your add-on license keys to enable one-click updates for them."
 msgstr ""
 
 #: includes/taxonomies.php:32
-msgctxt "taxonomy general name"
 msgid "Sermon Topics"
 msgstr ""
 
 #: includes/taxonomies.php:33
-msgctxt "taxonomy singular name"
 msgid "Sermon Topic"
 msgstr ""
 
 #: includes/taxonomies.php:34
-msgctxt "sermons"
 msgid "Search Topics"
 msgstr ""
 
 #: includes/taxonomies.php:35
-msgctxt "sermons"
 msgid "Popular Topics"
 msgstr ""
 
 #: includes/taxonomies.php:36
-msgctxt "sermons"
 msgid "All Topics"
 msgstr ""
 
 #: includes/taxonomies.php:39
-msgctxt "sermons"
 msgid "Edit Topic"
 msgstr ""
 
 #: includes/taxonomies.php:40
-msgctxt "sermons"
 msgid "Update Topic"
 msgstr ""
 
 #: includes/taxonomies.php:41
-msgctxt "sermons"
 msgid "Add Topic"
 msgstr ""
 
 #: includes/taxonomies.php:42
-msgctxt "sermons"
 msgid "New Topic"
 msgstr ""
 
 #: includes/taxonomies.php:43
-msgctxt "sermons"
 msgid "Separate topics with commas"
 msgstr ""
 
 #: includes/taxonomies.php:44
-msgctxt "sermons"
 msgid "Add or remove topics"
 msgstr ""
 
 #: includes/taxonomies.php:45
-msgctxt "sermons"
 msgid "Choose from the most used topics"
 msgstr ""
 
 #: includes/taxonomies.php:46
-msgctxt "sermon menu name"
 msgid "Topics"
 msgstr ""
 
 #: includes/taxonomies.php:79
-msgctxt "taxonomy general name"
 msgid "Sermon Books"
 msgstr ""
 
 #: includes/taxonomies.php:80
-msgctxt "taxonomy singular name"
 msgid "Sermon Book"
 msgstr ""
 
 #: includes/taxonomies.php:81
-msgctxt "sermons"
 msgid "Search Books"
 msgstr ""
 
 #: includes/taxonomies.php:82
-msgctxt "sermons"
 msgid "Popular Books"
 msgstr ""
 
 #: includes/taxonomies.php:83
-msgctxt "sermons"
 msgid "All Books"
 msgstr ""
 
 #: includes/taxonomies.php:86
-msgctxt "sermons"
 msgid "Edit Book"
 msgstr ""
 
 #: includes/taxonomies.php:87
-msgctxt "sermons"
 msgid "Update Book"
 msgstr ""
 
 #: includes/taxonomies.php:88
-msgctxt "sermons"
 msgid "Add Book"
 msgstr ""
 
 #: includes/taxonomies.php:89
-msgctxt "sermons"
 msgid "New Book"
 msgstr ""
 
 #: includes/taxonomies.php:90
-msgctxt "sermons"
 msgid "Separate books with commas"
 msgstr ""
 
 #: includes/taxonomies.php:91
-msgctxt "sermons"
 msgid "Add or remove books"
 msgstr ""
 
 #: includes/taxonomies.php:92
-msgctxt "sermons"
 msgid "Choose from the most used books"
 msgstr ""
 
 #: includes/taxonomies.php:93
-msgctxt "sermon menu name"
 msgid "Books"
 msgstr ""
 
 #: includes/taxonomies.php:126
-msgctxt "taxonomy general name"
-msgid "Sermon Series"
-msgstr ""
-
 #: includes/taxonomies.php:127
-msgctxt "taxonomy singular name"
 msgid "Sermon Series"
 msgstr ""
 
 #: includes/taxonomies.php:128
-msgctxt "sermons"
 msgid "Search Series"
 msgstr ""
 
 #: includes/taxonomies.php:129
-msgctxt "sermons"
 msgid "Popular Series"
 msgstr ""
 
 #: includes/taxonomies.php:130
-msgctxt "sermons"
 msgid "All Series"
 msgstr ""
 
 #: includes/taxonomies.php:133
-msgctxt "sermons"
 msgid "Edit Series"
 msgstr ""
 
 #: includes/taxonomies.php:134
-msgctxt "sermons"
 msgid "Update Series"
 msgstr ""
 
 #: includes/taxonomies.php:135
-msgctxt "sermons"
 msgid "Add Series"
 msgstr ""
 
 #: includes/taxonomies.php:136
-msgctxt "sermons"
 msgid "New Series"
 msgstr ""
 
 #: includes/taxonomies.php:137
-msgctxt "sermons"
 msgid "Separate series with commas"
 msgstr ""
 
 #: includes/taxonomies.php:138
-msgctxt "sermons"
 msgid "Add or remove series"
 msgstr ""
 
 #: includes/taxonomies.php:139
-msgctxt "sermons"
 msgid "Choose from the most used series"
 msgstr ""
 
 #: includes/taxonomies.php:140
-msgctxt "sermon menu name"
 msgid "Series"
 msgstr ""
 
 #: includes/taxonomies.php:173
-msgctxt "taxonomy general name"
 msgid "Sermon Speakers"
 msgstr ""
 
 #: includes/taxonomies.php:174
-msgctxt "taxonomy singular name"
 msgid "Sermon Speaker"
 msgstr ""
 
 #: includes/taxonomies.php:175
-msgctxt "sermons"
 msgid "Search Speakers"
 msgstr ""
 
 #: includes/taxonomies.php:176
-msgctxt "sermons"
 msgid "Popular Speakers"
 msgstr ""
 
 #: includes/taxonomies.php:177
-msgctxt "sermons"
 msgid "All Speakers"
 msgstr ""
 
 #: includes/taxonomies.php:180
-msgctxt "sermons"
 msgid "Edit Speaker"
 msgstr ""
 
 #: includes/taxonomies.php:181
-msgctxt "sermons"
 msgid "Update Speaker"
 msgstr ""
 
 #: includes/taxonomies.php:182
-msgctxt "sermons"
 msgid "Add Speaker"
 msgstr ""
 
 #: includes/taxonomies.php:183
-msgctxt "sermons"
 msgid "New Speaker"
 msgstr ""
 
 #: includes/taxonomies.php:184
-msgctxt "sermons"
 msgid "Separate speakers with commas"
 msgstr ""
 
 #: includes/taxonomies.php:185
-msgctxt "sermons"
 msgid "Add or remove speakers"
 msgstr ""
 
 #: includes/taxonomies.php:186
-msgctxt "sermons"
 msgid "Choose from the most used speakers"
 msgstr ""
 
 #: includes/taxonomies.php:187
-msgctxt "sermon menu name"
 msgid "Speakers"
 msgstr ""
 
 #: includes/taxonomies.php:220
-msgctxt "taxonomy general name"
 msgid "Sermon Tags"
 msgstr ""
 
 #: includes/taxonomies.php:221
-msgctxt "taxonomy singular name"
 msgid "Sermon Tag"
 msgstr ""
 
 #: includes/taxonomies.php:222
-msgctxt "sermons"
 msgid "Search Tags"
 msgstr ""
 
 #: includes/taxonomies.php:223
-msgctxt "sermons"
 msgid "Popular Tags"
 msgstr ""
 
 #: includes/taxonomies.php:224
-msgctxt "sermons"
 msgid "All Tags"
 msgstr ""
 
 #: includes/taxonomies.php:227
-msgctxt "sermons"
 msgid "Edit Tag"
 msgstr ""
 
 #: includes/taxonomies.php:228
-msgctxt "sermons"
 msgid "Update Tag"
 msgstr ""
 
 #: includes/taxonomies.php:229
-msgctxt "sermons"
 msgid "Add Tag"
 msgstr ""
 
 #: includes/taxonomies.php:230
-msgctxt "sermons"
 msgid "New Tag"
 msgstr ""
 
 #: includes/taxonomies.php:231
-msgctxt "sermons"
 msgid "Separate tags with commas"
 msgstr ""
 
 #: includes/taxonomies.php:232
-msgctxt "sermons"
 msgid "Add or remove tags"
 msgstr ""
 
 #: includes/taxonomies.php:233
-msgctxt "sermons"
 msgid "Choose from the most used tags"
 msgstr ""
 
 #: includes/taxonomies.php:234
-msgctxt "sermon menu name"
 msgid "Tags"
 msgstr ""
 
 #: includes/taxonomies.php:271
-msgctxt "taxonomy general name"
+#: includes/taxonomies.php:285
 msgid "Groups"
 msgstr ""
 
 #: includes/taxonomies.php:272
-msgctxt "taxonomy singular name"
 msgid "Group"
 msgstr ""
 
 #: includes/taxonomies.php:273
-msgctxt "people"
 msgid "Search Groups"
 msgstr ""
 
 #: includes/taxonomies.php:274
-msgctxt "people"
 msgid "Popular Groups"
 msgstr ""
 
 #: includes/taxonomies.php:275
-msgctxt "people"
 msgid "All Groups"
 msgstr ""
 
 #: includes/taxonomies.php:278
-msgctxt "people"
 msgid "Edit Group"
 msgstr ""
 
 #: includes/taxonomies.php:279
-msgctxt "people"
 msgid "Update Group"
 msgstr ""
 
 #: includes/taxonomies.php:280
-msgctxt "people"
 msgid "Add Group"
 msgstr ""
 
 #: includes/taxonomies.php:281
-msgctxt "people"
 msgid "New Group"
 msgstr ""
 
 #: includes/taxonomies.php:282
-msgctxt "people"
 msgid "Separate groups with commas"
 msgstr ""
 
 #: includes/taxonomies.php:283
-msgctxt "people"
 msgid "Add or remove groups"
 msgstr ""
 
 #: includes/taxonomies.php:284
-msgctxt "people"
 msgid "Choose from the most used groups"
-msgstr ""
-
-#: includes/taxonomies.php:285
-msgctxt "people menu name"
-msgid "Groups"
 msgstr ""
 
 #: includes/template-tags.php:50
@@ -1978,50 +544,709 @@ msgstr ""
 msgid "Yesterday"
 msgstr ""
 
+#: includes/admin/admin-event-fields.php:37
+msgid "Date & Time"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:75
+msgid "Start Date"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:76
+msgid "(Required)"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:100
+msgid "End Date"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:124
+msgid "Start Time"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:149
+msgid "End Time"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:180
+msgid "Do not show times entered above (use only for ordering events)"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:201
+msgid "Time Description"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:204
+msgid "Optionally describe the time (e.g. \"9:30 am and 11:00 am\" or \"After Second Service\")"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:225
+msgid "Recurrence"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:228
+msgid "Dates automatically move forward after event ends."
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:232
+msgid "None"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:233
+msgid "Weekly"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:234
+msgid "Monthly"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:235
+msgid "Yearly"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:254
+msgid "Recur Until"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:339
+msgid "Venue"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:342
+msgid "You can provide a building name, room number or other location name to help people find the event."
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:363
+#: includes/admin/admin-location-fields.php:73
+#: includes/admin/admin-location-fields.php:251
+msgid "Address"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:366
+msgid "You can enter an address if it is necessary for people to find this event."
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:392
+msgid "Show directions link"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:411
+#: includes/admin/admin-location-fields.php:169
+msgid "Map Type"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:414
+#: includes/admin/admin-location-fields.php:172
+msgid "You can show a road map, satellite imagery, a combination of both (hybrid) or terrain."
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:435
+#: includes/admin/admin-location-fields.php:194
+msgid "Map Zoom"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:438
+#: includes/admin/admin-location-fields.php:197
+msgid "A lower number is more zoomed out while a higher number is more zoomed in."
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:622
+#: includes/admin/admin-location-fields.php:246
+msgid "Thumbnail"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:627
+msgid "When"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:628
+msgid "Where"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:690
+#: includes/admin/admin-event-fields.php:708
+msgid " &ndash; "
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:738
+#, php-format
+msgid "Every week until %1$s"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:743
+msgid "Every week"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:754
+#, php-format
+msgid "Every month until %1$s"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:759
+msgid "Every month"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:770
+#, php-format
+msgid "Every year until %1$s"
+msgstr ""
+
+#: includes/admin/admin-event-fields.php:775
+msgid "Every year"
+msgstr ""
+
+#: includes/admin/admin-helpers.php:67
+msgid "Road"
+msgstr ""
+
+#: includes/admin/admin-helpers.php:68
+msgid "Satellite"
+msgstr ""
+
+#: includes/admin/admin-helpers.php:69
+msgid "Hybrid"
+msgstr ""
+
+#: includes/admin/admin-helpers.php:70
+msgid "Terrain"
+msgstr ""
+
+#: includes/admin/admin-location-fields.php:35
+msgid "Location Details"
+msgstr ""
+
+#: includes/admin/admin-location-fields.php:121
+msgid "Phone"
+msgstr ""
+
+#: includes/admin/admin-location-fields.php:145
+#: includes/admin/admin-location-fields.php:252
+msgid "Times"
+msgstr ""
+
+#: includes/admin/admin-location-fields.php:253
+msgid "Order"
+msgstr ""
+
+#: includes/admin/admin-person-fields.php:35
+msgid "Enter name here"
+msgstr ""
+
+#: includes/admin/admin-person-fields.php:60
+msgid "Person Details"
+msgstr ""
+
+#: includes/admin/admin-person-fields.php:98
+#: includes/admin/admin-person-fields.php:223
+msgid "Position"
+msgstr ""
+
+#: includes/admin/admin-person-fields.php:101
+msgid "Enter the person's position or title (e.g. Senior Pastor, Deacon, etc.)"
+msgstr ""
+
+#: includes/admin/admin-person-fields.php:146
+msgid "Email"
+msgstr ""
+
+#: includes/admin/admin-person-fields.php:170
+msgid "URLs"
+msgstr ""
+
+#: includes/admin/admin-person-fields.php:229
+msgid "Name"
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:35
+msgid "Sermon Media"
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:73
+msgid "Full Text"
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:76
+msgid "Check this if you provide a complete transcript above."
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:78
+msgid "Full sermon text provided"
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:97
+#: includes/admin/admin-sermon-fields.php:285
+msgid "Video"
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:100
+msgid "Upload a file by clicking \"Choose Video\" or upload a video to YouTube, Vimeo, or another supported site then paste the URL here, or paste an embed code from another site."
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:104
+msgid "Choose Video"
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:105
+msgid "Choose an Video File"
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:121
+#: includes/admin/admin-sermon-fields.php:289
+msgid "Audio"
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:124
+msgid "Upload a file by clicking \"Choose Audio\" or upload audio to a site like SoundCloud and paste the URL here or paste an embed code from another site."
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:128
+msgid "Choose Audio"
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:129
+msgid "Choose an Audio File"
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:148
+msgid "Upload a file by clicking \"Choose PDF\" or paste the URL to a PDF hosted on another site."
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:152
+msgid "Choose PDF"
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:153
+msgid "Choose a PDF File"
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:238
+msgid "Formats"
+msgstr ""
+
+#: includes/admin/admin-sermon-fields.php:281
+msgid "Text"
+msgstr ""
+
+#: includes/admin/admin-support.php:53
+#, php-format
+msgid "The <b>%1$s</b> theme does not support the <b>%2$s</b> plugin. <a href=\"%3$s\" target=\"_blank\">More Information</a>, <a href=\"%4$s\">Dismiss</a>"
+msgstr ""
+
+#: includes/admin/admin-widgets.php:33
+msgid "Choose Image for Widget"
+msgstr ""
+
+#: includes/admin/admin-widgets.php:34
+msgid "Use in Widget"
+msgstr ""
+
+#: includes/classes/breadcrumbs.php:55
+msgid " > "
+msgstr ""
+
+#: includes/classes/breadcrumbs.php:241
+msgid "Y"
+msgstr ""
+
+#: includes/classes/breadcrumbs.php:258
+msgid "F"
+msgstr ""
+
+#: includes/classes/breadcrumbs.php:275
+msgid "jS"
+msgstr ""
+
+#: includes/classes/breadcrumbs.php:354
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: includes/classes/breadcrumbs.php:365
+msgid "Search Results"
+msgstr ""
+
+#: includes/classes/breadcrumbs.php:527
+msgid "Home"
+msgstr ""
+
+#: includes/classes/customize-controls.php:119
+#: includes/classes/customize-controls.php:198
+msgid "Colorable"
+msgstr ""
+
+#: includes/classes/customize-controls.php:138
+msgid "The selected image is <strong>colorable</strong>."
+msgstr ""
+
+#: includes/classes/customize-controls.php:175
+msgid "Presets"
+msgstr ""
+
+#: includes/classes/widget-archives.php:35
+#: includes/classes/widget-archives.php:93
+msgid "Archives"
+msgstr ""
+
+#: includes/classes/widget-archives.php:37
+msgid "Monthly archive for chosen post type"
+msgstr ""
+
+#: includes/classes/widget-archives.php:84
+#: includes/classes/widget-categories.php:87
+#: includes/classes/widget-categories.php:144
+#: includes/classes/widget-events.php:82
+msgid "Title"
+msgstr ""
+
+#: includes/classes/widget-archives.php:108
+#: includes/classes/widget-categories.php:111
+msgid "Type"
+msgstr ""
+
+#: includes/classes/widget-archives.php:132
+#: includes/classes/widget-categories.php:190
+#: includes/classes/widget-events.php:133
+msgid "Limit"
+msgstr ""
+
+#: includes/classes/widget-archives.php:134
+msgid "Set to 0 for no limit."
+msgstr ""
+
+#: includes/classes/widget-archives.php:163
+#: includes/classes/widget-categories.php:221
+msgid "Show counts"
+msgstr ""
+
+#: includes/classes/widget-archives.php:184
+#: includes/classes/widget-categories.php:266
+msgid "Show as dropdown"
+msgstr ""
+
+#: includes/classes/widget-archives.php:238
+msgid "Blog"
+msgstr ""
+
+#: includes/classes/widget-categories.php:35
+#: includes/classes/widget-categories.php:96
+msgid "Categories"
+msgstr ""
+
+#: includes/classes/widget-categories.php:37
+msgid "Shows categories of various types"
+msgstr ""
+
+#: includes/classes/widget-categories.php:135
+msgid "Order By"
+msgstr ""
+
+#: includes/classes/widget-categories.php:145
+msgid "Date"
+msgstr ""
+
+#: includes/classes/widget-categories.php:146
+msgid "Post Count"
+msgstr ""
+
+#: includes/classes/widget-categories.php:172
+msgid "Low to High"
+msgstr ""
+
+#: includes/classes/widget-categories.php:173
+msgid "High to Low"
+msgstr ""
+
+#: includes/classes/widget-categories.php:192
+msgid "Set to 0 for unlimited."
+msgstr ""
+
+#: includes/classes/widget-categories.php:245
+msgid "Show hierarchy"
+msgstr ""
+
+#: includes/classes/widget-categories.php:313
+msgid "Blog Categories"
+msgstr ""
+
+#: includes/classes/widget-categories.php:315
+msgid "Blog Tags"
+msgstr ""
+
+#: includes/classes/widget-events.php:35
+msgid "Shows upcoming or past events"
+msgstr ""
+
+#: includes/classes/widget-events.php:115
+msgid "Upcoming"
+msgstr ""
+
+#: includes/classes/widget-events.php:116
+msgid "Past"
+msgstr ""
+
+#: includes/classes/widget-events.php:161
+msgid "Show image"
+msgstr ""
+
+#: includes/classes/widget-events.php:188
+msgid "Show date"
+msgstr ""
+
+#: includes/classes/widget-events.php:209
+msgid "Show time"
+msgstr ""
+
+#: includes/classes/widget-events.php:233
+msgid "Show excerpt"
+msgstr ""
+
+#: includes/classes/widget-galleries.php:35
+#: includes/classes/widget-galleries.php:93
+msgid "Galleries"
+msgstr ""
+
+#: includes/classes/widget-galleries.php:37
+msgid "Shows list of gallery pages"
+msgstr ""
+
+#: includes/classes/widget-galleries.php:117
+msgid "Date Added"
+msgstr ""
+
+#: includes/classes/widget-gallery.php:33
+#: includes/classes/widget-gallery.php:102
+#: includes/classes/widget-gallery.php:117
+msgid "Gallery"
+msgstr ""
+
+#: includes/classes/widget-gallery.php:35
+msgid "Shows gallery thumbnails"
+msgstr ""
+
+#: includes/classes/widget-gallery.php:57
+msgid "All Galleries"
+msgstr ""
+
+#: includes/classes/widget-gallery.php:145
+msgid "Show link to gallery"
+msgstr ""
+
+#: includes/classes/widget-gallery.php:174
+msgid "Upload Date"
+msgstr ""
+
+#: includes/classes/widget-gallery.php:176
+#: includes/classes/widget-posts.php:145
+#: includes/classes/widget-sermons.php:221
+msgid "Comment Count"
+msgstr ""
+
+#: includes/classes/widget-gallery.php:244
+msgid "Thumbnail Size"
+msgstr ""
+
+#: includes/classes/widget-gallery.php:253
+msgid "Small"
+msgstr ""
+
+#: includes/classes/widget-gallery.php:254
+msgid "Medium"
+msgstr ""
+
+#: includes/classes/widget-gallery.php:255
+msgid "Large"
+msgstr ""
+
+#: includes/classes/widget-giving.php:33
+#: includes/classes/widget-giving.php:91
+msgid "Giving"
+msgstr ""
+
+#: includes/classes/widget-giving.php:35
+msgid "Shows a message and button"
+msgstr ""
+
+#: includes/classes/widget-giving.php:106
+msgid "Message"
+msgstr ""
+
+#: includes/classes/widget-giving.php:115
+msgid "You may give online by clicking below."
+msgstr ""
+
+#: includes/classes/widget-giving.php:130
+msgid "Button Text"
+msgstr ""
+
+#: includes/classes/widget-giving.php:139
+msgid "Give Now"
+msgstr ""
+
+#: includes/classes/widget-giving.php:154
+msgid "Button URL"
+msgstr ""
+
+#: includes/classes/widget-highlight.php:33
+msgid "Highlight"
+msgstr ""
+
+#: includes/classes/widget-highlight.php:35
+msgid "Shows a highlight"
+msgstr ""
+
+#: includes/classes/widget-highlight.php:106
+#: includes/classes/widget-slide.php:106
+msgid "Description"
+msgstr ""
+
+#: includes/classes/widget-highlight.php:130
+#: includes/classes/widget-slide.php:130
+msgid "Click URL"
+msgstr ""
+
+#: includes/classes/widget-highlight.php:158
+#: includes/classes/widget-slide.php:158
+msgid "Open in new tab"
+msgstr ""
+
+#: includes/classes/widget-highlight.php:178
+#: includes/classes/widget-slide.php:178
+msgid "Image"
+msgstr ""
+
+#: includes/classes/widget-locations.php:35
+msgid "Shows church location(s)"
+msgstr ""
+
+#: includes/classes/widget-locations.php:115
+#: includes/classes/widget-people.php:141
+msgid "Custom Order"
+msgstr ""
+
+#: includes/classes/widget-locations.php:212
+msgid "Show address"
+msgstr ""
+
+#: includes/classes/widget-locations.php:236
+msgid "Show phone number"
+msgstr ""
+
+#: includes/classes/widget-locations.php:260
+msgid "Show times"
+msgstr ""
+
+#: includes/classes/widget-locations.php:284
+msgid "Show map"
+msgstr ""
+
+#: includes/classes/widget-people.php:35
+msgid "Shows people according to options"
+msgstr ""
+
+#: includes/classes/widget-people.php:214
+msgid "Show photo"
+msgstr ""
+
+#: includes/classes/widget-people.php:238
+msgid "Show position"
+msgstr ""
+
+#: includes/classes/widget-people.php:262
+msgid "Show phone"
+msgstr ""
+
+#: includes/classes/widget-people.php:286
+msgid "Show email"
+msgstr ""
+
+#: includes/classes/widget-people.php:310
+msgid "Show icons"
+msgstr ""
+
+#: includes/classes/widget-posts.php:35
+#: includes/classes/widget-posts.php:93
+msgid "Posts"
+msgstr ""
+
+#: includes/classes/widget-posts.php:37
+msgid "Shows blog posts according to options"
+msgstr ""
+
+#: includes/classes/widget-posts.php:108
+msgid "Category"
+msgstr ""
+
+#: includes/classes/widget-posts.php:117
+msgid "All Categories"
+msgstr ""
+
+#: includes/classes/widget-posts.php:268
+msgid "Show author"
+msgstr ""
+
+#: includes/classes/widget-sermons.php:35
+msgid "Shows sermons according to options"
+msgstr ""
+
+#: includes/classes/widget-sermons.php:106
+msgid "Topic"
+msgstr ""
+
+#: includes/classes/widget-sermons.php:132
+msgid "Book"
+msgstr ""
+
+#: includes/classes/widget-sermons.php:184
+msgid "Speaker"
+msgstr ""
+
+#: includes/classes/widget-sermons.php:344
+msgid "Show topic"
+msgstr ""
+
+#: includes/classes/widget-sermons.php:368
+msgid "Show book"
+msgstr ""
+
+#: includes/classes/widget-sermons.php:392
+msgid "Show series"
+msgstr ""
+
+#: includes/classes/widget-sermons.php:416
+msgid "Show speaker"
+msgstr ""
+
+#: includes/classes/widget-sermons.php:437
+msgid "Show media types"
+msgstr ""
+
+#: includes/classes/widget-slide.php:34
+msgid "Slide"
+msgstr ""
+
+#: includes/classes/widget-slide.php:36
+msgid "A slide to be shown in a slider"
+msgstr ""
+
+#: includes/classes/widget-slide.php:202
+msgid "Video URL"
+msgstr ""
+
+#: includes/classes/widget.php:298
+msgid "Choose Image"
+msgstr ""
+
+#: includes/classes/widget.php:301
+msgid "Remove Image"
+msgstr ""
+
 #: includes/widget-templates/widget-categories.php:39
-msgctxt "categories widget"
 msgid "Select One"
-msgstr ""
-
-#: includes/widget-templates/widget-events.php:1
-msgctxt "events widget"
-msgid "There are no events to show."
-msgstr ""
-
-#: includes/widget-templates/widget-galleries.php:61
-msgctxt "galleries widget"
-msgid "There are no galleries to show."
-msgstr ""
-
-#: includes/widget-templates/widget-gallery.php:1
-msgctxt "gallery widget"
-msgid "View Gallery"
-msgstr ""
-
-#: includes/widget-templates/widget-gallery.php:1
-msgctxt "gallery widget"
-msgid "There are no images to show."
-msgstr ""
-
-#: includes/widget-templates/widget-locations.php:1
-msgctxt "locations widget"
-msgid "There are no locations to show."
-msgstr ""
-
-#: includes/widget-templates/widget-people.php:1
-msgctxt "people widget"
-msgid "There are no people to show."
 msgstr ""
 
 #: includes/widget-templates/widget-posts.php:63
 #, php-format
-msgctxt "posts widget"
 msgid "by <a href=\"%1$s\">%2$s</a>"
-msgstr ""
-
-#: includes/widget-templates/widget-posts.php:93
-msgctxt "posts widget"
-msgid "There are no posts to show."
 msgstr ""
 
 #: includes/widget-templates/widget-sermons.php:61
@@ -2033,31 +1258,6 @@ msgstr ""
 
 #: includes/widget-templates/widget-sermons.php:63
 #, php-format
-msgctxt "widget"
 msgid "by %s"
 msgstr ""
 
-#: includes/widget-templates/widget-sermons.php:107
-msgctxt "sermons widget"
-msgid "There are no sermons to show."
-msgstr ""
-
-#: node_modules/grunt-pot/test/fixtures/some-file.php:3
-msgid "I'm a translatable string."
-msgstr ""
-
-#: node_modules/grunt-pot/test/fixtures/some-other-file.php:4
-msgid "Me too"
-msgstr ""
-
-#: node_modules/grunt-pot/test/fixtures/some-other-file.php:7
-#, php-format
-msgid "I have %d apple"
-msgid_plural "I have %d apples"
-msgstr[0] ""
-msgstr[1] ""
-
-#. / TRANSLATORS: This should be translated as a shorthand for YEAR-MONTH-DAY using 4, 2 and 2 digits.
-#: node_modules/grunt-pot/test/fixtures/some-other-file.php:16
-msgid "yyyy-mm-dd"
-msgstr ""
